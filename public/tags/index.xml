@@ -9,7 +9,287 @@
     <managingEditor>loughondata@protonmail.com (Connor Lough)</managingEditor>
     <webMaster>loughondata@protonmail.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ai</title>
+      <link>http://localhost:1313/tags/ai/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/ai/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Claude</title>
+      <link>http://localhost:1313/tags/claude/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/claude/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Gcp</title>
+      <link>http://localhost:1313/tags/gcp/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/gcp/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Llm</title>
+      <link>http://localhost:1313/tags/llm/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/llm/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Ollama</title>
+      <link>http://localhost:1313/tags/ollama/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/ollama/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Rag</title>
+      <link>http://localhost:1313/tags/rag/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/rag/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Graph-Rag</title>
+      <link>http://localhost:1313/tags/graph-rag/</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/graph-rag/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Nlp</title>
+      <link>http://localhost:1313/tags/nlp/</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/nlp/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Conferences</title>
+      <link>http://localhost:1313/tags/conferences/</link>
+      <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/conferences/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Data-Mesh</title>
+      <link>http://localhost:1313/tags/data-mesh/</link>
+      <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/data-mesh/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Dlt</title>
+      <link>http://localhost:1313/tags/dlt/</link>
+      <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/dlt/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Ibis</title>
+      <link>http://localhost:1313/tags/ibis/</link>
+      <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/ibis/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Polars</title>
+      <link>http://localhost:1313/tags/polars/</link>
+      <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/polars/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>http://localhost:1313/tags/testing/</link>
+      <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/testing/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Ci</title>
+      <link>http://localhost:1313/tags/ci/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/ci/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Data-Engineering</title>
+      <link>http://localhost:1313/tags/data-engineering/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/data-engineering/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Dbt</title>
+      <link>http://localhost:1313/tags/dbt/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/dbt/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Dbt-Osmosis</title>
+      <link>http://localhost:1313/tags/dbt-osmosis/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/dbt-osmosis/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Dbt2looker</title>
+      <link>http://localhost:1313/tags/dbt2looker/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/dbt2looker/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Github-Actions</title>
+      <link>http://localhost:1313/tags/github-actions/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/github-actions/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Data-Modeling</title>
+      <link>http://localhost:1313/tags/data-modeling/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/data-modeling/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Data-Vault</title>
+      <link>http://localhost:1313/tags/data-vault/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/data-vault/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Aws-S3</title>
+      <link>http://localhost:1313/tags/aws-s3/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/aws-s3/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Godaddy</title>
+      <link>http://localhost:1313/tags/godaddy/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/godaddy/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Heroku</title>
+      <link>http://localhost:1313/tags/heroku/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/heroku/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Rails</title>
+      <link>http://localhost:1313/tags/rails/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/rails/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Ruby</title>
+      <link>http://localhost:1313/tags/ruby/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/ruby/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Web-Dev</title>
+      <link>http://localhost:1313/tags/web-dev/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/web-dev/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Aws</title>
@@ -22,31 +302,11 @@
     </item>
     
     <item>
-      <title>Data-Engineering</title>
-      <link>http://localhost:1313/tags/data-engineering/</link>
-      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
-      <author>loughondata@protonmail.com (Connor Lough)</author>
-      <guid>http://localhost:1313/tags/data-engineering/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Dbeaver</title>
       <link>http://localhost:1313/tags/dbeaver/</link>
       <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
       <author>loughondata@protonmail.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/dbeaver/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Dlt</title>
-      <link>http://localhost:1313/tags/dlt/</link>
-      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
-      <author>loughondata@protonmail.com (Connor Lough)</author>
-      <guid>http://localhost:1313/tags/dlt/</guid>
       <description></description>
       
     </item>
@@ -97,6 +357,46 @@
       <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
       <author>loughondata@protonmail.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/slack/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Mermaid</title>
+      <link>http://localhost:1313/tags/mermaid/</link>
+      <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/mermaid/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Meltano</title>
+      <link>http://localhost:1313/tags/meltano/</link>
+      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/meltano/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Postgres</title>
+      <link>http://localhost:1313/tags/postgres/</link>
+      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/postgres/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Snowflake</title>
+      <link>http://localhost:1313/tags/snowflake/</link>
+      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/snowflake/</guid>
       <description></description>
       
     </item>
