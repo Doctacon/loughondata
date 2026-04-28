@@ -20,6 +20,10 @@ Open to consulting engagements, especially anything sitting at the intersection 
 
 ## Where I've been
 
+**Trainings**
+
+- Data Vault 2.0 Practitioner — Helsinki, Finland
+
 **Conferences**
 
 - dbt Coalesce 2022 — New Orleans, LA
@@ -27,10 +31,6 @@ Open to consulting engagements, especially anything sitting at the intersection 
 - WWDVC 2023 — Stowe, VT
 - Data Saturday #52 — Oslo, Norway
 - AI Council 2026 — San Francisco, CA 
-
-**Trainings**
-
-- Data Vault 2.0 Practitioner — Helsinki, Finland
 
 ## Get in touch
 
