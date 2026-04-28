@@ -21,6 +21,12 @@
   weight = 20
 
 [[main]]
+  name = "Databox"
+  parent = "Projects"
+  pageRef = "projects/databox"
+  weight = 10
+
+[[main]]
   name = "About"
   pageRef = "about"
   weight = 30

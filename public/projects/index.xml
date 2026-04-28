@@ -9,7 +9,17 @@
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Databox</title>
+      <link>http://localhost:1313/projects/databox/</link>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/projects/databox/</guid>
+      <description>A single-operator data platform that ingests eBird, NOAA, and USGS into one queryable warehouse — built to answer whether species distributions shift with same-day weather and streamflow anomalies.</description>
+      
+    </item>
     
   </channel>
 </rss>
