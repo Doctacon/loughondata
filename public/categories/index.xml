@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Blowfish</title>
+    <title>Categories on Lough on Data</title>
     <link>http://localhost:1313/categories/</link>
-    <description>Recent content in Categories on Blowfish</description>
+    <description>Recent content in Categories on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2026 </copyright>
+    <managingEditor>loughondata@protonmail.com (Connor Lough)</managingEditor>
+    <webMaster>loughondata@protonmail.com (Connor Lough)</webMaster>
+    <copyright>© 2026 Connor Lough</copyright>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>

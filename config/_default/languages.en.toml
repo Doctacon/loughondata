@@ -2,7 +2,7 @@ disabled = false
 locale = "en"
 label = "English"
 weight = 1
-title = "Blowfish"
+title = "Lough on Data"
 
 [params]
   displayName = "EN"
@@ -11,18 +11,24 @@ title = "Blowfish"
   dateFormat = "2 January 2006"
   # logo = "img/logo.png"
   # secondaryLogo = "img/secondary-logo.png"
-  # description = "My awesome website"
+  description = "Connor Lough — data engineering, geospatial, and notes from Arizona."
   # copyright = "Copy, _right?_ :thinking_face:"
 
-# [params.author]
-#   name = "Your name here"
-#   email = "youremail@example.com"
-#   image = "img/blowfish_logo.png"
-#   imageQuality = 96
-#   headline = "I'm only human"
-#   bio = "A little bit about you"
+[params.author]
+  name = "Connor Lough"
+  email = "loughondata@protonmail.com"
+  # image = "img/avatar.jpg"
+  imageQuality = 96
+  headline = "Data Engineer in AZ"
+  bio = ""
+  links = [
+    { email = "mailto:loughondata@protonmail.com" },
+    { github = "https://github.com/Doctacon" },
+    { linkedin = "https://www.linkedin.com/in/crlough/" },
+  ]
+
+# [params.author.disabled]
 #   links = [
-#     { email = "mailto:hello@your_domain.com" },
 #     { link = "https://link-to-some-website.com/" },
 #     { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
 #     { apple = "https://www.apple.com" },
