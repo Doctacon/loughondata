@@ -1,0 +1,27 @@
+/* Shrink fixed-fill-blur header — default smaller, even smaller on scroll. */
+
+/* Tailwind class min-h-[148px] needs bracket escapes in the selector. */
+.min-h-\[148px\],
+[class~="min-h-[148px]"] {
+  min-height: 96px !important;
+  transition: min-height 200ms ease;
+}
+
+img.logo,
+.logo {
+  max-height: 3rem !important;
+  max-width: 3rem !important;
+  transition: max-height 200ms ease, max-width 200ms ease;
+}
+
+/* Shrunk state — JS sets data-scrolled on <html> past 20px scroll. */
+html[data-scrolled="true"] .min-h-\[148px\],
+html[data-scrolled="true"] [class~="min-h-[148px]"] {
+  min-height: 64px !important;
+}
+
+html[data-scrolled="true"] img.logo,
+html[data-scrolled="true"] .logo {
+  max-height: 2.25rem !important;
+  max-width: 2.25rem !important;
+}

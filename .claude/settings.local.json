@@ -4,7 +4,9 @@
       "Bash(hugo --quiet --destination /tmp/loughondata-build)",
       "Bash(echo \"---EXIT:$?---\")",
       "Bash(rm -rf /tmp/loughondata-build)",
-      "Bash(rtk ls *)"
+      "Bash(rtk ls *)",
+      "Bash(rtk read *)",
+      "Bash(rtk grep *)"
     ]
   }
 }

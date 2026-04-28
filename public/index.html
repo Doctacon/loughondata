@@ -110,6 +110,8 @@
   
   
   
+    
+  
   
     
   
@@ -117,8 +119,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.4ecdbecdb8d813b3cd8b3d00595f141b1d694f6bf4df703ade177d63ea14022b0d9ec7acf490411756efb7bcee213a05c3bcd68059dc57767963155c42c47994.css"
-    integrity="sha512-Ts2&#43;zbjYE7PNiz0AWV8UGx1pT2v033A63hd9Y&#43;oUAisNnses9JBBF1bvt7zuIToFw7zWgFncV3Z5YxVcQsR5lA==">
+    href="/css/main.bundle.min.eee5d1eb4a5e266cde0b382b2456a11e46578e9f411ad3fddb295cd30aa924647daf400244621d2d379795b235ebab5c2b13bec70f3d5d27d3d21d9c79481631.css"
+    integrity="sha512-7uXR60peJmzeCzgrJFahHkZXjp9BGtP92ylc0wqpJGR9r0ACRGIdLTeXlbI166tcKxO&#43;xw89XSfT0h2ceUgWMQ==">
 
   
   
@@ -244,6 +246,18 @@
 
   
   
+    <script>
+  (function () {
+    const root = document.documentElement;
+    const setScrolled = () => {
+      root.dataset.scrolled = window.scrollY > 20 ? "true" : "false";
+    };
+    setScrolled();
+    window.addEventListener("scroll", setScrolled, { passive: true });
+  })();
+</script>
+
+  
 
   
   
@@ -281,7 +295,13 @@
     </div>
     
     
-      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl backdrop-saturate-220 backdrop-brightness-112 dark:backdrop-saturate-180 dark:backdrop-brightness-95 bg-primary-200/80 bg-linear-60 dark:bg-primary-800/30 shadow-xl"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
   
     
     
@@ -533,6 +553,15 @@
 
 
 
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+  integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+  data-blur-id="menu-blur"></script>
     
     <div class="relative flex flex-col grow">
       <main id="main-content" class="grow">

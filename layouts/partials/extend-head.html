@@ -1,0 +1,10 @@
+<script>
+  (function () {
+    const root = document.documentElement;
+    const setScrolled = () => {
+      root.dataset.scrolled = window.scrollY > 20 ? "true" : "false";
+    };
+    setScrolled();
+    window.addEventListener("scroll", setScrolled, { passive: true });
+  })();
+</script>
