@@ -16,13 +16,13 @@ title = "Lough on Data"
 
 [params.author]
   name = "Connor Lough"
-  email = "loughondata@protonmail.com"
+  email = "connor@loughondata.com"
   image = "img/avatar.png"
   imageQuality = 96
   headline = "Data Engineer in AZ"
   bio = ""
   links = [
-    { email = "mailto:loughondata@protonmail.com" },
+    { email = "mailto:connor@loughondata.com" },
     { github = "https://github.com/Doctacon" },
     { linkedin = "https://www.linkedin.com/in/crlough/" },
   ]

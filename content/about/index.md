@@ -34,6 +34,6 @@ Open to consulting engagements, especially anything sitting at the intersection 
 
 ## Get in touch
 
-- Email — [loughondata@protonmail.com](mailto:loughondata@protonmail.com)
+- Email — [connor@loughondata.com](mailto:connor@loughondata.com)
 - GitHub — [@Doctacon](https://github.com/Doctacon)
 - LinkedIn — [crlough](https://www.linkedin.com/in/crlough/)
