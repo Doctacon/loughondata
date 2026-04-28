@@ -9,7 +9,67 @@
     <managingEditor>loughondata@protonmail.com (Connor Lough)</managingEditor>
     <webMaster>loughondata@protonmail.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Giving Your LLM Context</title>
+      <link>http://localhost:1313/posts/give-your-llm-context/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/give-your-llm-context/</guid>
+      <description>Working through RAG approaches — from the dummy-simple Ollama + AnythingLLM path to a GCP RAG Engine setup that lives next to your IDE.</description>
+      
+    </item>
+    
+    <item>
+      <title>Lazy Graph RAG</title>
+      <link>http://localhost:1313/posts/lazy-graph-rag-i/</link>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/lazy-graph-rag-i/</guid>
+      <description>A first pass at LazyGraphRAG — defer all LLM calls until query time, build a concept graph from NLP, and chase the cost/quality sweet spot.</description>
+      
+    </item>
+    
+    <item>
+      <title>Data Saturday #52 — Oslo</title>
+      <link>http://localhost:1313/posts/data-saturday-52-oslo/</link>
+      <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/data-saturday-52-oslo/</guid>
+      <description>Session notes from Data Saturday #52 in Oslo: tools that came up, Roche&amp;rsquo;s Maxim, testing in the dev cycle, data mesh, and turning data into influence.</description>
+      
+    </item>
+    
+    <item>
+      <title>Never Make Another dbt model .yml</title>
+      <link>http://localhost:1313/posts/never-make-another-yml/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/never-make-another-yml/</guid>
+      <description>A GitHub Action that runs dbt-osmosis + dbt2looker on every push, then commits the regenerated .yml and .lookml files back to your repo.</description>
+      
+    </item>
+    
+    <item>
+      <title>Data Vault walk-through: Fifty First Data Vaults</title>
+      <link>http://localhost:1313/posts/fifty-first-data-vaults/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/fifty-first-data-vaults/</guid>
+      <description>A talk to the UK Data Vault User Group on what went wrong (and right) across many iterations of building data vaults, and why the methodology is worth the heartache.</description>
+      
+    </item>
+    
+    <item>
+      <title>Building a Wedding Photo Collection Website with Ruby on Rails</title>
+      <link>http://localhost:1313/posts/media-collection-with-ruby-on-rails/</link>
+      <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/media-collection-with-ruby-on-rails/</guid>
+      <description>A step-by-step Rails build for a wedding photo collection site — Active Storage on AWS S3, deployed to Heroku, custom domain via GoDaddy.</description>
+      
+    </item>
     
     <item>
       <title>dlt Demo: Bird Hotspot Finder, pt. II</title>
@@ -22,12 +82,42 @@
     </item>
     
     <item>
+      <title>World Wide Data Vault Consortium 2023</title>
+      <link>http://localhost:1313/posts/wwdvc-2023/</link>
+      <pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/wwdvc-2023/</guid>
+      <description>A recap of WWDVC 2023 in Stowe, Vermont — small, international, and surprisingly star-studded for a methodology most people still haven&amp;rsquo;t heard of.</description>
+      
+    </item>
+    
+    <item>
       <title>dlt Demo: Bird Hotspot Finder, pt. I</title>
       <link>http://localhost:1313/posts/bird-finder-via-dlt-i/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
       <author>loughondata@protonmail.com (Connor Lough)</author>
       <guid>http://localhost:1313/posts/bird-finder-via-dlt-i/</guid>
       <description>Loading eBird API data into DuckDB with dlt, then querying it in DBeaver. A first look at dlt as a Meltano/Airbyte alternative.</description>
+      
+    </item>
+    
+    <item>
+      <title>Creating a Mermaid Diagram for Your dbt Project Using graph.gpickle</title>
+      <link>http://localhost:1313/posts/dbt-and-mermaid-diagramming/</link>
+      <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/dbt-and-mermaid-diagramming/</guid>
+      <description>Turn a dbt project&amp;rsquo;s compiled graph.gpickle into a Mermaid diagram so you can actually see what your models depend on.</description>
+      
+    </item>
+    
+    <item>
+      <title>Creating a Data Pipeline Between PostgreSQL and Snowflake with Meltano</title>
+      <link>http://localhost:1313/posts/meltano-getting-started/</link>
+      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/meltano-getting-started/</guid>
+      <description>Standing up a Meltano pipeline from a PostgreSQL source to a Snowflake destination — init, plugins, env config, run.</description>
       
     </item>
     

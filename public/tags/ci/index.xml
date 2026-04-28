@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ci on Lough on Data</title>
+    <link>http://localhost:1313/tags/ci/</link>
+    <description>Recent content in Ci on Lough on Data</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>loughondata@protonmail.com (Connor Lough)</managingEditor>
+    <webMaster>loughondata@protonmail.com (Connor Lough)</webMaster>
+    <copyright>© 2026 Connor Lough</copyright>
+    <lastBuildDate>Sat, 10 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/ci/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Never Make Another dbt model .yml</title>
+      <link>http://localhost:1313/posts/never-make-another-yml/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/never-make-another-yml/</guid>
+      <description>A GitHub Action that runs dbt-osmosis + dbt2looker on every push, then commits the regenerated .yml and .lookml files back to your repo.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

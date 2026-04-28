@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Conferences on Lough on Data</title>
+    <link>http://localhost:1313/tags/conferences/</link>
+    <description>Recent content in Conferences on Lough on Data</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>loughondata@protonmail.com (Connor Lough)</managingEditor>
+    <webMaster>loughondata@protonmail.com (Connor Lough)</webMaster>
+    <copyright>© 2026 Connor Lough</copyright>
+    <lastBuildDate>Mon, 05 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/conferences/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>World Wide Data Vault Consortium 2023</title>
+      <link>http://localhost:1313/posts/wwdvc-2023/</link>
+      <pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/wwdvc-2023/</guid>
+      <description>A recap of WWDVC 2023 in Stowe, Vermont — small, international, and surprisingly star-studded for a methodology most people still haven&amp;rsquo;t heard of.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Claude on Lough on Data</title>
+    <link>http://localhost:1313/tags/claude/</link>
+    <description>Recent content in Claude on Lough on Data</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>loughondata@protonmail.com (Connor Lough)</managingEditor>
+    <webMaster>loughondata@protonmail.com (Connor Lough)</webMaster>
+    <copyright>© 2026 Connor Lough</copyright>
+    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/claude/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Giving Your LLM Context</title>
+      <link>http://localhost:1313/posts/give-your-llm-context/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/give-your-llm-context/</guid>
+      <description>Working through RAG approaches — from the dummy-simple Ollama + AnythingLLM path to a GCP RAG Engine setup that lives next to your IDE.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
