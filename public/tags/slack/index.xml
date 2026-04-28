@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Lough on Data</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Lough on Data</description>
+    <title>Slack on Lough on Data</title>
+    <link>http://localhost:1313/tags/slack/</link>
+    <description>Recent content in Slack on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>loughondata@protonmail.com (Connor Lough)</managingEditor>
     <webMaster>loughondata@protonmail.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/slack/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>dlt Demo: Bird Hotspot Finder, pt. II</title>
@@ -18,16 +18,6 @@
       <author>loughondata@protonmail.com (Connor Lough)</author>
       <guid>http://localhost:1313/posts/bird-finder-via-dlt-ii/</guid>
       <description>Extending the dlt pipeline: stage load packages to S3, persist schema changes back to DuckDB, and ping Slack on schema drift.</description>
-      
-    </item>
-    
-    <item>
-      <title>dlt Demo: Bird Hotspot Finder, pt. I</title>
-      <link>http://localhost:1313/posts/bird-finder-via-dlt-i/</link>
-      <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <author>loughondata@protonmail.com (Connor Lough)</author>
-      <guid>http://localhost:1313/posts/bird-finder-via-dlt-i/</guid>
-      <description>Loading eBird API data into DuckDB with dlt, then querying it in DBeaver. A first look at dlt as a Meltano/Airbyte alternative.</description>
       
     </item>
     
