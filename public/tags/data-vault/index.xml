@@ -6,8 +6,8 @@
     <description>Recent content in Data-Vault on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>loughondata@protonmail.com (Connor Lough)</managingEditor>
-    <webMaster>loughondata@protonmail.com (Connor Lough)</webMaster>
+    <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
+    <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
     <lastBuildDate>Fri, 15 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/data-vault/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
       <title>Data Vault walk-through: Fifty First Data Vaults</title>
       <link>http://localhost:1313/posts/fifty-first-data-vaults/</link>
       <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
-      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/posts/fifty-first-data-vaults/</guid>
       <description>A talk to the UK Data Vault User Group on what went wrong (and right) across many iterations of building data vaults, and why the methodology is worth the heartache.</description>
       
@@ -25,7 +25,7 @@
       <title>World Wide Data Vault Consortium 2023</title>
       <link>http://localhost:1313/posts/wwdvc-2023/</link>
       <pubDate>Mon, 05 Jun 2023 00:00:00 +0000</pubDate>
-      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/posts/wwdvc-2023/</guid>
       <description>A recap of WWDVC 2023 in Stowe, Vermont — small, international, and surprisingly star-studded for a methodology most people still haven&amp;rsquo;t heard of.</description>
       

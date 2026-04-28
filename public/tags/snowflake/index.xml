@@ -6,8 +6,8 @@
     <description>Recent content in Snowflake on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>loughondata@protonmail.com (Connor Lough)</managingEditor>
-    <webMaster>loughondata@protonmail.com (Connor Lough)</webMaster>
+    <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
+    <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
     <lastBuildDate>Wed, 05 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/snowflake/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
       <title>Creating a Data Pipeline Between PostgreSQL and Snowflake with Meltano</title>
       <link>http://localhost:1313/posts/meltano-getting-started/</link>
       <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
-      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/posts/meltano-getting-started/</guid>
       <description>Standing up a Meltano pipeline from a PostgreSQL source to a Snowflake destination — init, plugins, env config, run.</description>
       

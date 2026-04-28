@@ -6,8 +6,8 @@
     <description>Recent content in Dbt2looker on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>loughondata@protonmail.com (Connor Lough)</managingEditor>
-    <webMaster>loughondata@protonmail.com (Connor Lough)</webMaster>
+    <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
+    <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
     <lastBuildDate>Sat, 10 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/dbt2looker/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
       <title>Never Make Another dbt model .yml</title>
       <link>http://localhost:1313/posts/never-make-another-yml/</link>
       <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
-      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/posts/never-make-another-yml/</guid>
       <description>A GitHub Action that runs dbt-osmosis + dbt2looker on every push, then commits the regenerated .yml and .lookml files back to your repo.</description>
       

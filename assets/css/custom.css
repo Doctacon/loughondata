@@ -1,3 +1,10 @@
+/* Site-wide background pattern. Gold + 0.08 opacity baked into the SVG. */
+body {
+  background-image: url("/img/bg-pattern.svg?v=2");
+  background-attachment: fixed;
+  background-repeat: repeat;
+}
+
 /* Shrink fixed-fill-blur header — default smaller, even smaller on scroll. */
 
 /* Tailwind class min-h-[148px] needs bracket escapes in the selector. */

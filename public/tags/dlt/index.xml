@@ -6,8 +6,8 @@
     <description>Recent content in Dlt on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>loughondata@protonmail.com (Connor Lough)</managingEditor>
-    <webMaster>loughondata@protonmail.com (Connor Lough)</webMaster>
+    <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
+    <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
     <lastBuildDate>Sat, 31 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/dlt/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
       <title>Data Saturday #52 — Oslo</title>
       <link>http://localhost:1313/posts/data-saturday-52-oslo/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
-      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/posts/data-saturday-52-oslo/</guid>
       <description>Session notes from Data Saturday #52 in Oslo: tools that came up, Roche&amp;rsquo;s Maxim, testing in the dev cycle, data mesh, and turning data into influence.</description>
       
@@ -25,7 +25,7 @@
       <title>dlt Demo: Bird Hotspot Finder, pt. II</title>
       <link>http://localhost:1313/posts/bird-finder-via-dlt-ii/</link>
       <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
-      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/posts/bird-finder-via-dlt-ii/</guid>
       <description>Extending the dlt pipeline: stage load packages to S3, persist schema changes back to DuckDB, and ping Slack on schema drift.</description>
       
@@ -35,7 +35,7 @@
       <title>dlt Demo: Bird Hotspot Finder, pt. I</title>
       <link>http://localhost:1313/posts/bird-finder-via-dlt-i/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
-      <author>loughondata@protonmail.com (Connor Lough)</author>
+      <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/posts/bird-finder-via-dlt-i/</guid>
       <description>Loading eBird API data into DuckDB with dlt, then querying it in DBeaver. A first look at dlt as a Meltano/Airbyte alternative.</description>
       
