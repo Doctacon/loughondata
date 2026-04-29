@@ -12,6 +12,16 @@
     <lastBuildDate>Tue, 28 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/duckdb/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Building a Dream-Job Radar</title>
+      <link>http://localhost:1313/posts/building-a-dream-job-radar/</link>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/building-a-dream-job-radar/</guid>
+      <description>On a dog-walk conversation with Claude that surfaced a role I would have otherwise missed — and the small dlt → S3 → MotherDuck pipeline I&amp;rsquo;m building so it doesn&amp;rsquo;t happen again.</description>
+      
+    </item>
+    
+    <item>
       <title>Databox</title>
       <link>http://localhost:1313/projects/databox/</link>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
