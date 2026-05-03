@@ -17,7 +17,7 @@ summary: |
 
 ## Code
 
-Open source: [github.com/Doctacon/dream-job-radar](https://github.com/Doctacon/dream-job-radar)
+{{< github repo="Doctacon/dream-job-radar" >}}
 
 ## What changed from the plan
 

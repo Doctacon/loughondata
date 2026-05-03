@@ -32,3 +32,15 @@ html[data-scrolled="true"] .logo {
   max-height: 2.25rem !important;
   max-width: 2.25rem !important;
 }
+
+/* Constrain carousel width so portrait photos don't dominate the page. */
+[data-twe-carousel-init] {
+  max-width: 22rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Fit images inside the frame instead of cropping (mixed portrait + landscape). */
+[data-twe-carousel-init] img {
+  object-fit: contain !important;
+}

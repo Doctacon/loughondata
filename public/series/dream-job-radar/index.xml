@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dream-Job-Radar on Lough on Data</title>
+    <link>http://localhost:1313/series/dream-job-radar/</link>
+    <description>Recent content in Dream-Job-Radar on Lough on Data</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
+    <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
+    <copyright>© 2026 Connor Lough</copyright>
+    <lastBuildDate>Sat, 02 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/series/dream-job-radar/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Building a Dream-Job Radar, Part 2: The Build</title>
+      <link>http://localhost:1313/posts/building-a-dream-job-radar-ii/</link>
+      <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/building-a-dream-job-radar-ii/</guid>
+      <description>The follow-up to Part 1. I built the dream-job radar — a small&#xA;dlt pipeline that watches a hand-picked list of outdoor, geospatial,&#xA;and forestry companies for new roles, writes Parquet to Cloudflare R2,&#xA;and surfaces everything in a MotherDuck Dive I check on my phone.&#xA;Here&amp;rsquo;s how it works, what changed from the original plan, and what&#xA;I deliberately left naive.</description>
+      
+    </item>
+    
+    <item>
+      <title>Building a Dream-Job Radar</title>
+      <link>http://localhost:1313/posts/building-a-dream-job-radar/</link>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/building-a-dream-job-radar/</guid>
+      <description>On a dog-walk conversation with Claude that surfaced a role I would have otherwise missed — and the small dlt → S3 → MotherDuck pipeline I&amp;rsquo;m building so it doesn&amp;rsquo;t happen again.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

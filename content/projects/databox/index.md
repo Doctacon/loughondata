@@ -13,8 +13,7 @@ The project exists to answer one question: *do species distributions shift with 
 
 ## Links
 
-- **Code** — [github.com/Doctacon/databox](https://github.com/Doctacon/databox)
-- **Data dictionary** — [doctacon.github.io/databox](https://doctacon.github.io/databox/)
+{{< github repo="Doctacon/databox" >}}
 
 ![Databox Dagster DAG showing ingest, transform, and quality assets in a single graph](dagster-databox.png)
 

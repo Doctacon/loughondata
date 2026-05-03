@@ -32,6 +32,8 @@ Open to consulting engagements, especially anything sitting at the intersection 
 - Data Saturday #52 — Oslo, Norway
 - AI Council 2026 — San Francisco, CA 
 
+{{< carousel images="gallery/*" aspectRatio="1-1" interval="3500" captions="{dataday.png:Data Saturday #52 — Oslo,datamon.png:Datamon from Zenlytics at dbt Coalesce 2023,inmon.png:With Bill Inmon at WWDVC 2023,neworleans.png:dbt Coalesce 2022 — New Orleans,suomenlinna.png:Suomenlinna — Helsinki Data Vault training}" >}}
+
 ## Get in touch
 
 - Email — [connor@loughondata.com](mailto:connor@loughondata.com)

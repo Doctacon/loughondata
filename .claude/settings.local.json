@@ -6,7 +6,9 @@
       "Bash(rm -rf /tmp/loughondata-build)",
       "Bash(rtk ls *)",
       "Bash(rtk read *)",
-      "Bash(rtk grep *)"
+      "Bash(rtk grep *)",
+      "Bash(hugo server *)",
+      "WebFetch(domain:blowfish.page)"
     ]
   }
 }
