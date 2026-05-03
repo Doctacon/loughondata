@@ -4,6 +4,8 @@ date: 2026-04-28
 draft: false
 summary: "On a dog-walk conversation with Claude that surfaced a role I would have otherwise missed — and the small dlt → S3 → MotherDuck pipeline I'm building so it doesn't happen again."
 tags: ["data-engineering", "dlt", "motherduck", "duckdb", "aws-s3", "career", "side-project"]
+series: ["dream-job-radar"]
+series_order: 1
 ---
 
 I almost missed a dream job today.
