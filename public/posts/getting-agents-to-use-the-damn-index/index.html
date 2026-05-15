@@ -1,0 +1,1384 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Getting Agents To Use The Damn Index &middot; Lough on Data</title>
+    <meta name="title" content="Getting Agents To Use The Damn Index &middot; Lough on Data">
+  
+
+  
+  
+    <meta name="description" content="Notes from AI Council on turbopuffer, embeddings, semantic code search, and why the hardest part is not building the index but getting agents to use it.">
+  
+  
+    <meta name="keywords" content="ai,embeddings,rag,semantic-search,coding-agents,conferences,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/getting-agents-to-use-the-damn-index/">
+  
+  
+
+  
+  
+    <meta name="author" content="Connor Lough">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://github.com/Doctacon" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/crlough/" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/getting-agents-to-use-the-damn-index/">
+  <meta property="og:site_name" content="Lough on Data">
+  <meta property="og:title" content="Getting Agents To Use The Damn Index">
+  <meta property="og:description" content="Notes from AI Council on turbopuffer, embeddings, semantic code search, and why the hardest part is not building the index but getting agents to use it.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-05-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-05-15T00:00:00+00:00">
+    <meta property="article:tag" content="Ai">
+    <meta property="article:tag" content="Embeddings">
+    <meta property="article:tag" content="Rag">
+    <meta property="article:tag" content="Semantic-Search">
+    <meta property="article:tag" content="Coding-Agents">
+    <meta property="article:tag" content="Conferences">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Getting Agents To Use The Damn Index">
+  <meta name="twitter:description" content="Notes from AI Council on turbopuffer, embeddings, semantic code search, and why the hardest part is not building the index but getting agents to use it.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.46325517c2e455aa4ef0699b8f1be6913f5c71ee8b053a1342ee2443a231949b038777972f6e9e20c6385b91ccbb19fa88b61a2be797d166b533f3f325b82914.css"
+    integrity="sha512-RjJVF8LkVapO8GmbjxvmkT9cce6LBToTQu4kQ6IxlJsDh3eXL26eIMY4W5HMuxn6iLYaK&#43;eX0Wa1M/PzJbgpFA==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.4c6b36324987fc05dd8cd58437946294b6f2e315675cef16098738373ac2a0fe600416b00e13a1a8687c872f82868f7a0ece1e4ae0b9ea6ead63721f5e8b6748.js"
+      integrity="sha512-TGs2MkmH/AXdjNWEN5RilLby4xVnXO8WCYc4NzrCoP5gBBawDhOhqGh8hy&#43;Cho96Ds4eSuC56m6tY3IfXotnSA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Getting Agents To Use The Damn Index",
+    "headline": "Getting Agents To Use The Damn Index",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/posts/getting-agents-to-use-the-damn-index/",
+    "author" : {
+      "@type": "Person",
+      "name": "Connor Lough"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-05-15T00:00:00\u002b00:00",
+    "datePublished": "2026-05-15T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-05-15T00:00:00\u002b00:00",
+    
+    "keywords": ["ai","embeddings","rag","semantic-search","coding-agents","conferences"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2193"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+    <script>
+  (function () {
+    const root = document.documentElement;
+    const setScrolled = () => {
+      root.dataset.scrolled = window.scrollY > 20 ? "true" : "false";
+    };
+    setScrolled();
+    window.addEventListener("scroll", setScrolled, { passive: true });
+  })();
+</script>
+
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl backdrop-saturate-220 backdrop-brightness-112 dark:backdrop-saturate-180 dark:backdrop-brightness-95 bg-primary-200/80 bg-linear-60 dark:bg-primary-800/30 shadow-xl"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+    
+    
+      <div>
+        <a href="/" class="flex">
+          <span class="sr-only">Lough on Data</span>
+          
+            <img
+              src="/img/avatar.png"
+              width="512"
+              height="512"
+              class="logo max-h-20 max-w-20 object-scale-down object-left nozoom"
+              alt="">
+          
+        </a>
+      </div>
+    
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Lough on Data
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Posts"
+      title="Posts">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Posts
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <div class="nested-menu">
+      <div class="cursor-pointer flex items-center">
+        <a
+          
+            href="/projects/"
+            
+          
+          aria-label="Projects"
+          class="flex items-center text-base font-medium bf-icon-color-hover"
+          title="Projects">
+          
+          <span class="text-bg font-bg break-normal" title="Projects">
+            Projects
+          </span>
+          <span>
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </span>
+        </a>
+      </div>
+      <div class="menuhide">
+        <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl bg-neutral/25 dark:bg-neutral-800/25">
+          <div class="flex flex-col space-y-3">
+            
+              <a
+                href="/projects/databox/"
+                
+                aria-label="Databox"
+                class="flex items-center bf-icon-color-hover">
+                
+                <span class="text-sm font-sm" title="Databox">
+                  Databox
+                </span>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+      
+      
+        <span class="text-base font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Posts"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Posts" class="text-2xl font-bold tracking-tight">
+          Posts
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/projects/"
+        aria-label="Projects"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Projects" class="text-2xl font-bold tracking-tight">
+          Projects
+        </span>
+        
+          <label
+            for="fullscreen-submenu-projects"
+            class="ms-auto flex items-center justify-center h-10 w-10 cursor-pointer rounded-lg bf-icon-color-hover border bf-border-color bf-border-color-hover">
+            <span class="relative block icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+</span>
+          </label>
+        
+      </a>
+
+      
+        <input checked type="checkbox" id="fullscreen-submenu-projects" autocomplete="off" class="hidden peer/full">
+
+        <div
+          class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 peer-checked/full:grid-rows-[1fr]">
+          <div class="overflow-hidden">
+            <div class="ms-7 mt-4">
+              
+                <a
+                  href="/projects/databox/"
+                  aria-label="Databox"
+                  
+                  class="flex items-center gap-3 p-2 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+                  
+                  <span title="Databox" class="text-lg">
+                    Databox
+                  </span>
+                </a>
+              
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/about/"
+        aria-label="About"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="About" class="text-2xl font-bold tracking-tight">
+          About
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+  integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+  data-blur-id="menu-blur"></script>
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Getting Agents To Use The Damn Index
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-05-15T00:00:00&#43;00:00">15 May 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2193 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">11 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/ai/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Ai
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/embeddings/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Embeddings
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/rag/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Rag
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/semantic-search/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Semantic-Search
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/coding-agents/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Coding-Agents
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/conferences/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Conferences
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Connor Lough"
+        src="/img/avatar_hu_db567b2fec34e612.png"
+        data-zoom-src="/img/avatar_hu_8b208b04b1ab4e2f.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Connor Lough
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500 space-x-2">
+    
+      
+        
+        <a
+          class="email-link hover:text-primary-700 dark:hover:text-primary-400"
+          href="#"
+          
+            data-email="bWFpbHRvOmNvbm5vckBsb3VnaG9uZGF0YS5jb20="
+          
+          target="_blank"
+          aria-label="Email"
+          title="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/Doctacon"
+          
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.linkedin.com/in/crlough/"
+          
+          target="_blank"
+          aria-label="Linkedin"
+          title="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <p>AI Council was a hell of a week.</p>
+<p>It was only 3 days in the heart of San Francisco, but it was action packed. I have heard people call it the practitioners conference, and that felt right. The people there were not just selling some AI future. They were demoing what they had learned, what broke, what scaled, what did not scale, and what they were still confused by.</p>
+<p>Even some of the company talks barely felt like company talks. They were not sales pitches so much as, &ldquo;here is a person at this company who did something cool, and maybe it is adjacent to the product, but mostly it is just interesting.&rdquo;</p>
+<p>If the conference had themes, they were probably something like:</p>
+<ul>
+<li>embeddings</li>
+<li>agent evaluations</li>
+<li>autonomous agents</li>
+<li>the feasibility of local models</li>
+<li>data engineering in an age of AI</li>
+</ul>
+<p>Two sessions stuck with me more than the others. One was about making neural networks smaller through quantization and pruning, which was fascinating and also firmly in the &ldquo;I am doing my best to keep up&rdquo; category. The speaker walked through making local LLMs more efficient, including ideas like preserving important outlier weights instead of accidentally smoothing them into oblivion. It made me dream a little bit about the day when local models can take over more of the work we currently hand to proprietary frontier models.</p>
+<p>But the session I have not stopped thinking about was the turbopuffer workshop and talk about embeddings, semantic search, and what becomes possible when your index can support trillions of embeddings.</p>
+
+<h2 class="relative group">Embeddings are cached compute
+    <div id="embeddings-are-cached-compute" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#embeddings-are-cached-compute" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The phrase that stuck with me was this:</p>
+<blockquote><p>Embeddings are cached compute.</p>
+</blockquote><p>That is such a clean mental model.</p>
+<p>An embedding is not magic. It is not intelligence. It is not the answer. It is a bunch of numbers that represent something about the meaning of text, code, an image, a customer call, or whatever else you fed into the embedding model. You paid the model once to turn that thing into numbers. Later, when a user asks a question, you turn the question into numbers too and compare it against the numbers you already stored.</p>
+<p>In other words: you did some thinking ahead of time, cached the shape of that thinking, and made it cheap to search later.</p>
+<p>That is interesting for normal RAG over documents. It is much more interesting for code.</p>
+<p>Codebases are massive piles of relationships. Files call files. Modules imply ownership. Test names imply behavior. The thing you need is often not named the way you would have named it. And if you work at a company with thousands of repositories, the question is not &ldquo;can I grep for a function name?&rdquo; The question is closer to: &ldquo;where the hell does this behavior live?&rdquo;</p>
+<p>That is where embeddings feel like a legitimate unlock. Not because they replace exact search, but because they give you a way to enter a codebase through meaning instead of vocabulary.</p>
+
+<h2 class="relative group">The indexing part is not the whole problem
+    <div id="the-indexing-part-is-not-the-whole-problem" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-indexing-part-is-not-the-whole-problem" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The week before AI Council, I saw that turbopuffer was giving a workshop about teaching Claude how to do semantic search. I was excited because this is a problem I had already been circling.</p>
+<p>Cursor does this natively and does it well. In their own writing, they describe semantic search as one of the biggest drivers of agent performance, improving response accuracy by 12.5% on average. Cursor also published a great post on <a href="https://cursor.com/blog/secure-codebase-indexing"  target="_blank" rel="noreferrer">securely indexing large codebases</a>, where they explain how they use Merkle trees, content hashes, and reusable indexes so big repos can become searchable in seconds instead of hours.</p>
+<p>That got me thinking: why shouldn&rsquo;t I have something like that in my own editor?</p>
+<p>I do not use Claude Code. I use <a href="https://github.com/anomalyco/opencode"  target="_blank" rel="noreferrer">OpenCode</a>, Anomaly&rsquo;s open-source AI coding editor. So the weekend before the conference I tried to spin up my own local MCP server for semantic code search.</p>
+<p>The first version was not that hard. Take the codebase, chunk it, embed the chunks, store vectors in LanceDB, expose a search tool over MCP. A local-first semantic search server is very buildable.</p>
+<p>Then you hit the real problem.</p>
+<p>You built an MCP server or CLI tool. Great. You have semantic search. Great.</p>
+<p>Now how do you get the agent you are talking to to use the damn thing?</p>
+
+<h2 class="relative group">The grep doom spiral
+    <div id="the-grep-doom-spiral" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-grep-doom-spiral" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This was the part of the workshop that resonated with me the most, because the turbopuffer speaker basically named the same problem I had run into.</p>
+<p>Agents want to grep everything.</p>
+<p>That is not even always wrong. <code>grep</code>, <code>rg</code>, and <code>find</code> are fantastic tools. They are deterministic, fast, and exact. If you know the function name, error string, import path, route, config key, or class name, semantic search is usually not the first thing you want. You want exact search.</p>
+<p>But if you are trying to find behavior-adjacent files, understand a new codebase, discover the module that owns a concept, or figure out where some product behavior probably lives, exact search can be a bad starting point. It forces you to know the vocabulary before you have learned the territory.</p>
+<p>So I tried the obvious thing: tell the agent to use semantic search in .md.</p>
+<p>That made things worse.</p>
+<p>The more I told the model to use semantic search, the more it would get flustered. It would start reaching for <code>grep</code>, remember the instruction, apologize to itself, say something like, &ldquo;I should use semantic search first,&rdquo; then sometimes reach for <code>grep</code> again anyway. It created this little doom spiral where the agent was no longer just solving the task. It was spending tokens litigating whether it was allowed to search the way it wanted to search.</p>
+<p>That is a bad trade. You do not want your agent burning context on tool guilt.</p>
+<p>This also matches one of the more interesting findings around agent retrieval benchmarks. <a href="https://contextbench.github.io/"  target="_blank" rel="noreferrer">ContextBench</a> evaluates how well coding agents retrieve the right multi-file context for issue-resolution tasks. Its findings are pretty sobering: frontier models still struggle to retrieve precise code context, they tend to favor recall over precision, and retrieved context is often not used in final solutions.</p>
+<p>In other words, retrieval is not just an infrastructure problem. It is a behavior problem.</p>
+
+<h2 class="relative group">Turbopuffer&rsquo;s answer: upgrade grep
+    <div id="turbopuffers-answer-upgrade-grep" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#turbopuffers-answer-upgrade-grep" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The turbopuffer answer, at least as I understood it from the workshop, is not to ban grep. It is to make something grep-shaped that can do more than grep.</p>
+<p>Their public repo <a href="https://github.com/turbopuffer/turbogrep"  target="_blank" rel="noreferrer"><code>turbopuffer/turbogrep</code></a> is a small Rust CLI called <code>tg</code>. The README describes it as a semantic, full-text, and regex grep tool using turbopuffer. It uses Voyage embeddings and turbopuffer as the backend index.</p>
+<p>That is an important product shape.</p>
+<p>Instead of handing the agent a new abstract semantic-search tool and then begging it to remember when to use it, you give it a search tool that satisfies the grep instinct. The model still feels like it is searching. It still has a CLI. It still gets regex and full-text behavior. But now semantic search is part of the same path.</p>
+<p>Do not fight the agent&rsquo;s grep impulse. Upgrade grep.</p>
+<p>That feels correct to me. Especially if you are building the tool for a general coding agent where you cannot fully control the harness, model, routing layer, or system prompts.</p>
+<p>But because I am using OpenCode, I think I have another option that I like.</p>
+
+<h2 class="relative group">My answer: conditionally prime the agent before it starts
+    <div id="my-answer-conditionally-prime-the-agent-before-it-starts" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#my-answer-conditionally-prime-the-agent-before-it-starts" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>OpenCode has an experimental plugin hook that can transform chat messages before the main model sees them.</p>
+<p>That is a very interesting place to intervene.</p>
+<p>Instead of telling the main model, &ldquo;please use semantic search,&rdquo; my plugin tries to make the semantic-search decision before the main model even starts. The flow is:</p>
+<ol>
+<li>The user sends a message.</li>
+<li>A small classifier model starts in a separate OpenCode session.</li>
+<li>The classifier sees the user prompt and answers one question: should semantic code search run first, yes or no?</li>
+<li>If the classifier says no, the user&rsquo;s message stays unchanged.</li>
+<li>If the classifier says yes, the plugin calls <a href="https://github.com/giancarloerra/SocratiCode"  target="_blank" rel="noreferrer">SocratiCode</a>&rsquo;s semantic search MCP tool using the user&rsquo;s prompt (<em>a more sophisticated version of my semantic search MCP</em>).</li>
+<li>The plugin appends the search results as synthetic context to the user message.</li>
+<li>The main model starts fresh and sees the original request plus the semantic search results.</li>
+<li>The main model can still use <code>rg</code> or <code>grep</code> for exact verification without having to feel bad about it.</li>
+</ol>
+<p>The plugin is here: <a href="https://github.com/Doctacon/dream-job-radar/blob/main/.opencode/plugins/socraticode-primer.js"  target="_blank" rel="noreferrer"><code>socraticode-primer.js</code></a>.</p>
+<p>At the time of writing, the classifier model defaults to <code>openai/gpt-5.4-mini</code>. The classifier is intentionally constrained. It is not supposed to answer the coding question, plan the task, or use tools. It just returns compact JSON like:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;search&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nt">&#34;reason&#34;</span><span class="p">:</span> <span class="s2">&#34;repository context likely needed&#34;</span><span class="p">}</span></span></span></code></pre></div></div>
+<p>If <code>search=true</code>, the plugin calls SocratiCode&rsquo;s <code>codebase_search</code> tool, wraps the result in a <code>&lt;socraticode-semantic-search&gt;</code> block, and appends that block to the latest user message as synthetic text. There is also a small guard that warns before broad <code>rg</code> or <code>grep</code> usage after semantic search has already succeeded.</p>
+<p>The important difference is that the main model is not being asked to choose semantic search as a matter of virtue. It is simply given useful context at the start of the session when a small router thought that context would help.</p>
+<p>That makes the model calmer.</p>
+<p>It can start from semantic discovery and still use exact search for proof.</p>
+
+<h2 class="relative group">Semantic search for discovery, grep for proof
+    <div id="semantic-search-for-discovery-grep-for-proof" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#semantic-search-for-discovery-grep-for-proof" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This is the practical split I keep coming back to:</p>
+<blockquote><p>Semantic search is for discovery. Grep is for proof.</p>
+</blockquote><p>Semantic search wins when the query looks like:</p>
+<ul>
+<li>Where is this behavior implemented?</li>
+<li>What module owns this concept?</li>
+<li>How does this feature work?</li>
+<li>What files are probably related to this business process?</li>
+<li>Where should I start in this codebase?</li>
+</ul>
+<p>Grep wins when the query looks like:</p>
+<ul>
+<li>Where is this exact function called?</li>
+<li>Where does this import come from?</li>
+<li>What code produces this exact error string?</li>
+<li>Which tests reference this class?</li>
+<li>Where is this route or config key defined?</li>
+</ul>
+<p>Most real debugging work needs both. You use semantic search to find the neighborhood, then grep to trace the addresses.</p>
+<p>The mistake is trying to make one tool morally superior to the other. That is how you get the doom spiral. The agent does not need a lecture. It needs the right context at the right time and permission to use exact tools when exactness matters.</p>
+
+<h2 class="relative group">Why this matters outside code
+    <div id="why-this-matters-outside-code" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-this-matters-outside-code" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Code search is just the easiest place for me to feel the problem.</p>
+<p>The same pattern applies to basically every pile of company knowledge:</p>
+<ul>
+<li>all of your codebases</li>
+<li>all of your sales call transcripts</li>
+<li>all of your Slack messages</li>
+<li>all of your docs</li>
+<li>all of your support tickets</li>
+</ul>
+<p>Every company is already feeling the pressure of AI making downstream people more capable. People ask better questions. They ask more questions. They move faster. That is good, but it also pushes more strain upstream onto the people who know where things live and why they work the way they do.</p>
+<p>At some point, the bottleneck is not whether a model can generate text. The bottleneck is whether humans and agents can navigate the organization quickly enough to find the right context.</p>
+<p>A few years ago it would have sounded ridiculous to say, &ldquo;I work at a 1,500-person SaaS company and I understand every repository.&rdquo; Of course you do not. Nobody does. Different teams, different languages, different conventions, different historical accidents.</p>
+<p>But now I am less sure that it should sound ridiculous.</p>
+<p>Not because every engineer needs to hold every codebase in their head. That is not the goal. The goal is more like: can we build an encyclopedia of the company that agents can search well enough to help us navigate? Can we understand the high-level purpose of every repository? Can we find the fifteen repos that matter for a cross-cutting change without spending a week asking around?</p>
+<p>Embeddings make that question feel less absurd.</p>
+
+<h2 class="relative group">What I am trying next
+    <div id="what-i-am-trying-next" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-i-am-trying-next" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>For now, my bias is local-first.</p>
+<p>Turbopuffer is extremely cool. Their architecture is compelling: vector and full-text search built on object storage, with production claims in the trillions of documents and very low query latencies. But I am already paying for LLMs, and turbopuffer is not priced like a toy I casually add to my personal stack.</p>
+<p>So the personal path is:</p>
+<ol>
+<li>Use SocratiCode locally.</li>
+<li>Use a local or cheap embedding model where possible.</li>
+<li>Prime OpenCode sessions with semantic results only when a small classifier thinks it is useful.</li>
+<li>Let the main model use grep for exact verification.</li>
+<li>Find a way to quantify whether this actually improves outcomes.</li>
+</ol>
+<p>That last part is the missing piece. Qualitatively, I have seen gains. The sessions feel less lost at the beginning. The model finds behavior-adjacent files faster. It spends less time wandering the repo. But I have not put hard numbers behind it yet.</p>
+<p>That is probably the next project.</p>
+<p>Because after AI Council, I am convinced the interesting question is not only, &ldquo;can we embed everything?&rdquo;</p>
+<p>It is:</p>
+<blockquote><p>Once we embed everything, how do we get agents to use the damn index?</p>
+</blockquote>
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/building-a-dream-job-radar-ii/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Building a Dream-Job Radar, Part 2: The Build
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-05-02T00:00:00&#43;00:00">2 May 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/posts/index.xml"
+                title="">
+                
+                  <span class="mr-1">
+                    <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM128 416c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg></span>
+                  </span>
+                
+                RSS
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Connor Lough
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

@@ -10,4 +10,5 @@ E pluribus unum — from many, one. With a slight edit, "from many, ~~one~~ a fe
 
 There is a lot of good information out there about what data vault is, at a very high level. But not necessarily a glut of documented user experiences and stories from those who have implemented data vaults. Back at the tail end of 2023, I had the opportunity to present my ["fifty first data vaults"](https://www.linkedin.com/posts/activity-7123088473628049408-7cFA?utm_source=share&utm_medium=member_desktop) to the Data Vault User Group. During the session I gave a quick 411 on my setup and then we got into the weeds of what went wrong in each iteration. We ended with why data vault is ultimately worth the heartache.
 
-If you'd like to listen to the recording: [link to UK Data Vault User Group recording](https://www.ukdatavaultusergroup.co.uk/50-first-dates-with-data-vault/).
+If you'd like to listen to the recording:
+{{< youtubeLite id="E5VC2tueICk" label="Fifty First DataVaults - AutomateDV" params="start=1558" >}}

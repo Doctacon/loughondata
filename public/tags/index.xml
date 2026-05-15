@@ -9,7 +9,67 @@
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <lastBuildDate>Sat, 02 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ai</title>
+      <link>http://localhost:1313/tags/ai/</link>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/ai/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Coding-Agents</title>
+      <link>http://localhost:1313/tags/coding-agents/</link>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/coding-agents/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Conferences</title>
+      <link>http://localhost:1313/tags/conferences/</link>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/conferences/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Embeddings</title>
+      <link>http://localhost:1313/tags/embeddings/</link>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/embeddings/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Rag</title>
+      <link>http://localhost:1313/tags/rag/</link>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/rag/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Semantic-Search</title>
+      <link>http://localhost:1313/tags/semantic-search/</link>
+      <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/semantic-search/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Cloudflare-R2</title>
@@ -122,16 +182,6 @@
     </item>
     
     <item>
-      <title>Ai</title>
-      <link>http://localhost:1313/tags/ai/</link>
-      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/tags/ai/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Claude</title>
       <link>http://localhost:1313/tags/claude/</link>
       <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
@@ -172,16 +222,6 @@
     </item>
     
     <item>
-      <title>Rag</title>
-      <link>http://localhost:1313/tags/rag/</link>
-      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/tags/rag/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Graph-Rag</title>
       <link>http://localhost:1313/tags/graph-rag/</link>
       <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
@@ -197,16 +237,6 @@
       <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/nlp/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Conferences</title>
-      <link>http://localhost:1313/tags/conferences/</link>
-      <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/tags/conferences/</guid>
       <description></description>
       
     </item>
