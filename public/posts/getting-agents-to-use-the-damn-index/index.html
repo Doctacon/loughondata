@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="dark"
-  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  data-auto-appearance="false"><head>
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="en">
@@ -28,7 +28,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:1313/posts/getting-agents-to-use-the-damn-index/">
+  <link rel="canonical" href="https://loughondata.com/posts/getting-agents-to-use-the-damn-index/">
   
   
 
@@ -57,7 +57,7 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/posts/getting-agents-to-use-the-damn-index/">
+  <meta property="og:url" content="https://loughondata.com/posts/getting-agents-to-use-the-damn-index/">
   <meta property="og:site_name" content="Lough on Data">
   <meta property="og:title" content="Getting Agents To Use The Damn Index">
   <meta property="og:description" content="Notes from AI Council on turbopuffer, embeddings, semantic code search, and why the hardest part is not building the index but getting agents to use it.">
@@ -235,7 +235,7 @@
     "headline": "Getting Agents To Use The Damn Index",
     
     "inLanguage": "en",
-    "url" : "http://localhost:1313/posts/getting-agents-to-use-the-damn-index/",
+    "url" : "https://loughondata.com/posts/getting-agents-to-use-the-damn-index/",
     "author" : {
       "@type": "Person",
       "name": "Connor Lough"
@@ -256,6 +256,12 @@
 
 
   
+  
+    
+
+
+
+
   
 
   
@@ -1114,7 +1120,7 @@
 <li>The main model starts fresh and sees the original request plus the semantic search results.</li>
 <li>The main model can still use <code>rg</code> or <code>grep</code> for exact verification without having to feel bad about it.</li>
 </ol>
-<p>The plugin is here: <a href="https://github.com/Doctacon/dream-job-radar/blob/main/.opencode/plugins/socraticode-primer.js"  target="_blank" rel="noreferrer"><code>socraticode-primer.js</code></a>.</p>
+<p>The plugin is here: <a href="https://github.com/Doctacon/geospatial-role-radar/blob/main/.opencode/plugins/socraticode-primer.js"  target="_blank" rel="noreferrer"><code>socraticode-primer.js</code></a>.</p>
 <p>At the time of writing, the classifier model defaults to <code>openai/gpt-5.4-mini</code>. The classifier is intentionally constrained. It is not supposed to answer the coding question, plan the task, or use tools. It just returns compact JSON like:</p>
 <div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span><span class="nt">&#34;search&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nt">&#34;reason&#34;</span><span class="p">:</span> <span class="s2">&#34;repository context likely needed&#34;</span><span class="p">}</span></span></span></code></pre></div></div>
 <p>If <code>search=true</code>, the plugin calls SocratiCode&rsquo;s <code>codebase_search</code> tool, wraps the result in a <code>&lt;socraticode-semantic-search&gt;</code> block, and appends that block to the latest user message as synthetic text. There is also a small guard that warns before broad <code>rg</code> or <code>grep</code> usage after semantic search has already succeeded.</p>
@@ -1230,9 +1236,9 @@
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/building-a-dream-job-radar-ii/">
+              href="/posts/local-data-stack-build/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Building a Dream-Job Radar, Part 2: The Build
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Local Data Stack
               </span>
             </a>
             
@@ -1345,7 +1351,7 @@
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
-  data-url="http://localhost:1313/">
+  data-url="https://loughondata.com/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">

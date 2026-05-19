@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web-Dev on Lough on Data</title>
-    <link>http://localhost:1313/tags/web-dev/</link>
+    <link>https://loughondata.com/tags/web-dev/</link>
     <description>Recent content in Web-Dev on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <lastBuildDate>Thu, 10 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/web-dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/web-dev/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Building a Wedding Photo Collection Website with Ruby on Rails</title>
-      <link>http://localhost:1313/posts/media-collection-with-ruby-on-rails/</link>
+      <link>https://loughondata.com/posts/media-collection-with-ruby-on-rails/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/posts/media-collection-with-ruby-on-rails/</guid>
+      <guid>https://loughondata.com/posts/media-collection-with-ruby-on-rails/</guid>
       <description>A step-by-step Rails build for a wedding photo collection site — Active Storage on AWS S3, deployed to Heroku, custom domain via GoDaddy.</description>
       
     </item>

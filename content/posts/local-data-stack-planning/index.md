@@ -1,14 +1,14 @@
 ---
-title: "Building a Dream-Job Radar"
+title: "Local Data Stack Planning"
 date: 2026-04-28
 draft: false
 summary: "On a dog-walk conversation with Claude that surfaced a role I would have otherwise missed — and the small dlt → S3 → MotherDuck pipeline I'm building so it doesn't happen again."
 tags: ["data-engineering", "dlt", "motherduck", "duckdb", "aws-s3", "career", "side-project"]
-series: ["dream-job-radar"]
+series: ["local-data-stack"]
 series_order: 1
 ---
 
-I almost missed a dream job today.
+I almost missed a role that fit unusually well today.
 
 I was on a 30-minute walk to pick up my dog from daycare and decided to test Claude's voice mode. It's gotten weirdly good in the last few months — no awkward pauses, knew what I meant before I finished the sentence, the whole thing felt like talking to someone who'd already read my résumé. Creepy. Useful.
 
@@ -16,7 +16,7 @@ I started with geospatial. What gaps would a real interviewer poke at if I, a se
 
 For about a year and a half — basically since I got serious about big game hunting — I've known the answer is something like: data, but in an industry where what I do on weekends and what I do on weekdays draw the same Venn diagram. Data work is portable. You can do it anywhere. You might as well do it somewhere you'd actually want to go.
 
-So I asked Claude what companies I should be aiming at. The two I always come back to are GoHunt and onX. I use them aggressively. (I've also tried to build my own offline version, mostly because both of them claim to be offline apps but treat "no service" like a cold-start problem. Fifteen minutes to load a downloaded map is not offline.) Anyway — shot in the dark question, and Claude surfaced a senior data role at one of them that I hadn't seen posted anywhere. That's a top-three dream-fit job for me. Easily worth the time investment of an actual application.
+So I asked Claude what companies I should be aiming at. The two I always come back to are GoHunt and onX. I use them aggressively. (I've also tried to build my own offline version, mostly because both of them claim to be offline apps but treat "no service" like a cold-start problem. Fifteen minutes to load a downloaded map is not offline.) Anyway — shot in the dark question, and Claude surfaced a senior data role at one of them that I hadn't seen posted anywhere. That's a top-three best-fit role for me. Easily worth the time investment of an actual application.
 
 That's where the gut check happened: how did I not know about this until a chat agent told me on a dog walk? How many other top-three roles are quietly opening and closing while I'm not paying attention?
 
@@ -43,7 +43,7 @@ Plan B, if Dives don't pencil out: same pipeline, same data, but I build a small
 
 ## Why I'm writing this down
 
-Mostly because I want the embarrassment of an unfinished public project to keep me honest. The point isn't a job-board scraper. The point is closing the loop on "found role → tracked role → applied to role" so that the next dream job doesn't slip past me on a dog walk.
+Mostly because I want the embarrassment of an unfinished public project to keep me honest. The point isn't a job-board scraper. The point is closing the loop on "found role → tracked role → evaluated role" so that the next strong fit doesn't slip past me on a dog walk.
 
 Part two will be the build itself — pipeline, dashboard, whatever embedded surface I land on, posted right here once it's working.
 

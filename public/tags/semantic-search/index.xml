@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Semantic-Search on Lough on Data</title>
-    <link>http://localhost:1313/tags/semantic-search/</link>
+    <link>https://loughondata.com/tags/semantic-search/</link>
     <description>Recent content in Semantic-Search on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <lastBuildDate>Fri, 15 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/semantic-search/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 15 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/semantic-search/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Getting Agents To Use The Damn Index</title>
-      <link>http://localhost:1313/posts/getting-agents-to-use-the-damn-index/</link>
+      <link>https://loughondata.com/posts/getting-agents-to-use-the-damn-index/</link>
       <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/posts/getting-agents-to-use-the-damn-index/</guid>
+      <guid>https://loughondata.com/posts/getting-agents-to-use-the-damn-index/</guid>
       <description>Notes from AI Council on turbopuffer, embeddings, semantic code search, and why the hardest part is not building the index but getting agents to use it.</description>
       
     </item>

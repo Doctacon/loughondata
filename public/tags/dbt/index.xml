@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dbt on Lough on Data</title>
-    <link>http://localhost:1313/tags/dbt/</link>
+    <link>https://loughondata.com/tags/dbt/</link>
     <description>Recent content in Dbt on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <lastBuildDate>Sat, 10 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/dbt/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/dbt/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Never Make Another dbt model .yml</title>
-      <link>http://localhost:1313/posts/never-make-another-yml/</link>
+      <link>https://loughondata.com/posts/never-make-another-yml/</link>
       <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/posts/never-make-another-yml/</guid>
+      <guid>https://loughondata.com/posts/never-make-another-yml/</guid>
       <description>A GitHub Action that runs dbt-osmosis + dbt2looker on every push, then commits the regenerated .yml and .lookml files back to your repo.</description>
       
     </item>
     
     <item>
       <title>Data Vault walk-through: Fifty First Data Vaults</title>
-      <link>http://localhost:1313/posts/fifty-first-data-vaults/</link>
+      <link>https://loughondata.com/posts/fifty-first-data-vaults/</link>
       <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/posts/fifty-first-data-vaults/</guid>
+      <guid>https://loughondata.com/posts/fifty-first-data-vaults/</guid>
       <description>A talk to the UK Data Vault User Group on what went wrong (and right) across many iterations of building data vaults, and why the methodology is worth the heartache.</description>
       
     </item>
     
     <item>
       <title>Creating a Mermaid Diagram for Your dbt Project Using graph.gpickle</title>
-      <link>http://localhost:1313/posts/dbt-and-mermaid-diagramming/</link>
+      <link>https://loughondata.com/posts/dbt-and-mermaid-diagramming/</link>
       <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/posts/dbt-and-mermaid-diagramming/</guid>
+      <guid>https://loughondata.com/posts/dbt-and-mermaid-diagramming/</guid>
       <description>Turn a dbt project&amp;rsquo;s compiled graph.gpickle into a Mermaid diagram so you can actually see what your models depend on.</description>
       
     </item>

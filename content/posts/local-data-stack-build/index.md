@@ -1,13 +1,13 @@
 ---
-title: "Building a Dream-Job Radar, Part 2: The Build"
+title: "Local Data Stack"
 subtitle: "The pipeline works. Here's what I actually shipped."
 date: 2026-05-02
 draft: false
 tags: ["data-engineering", "geospatial", "motherduck", "duckdb", "cloudflare-r2", "dlt"]
-series: ["dream-job-radar"]
+series: ["local-data-stack"]
 series_order: 2
 summary: |
-  The follow-up to Part 1. I built the dream-job radar — a small
+  The follow-up to Part 1. I built the stack — a small
   dlt pipeline that watches a hand-picked list of outdoor, geospatial,
   and forestry companies for new roles, writes Parquet to Cloudflare R2,
   and surfaces everything in a MotherDuck Dive I check on my phone.
@@ -17,11 +17,11 @@ summary: |
 
 ## Code
 
-{{< github repo="Doctacon/dream-job-radar" >}}
+{{< github repo="Doctacon/geospatial-role-radar" >}}
 
 ## What changed from the plan
 
-In [Part 1]({{< ref "building-a-dream-job-radar" >}}) I said I'd build a dlt pipeline that hits the Greenhouse API for a curated list of companies, ships results to S3, and surfaces them in a MotherDuck Dive embedded right here on the site. I also flagged that MotherDuck's pricing might be a problem for a solo person tracking job postings.
+In [Part 1]({{< ref "local-data-stack-planning" >}}) I said I'd build a dlt pipeline that hits the Greenhouse API for a curated list of companies, ships results to S3, and surfaces them in a MotherDuck Dive embedded right here on the site. I also flagged that MotherDuck's pricing might be a problem for a solo person tracking job postings.
 
 Here's what actually happened.
 

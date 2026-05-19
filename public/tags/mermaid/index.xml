@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mermaid on Lough on Data</title>
-    <link>http://localhost:1313/tags/mermaid/</link>
+    <link>https://loughondata.com/tags/mermaid/</link>
     <description>Recent content in Mermaid on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <lastBuildDate>Sat, 15 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/mermaid/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/mermaid/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Creating a Mermaid Diagram for Your dbt Project Using graph.gpickle</title>
-      <link>http://localhost:1313/posts/dbt-and-mermaid-diagramming/</link>
+      <link>https://loughondata.com/posts/dbt-and-mermaid-diagramming/</link>
       <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/posts/dbt-and-mermaid-diagramming/</guid>
+      <guid>https://loughondata.com/posts/dbt-and-mermaid-diagramming/</guid>
       <description>Turn a dbt project&amp;rsquo;s compiled graph.gpickle into a Mermaid diagram so you can actually see what your models depend on.</description>
       
     </item>

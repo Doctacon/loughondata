@@ -3,115 +3,115 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/posts/getting-agents-to-use-the-damn-index/</loc>
+    <loc>https://loughondata.com/posts/getting-agents-to-use-the-damn-index/</loc>
     <lastmod>2026-05-15T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://loughondata.com/</loc>
     <lastmod>2026-05-15T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://loughondata.com/posts/</loc>
     <lastmod>2026-05-15T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/building-a-dream-job-radar-ii/</loc>
+    <loc>https://loughondata.com/posts/local-data-stack-build/</loc>
     <lastmod>2026-05-02T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/building-a-dream-job-radar/</loc>
+    <loc>https://loughondata.com/projects/databox/</loc>
     <lastmod>2026-04-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/projects/databox/</loc>
+    <loc>https://loughondata.com/posts/local-data-stack-planning/</loc>
     <lastmod>2026-04-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://loughondata.com/projects/</loc>
     <lastmod>2026-04-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/give-your-llm-context/</loc>
+    <loc>https://loughondata.com/posts/give-your-llm-context/</loc>
     <lastmod>2025-09-15T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/lazy-graph-rag-i/</loc>
+    <loc>https://loughondata.com/posts/lazy-graph-rag-i/</loc>
     <lastmod>2025-01-20T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/data-saturday-52-oslo/</loc>
+    <loc>https://loughondata.com/posts/data-saturday-52-oslo/</loc>
     <lastmod>2024-08-31T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/never-make-another-yml/</loc>
+    <loc>https://loughondata.com/posts/never-make-another-yml/</loc>
     <lastmod>2024-02-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/fifty-first-data-vaults/</loc>
+    <loc>https://loughondata.com/posts/fifty-first-data-vaults/</loc>
     <lastmod>2023-12-15T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/media-collection-with-ruby-on-rails/</loc>
+    <loc>https://loughondata.com/posts/media-collection-with-ruby-on-rails/</loc>
     <lastmod>2023-08-10T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/bird-finder-via-dlt-ii/</loc>
+    <loc>https://loughondata.com/posts/bird-finder-via-dlt-ii/</loc>
     <lastmod>2023-06-15T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/wwdvc-2023/</loc>
+    <loc>https://loughondata.com/posts/wwdvc-2023/</loc>
     <lastmod>2023-06-05T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/bird-finder-via-dlt-i/</loc>
+    <loc>https://loughondata.com/posts/bird-finder-via-dlt-i/</loc>
     <lastmod>2023-06-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/dbt-and-mermaid-diagramming/</loc>
+    <loc>https://loughondata.com/posts/dbt-and-mermaid-diagramming/</loc>
     <lastmod>2023-04-15T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/meltano-getting-started/</loc>
+    <loc>https://loughondata.com/posts/meltano-getting-started/</loc>
     <lastmod>2023-04-05T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://loughondata.com/about/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Lough on Data</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://loughondata.com/categories/</link>
     <description>Recent content in Categories on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://loughondata.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>

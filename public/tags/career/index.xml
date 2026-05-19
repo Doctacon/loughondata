@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Career on Lough on Data</title>
-    <link>http://localhost:1313/tags/career/</link>
+    <link>https://loughondata.com/tags/career/</link>
     <description>Recent content in Career on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <lastBuildDate>Tue, 28 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/career/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/career/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Building a Dream-Job Radar</title>
-      <link>http://localhost:1313/posts/building-a-dream-job-radar/</link>
+      <title>Local Data Stack Planning</title>
+      <link>https://loughondata.com/posts/local-data-stack-planning/</link>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/posts/building-a-dream-job-radar/</guid>
+      <guid>https://loughondata.com/posts/local-data-stack-planning/</guid>
       <description>On a dog-walk conversation with Claude that surfaced a role I would have otherwise missed — and the small dlt → S3 → MotherDuck pipeline I&amp;rsquo;m building so it doesn&amp;rsquo;t happen again.</description>
       
     </item>

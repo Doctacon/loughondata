@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Lough on Data</title>
-    <link>http://localhost:1313/series/</link>
+    <link>https://loughondata.com/series/</link>
     <description>Recent content in Series on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <lastBuildDate>Sat, 02 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/series/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Dream-Job-Radar</title>
-      <link>http://localhost:1313/series/dream-job-radar/</link>
+      <title>Local-Data-Stack</title>
+      <link>https://loughondata.com/series/local-data-stack/</link>
       <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/series/dream-job-radar/</guid>
+      <guid>https://loughondata.com/series/local-data-stack/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Bird Hotspot Finder</title>
-      <link>http://localhost:1313/series/bird-hotspot-finder/</link>
+      <link>https://loughondata.com/series/bird-hotspot-finder/</link>
       <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/series/bird-hotspot-finder/</guid>
+      <guid>https://loughondata.com/series/bird-hotspot-finder/</guid>
       <description></description>
       
     </item>

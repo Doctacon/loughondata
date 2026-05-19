@@ -2,61 +2,61 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Duckdb on Lough on Data</title>
-    <link>http://localhost:1313/tags/duckdb/</link>
+    <link>https://loughondata.com/tags/duckdb/</link>
     <description>Recent content in Duckdb on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <lastBuildDate>Sat, 02 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/duckdb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/duckdb/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Building a Dream-Job Radar, Part 2: The Build</title>
-      <link>http://localhost:1313/posts/building-a-dream-job-radar-ii/</link>
+      <title>Local Data Stack</title>
+      <link>https://loughondata.com/posts/local-data-stack-build/</link>
       <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/posts/building-a-dream-job-radar-ii/</guid>
-      <description>The follow-up to Part 1. I built the dream-job radar — a small&#xA;dlt pipeline that watches a hand-picked list of outdoor, geospatial,&#xA;and forestry companies for new roles, writes Parquet to Cloudflare R2,&#xA;and surfaces everything in a MotherDuck Dive I check on my phone.&#xA;Here&amp;rsquo;s how it works, what changed from the original plan, and what&#xA;I deliberately left naive.</description>
-      
-    </item>
-    
-    <item>
-      <title>Building a Dream-Job Radar</title>
-      <link>http://localhost:1313/posts/building-a-dream-job-radar/</link>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/posts/building-a-dream-job-radar/</guid>
-      <description>On a dog-walk conversation with Claude that surfaced a role I would have otherwise missed — and the small dlt → S3 → MotherDuck pipeline I&amp;rsquo;m building so it doesn&amp;rsquo;t happen again.</description>
+      <guid>https://loughondata.com/posts/local-data-stack-build/</guid>
+      <description>The follow-up to Part 1. I built the stack — a small&#xA;dlt pipeline that watches a hand-picked list of outdoor, geospatial,&#xA;and forestry companies for new roles, writes Parquet to Cloudflare R2,&#xA;and surfaces everything in a MotherDuck Dive I check on my phone.&#xA;Here&amp;rsquo;s how it works, what changed from the original plan, and what&#xA;I deliberately left naive.</description>
       
     </item>
     
     <item>
       <title>Databox</title>
-      <link>http://localhost:1313/projects/databox/</link>
+      <link>https://loughondata.com/projects/databox/</link>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/projects/databox/</guid>
+      <guid>https://loughondata.com/projects/databox/</guid>
       <description>A single-operator data platform that ingests eBird, NOAA, and USGS into one queryable warehouse — built to answer whether species distributions shift with same-day weather and streamflow anomalies.</description>
       
     </item>
     
     <item>
+      <title>Local Data Stack Planning</title>
+      <link>https://loughondata.com/posts/local-data-stack-planning/</link>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/posts/local-data-stack-planning/</guid>
+      <description>On a dog-walk conversation with Claude that surfaced a role I would have otherwise missed — and the small dlt → S3 → MotherDuck pipeline I&amp;rsquo;m building so it doesn&amp;rsquo;t happen again.</description>
+      
+    </item>
+    
+    <item>
       <title>dlt Demo: Bird Hotspot Finder, pt. II</title>
-      <link>http://localhost:1313/posts/bird-finder-via-dlt-ii/</link>
+      <link>https://loughondata.com/posts/bird-finder-via-dlt-ii/</link>
       <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/posts/bird-finder-via-dlt-ii/</guid>
+      <guid>https://loughondata.com/posts/bird-finder-via-dlt-ii/</guid>
       <description>Extending the dlt pipeline: stage load packages to S3, persist schema changes back to DuckDB, and ping Slack on schema drift.</description>
       
     </item>
     
     <item>
       <title>dlt Demo: Bird Hotspot Finder, pt. I</title>
-      <link>http://localhost:1313/posts/bird-finder-via-dlt-i/</link>
+      <link>https://loughondata.com/posts/bird-finder-via-dlt-i/</link>
       <pubDate>Thu, 01 Jun 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/posts/bird-finder-via-dlt-i/</guid>
+      <guid>https://loughondata.com/posts/bird-finder-via-dlt-i/</guid>
       <description>Loading eBird API data into DuckDB with dlt, then querying it in DBeaver. A first look at dlt as a Meltano/Airbyte alternative.</description>
       
     </item>

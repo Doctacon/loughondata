@@ -115,7 +115,7 @@ Instead of telling the main model, "please use semantic search," my plugin tries
 7. The main model starts fresh and sees the original request plus the semantic search results.
 8. The main model can still use `rg` or `grep` for exact verification without having to feel bad about it.
 
-The plugin is here: [`socraticode-primer.js`](https://github.com/Doctacon/dream-job-radar/blob/main/.opencode/plugins/socraticode-primer.js).
+The plugin is here: [`socraticode-primer.js`](https://github.com/Doctacon/geospatial-role-radar/blob/main/.opencode/plugins/socraticode-primer.js).
 
 At the time of writing, the classifier model defaults to `openai/gpt-5.4-mini`. The classifier is intentionally constrained. It is not supposed to answer the coding question, plan the task, or use tools. It just returns compact JSON like:
 
