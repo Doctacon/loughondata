@@ -15,18 +15,20 @@
 
   
   
-    <title>About &middot; Lough on Data</title>
-    <meta name="title" content="About &middot; Lough on Data">
+    <title>From Map Tiles To Trail Masks &middot; Lough on Data</title>
+    <meta name="title" content="From Map Tiles To Trail Masks &middot; Lough on Data">
   
 
   
   
-    <meta name="description" content="Connor Lough — data engineer in Prescott, Arizona.">
+    <meta name="description" content="A checkpoint from learning geospatial computer vision from first principles: map tiles, weak OSM labels, raster masks, PyTorch tensors, and why the first model failed in a useful way.">
+  
+  
+    <meta name="keywords" content="geospatial,computer-vision,machine-learning,pytorch,openstreetmap,">
   
   
   
-  
-  <link rel="canonical" href="https://loughondata.com/about/">
+  <link rel="canonical" href="https://loughondata.com/posts/from-map-tiles-to-trail-masks/">
   
   
 
@@ -55,17 +57,25 @@
   
 
   
-  <meta property="og:url" content="https://loughondata.com/about/">
+  <meta property="og:url" content="https://loughondata.com/posts/from-map-tiles-to-trail-masks/">
   <meta property="og:site_name" content="Lough on Data">
-  <meta property="og:title" content="About">
-  <meta property="og:description" content="Connor Lough — data engineer in Prescott, Arizona.">
+  <meta property="og:title" content="From Map Tiles To Trail Masks">
+  <meta property="og:description" content="A checkpoint from learning geospatial computer vision from first principles: map tiles, weak OSM labels, raster masks, PyTorch tensors, and why the first model failed in a useful way.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-05-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-05-18T00:00:00+00:00">
+    <meta property="article:tag" content="Geospatial">
+    <meta property="article:tag" content="Computer-Vision">
+    <meta property="article:tag" content="Machine-Learning">
+    <meta property="article:tag" content="Pytorch">
+    <meta property="article:tag" content="Openstreetmap">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="About">
-  <meta name="twitter:description" content="Connor Lough — data engineer in Prescott, Arizona.">
+  <meta name="twitter:title" content="From Map Tiles To Trail Masks">
+  <meta name="twitter:description" content="A checkpoint from learning geospatial computer vision from first principles: map tiles, weak OSM labels, raster masks, PyTorch tensors, and why the first model failed in a useful way.">
 
   
   
@@ -176,21 +186,6 @@
 
 
 
-  
-  
-  <link
-    type="text/css"
-    rel="stylesheet"
-    href="/css/components/carousel.8e65f2c27285218feed8ca2a6e12a80ec2fb4be8f774b7c74d9642f1bc528a3352288a700a64a0e1e3c38a40b74c978b5dbbeb38346202b5f7613d8fc023e3c9.css"
-    integrity="sha512-jmXywnKFIY/u2MoqbhKoDsL7S&#43;j3dLfHTZZC8bxSijNSKIpwCmSg4ePDikC3TJeLXbvrODRiArX3YT2PwCPjyQ==">
-  
-  
-  <script
-    defer
-    type="text/javascript"
-    src="/lib/tw-elements/index.min.5ffccf337b773ee831515cdde152c8039e972dd479f7dffb0532a79de9a6de5926154ae2587f181ed6c06a99aee25667096bcf6495da5aa86e235d98baee5943.js"
-    integrity="sha512-X/zPM3t3PugxUVzd4VLIA56XLdR599/7BTKnnemm3lkmFUriWH8YHtbAapmu4lZnCWvPZJXaWqhuI12Yuu5ZQw=="></script>
-
 
 
 
@@ -234,26 +229,26 @@
   [{
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "Lough on Data",
-    "name": "About",
-    "headline": "About",
-    "description": "Connor Lough — data engineer in Prescott, Arizona.",
+    "articleSection": "Posts",
+    "name": "From Map Tiles To Trail Masks",
+    "headline": "From Map Tiles To Trail Masks",
+    
     "inLanguage": "en",
-    "url" : "https://loughondata.com/about/",
+    "url" : "https://loughondata.com/posts/from-map-tiles-to-trail-masks/",
     "author" : {
       "@type": "Person",
       "name": "Connor Lough"
     },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-05-18T00:00:00\u002b00:00",
+    "datePublished": "2026-05-18T00:00:00\u002b00:00",
     
+    "dateModified": "2026-05-18T00:00:00\u002b00:00",
     
-    
-    
-    
-    
-    
+    "keywords": ["geospatial","computer-vision","machine-learning","pytorch","openstreetmap"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "308"
+    "wordCount": "849"
   }]
   </script>
 
@@ -676,7 +671,7 @@
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        About
+        From Map Tiles To Trail Masks
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -701,11 +696,17 @@
   
 
   
-
+    
   
 
   
 
+  
+    
+  
+
+  
+    
   
 
   
@@ -721,6 +722,8 @@
 
   <div class="flex flex-row flex-wrap items-center">
     
+    
+      <time datetime="2026-05-18T00:00:00&#43;00:00">18 May 2026</time><span class="px-2 text-primary-500">&middot;</span><span>849 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
     
 
     
@@ -740,6 +743,118 @@
         
       
         
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/geospatial/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Geospatial
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/computer-vision/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Computer-Vision
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/machine-learning/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Machine-Learning
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/pytorch/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Pytorch
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/openstreetmap/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Openstreetmap
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
       
     </div>
   
@@ -758,9 +873,103 @@
   
 
   
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Connor Lough"
+        src="/img/avatar_hu_db567b2fec34e612.png"
+        data-zoom-src="/img/avatar_hu_8b208b04b1ab4e2f.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Connor Lough
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500 space-x-2">
+    
+      
+        
+        <a
+          class="email-link hover:text-primary-700 dark:hover:text-primary-400"
+          href="#"
+          
+            data-email="bWFpbHRvOmNvbm5vckBsb3VnaG9uZGF0YS5jb20="
+          
+          target="_blank"
+          aria-label="Email"
+          title="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/Doctacon"
+          
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.linkedin.com/in/crlough/"
+          
+          target="_blank"
+          aria-label="Linkedin"
+          title="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
 
   
 
+  
+
+  
+    <div class="mb-5"></div>
   
 
       
@@ -773,632 +982,152 @@
       
       
       
-        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
-          <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
-            <details
-  open
-  id="TOCView"
-  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
-  <summary
-    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
-    Table of Contents
-  </summary>
-  <div
-    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#what-im-up-for">What I&rsquo;m up for</a></li>
-    <li><a href="#where-ive-been">Where I&rsquo;ve been</a></li>
-    <li><a href="#get-in-touch">Get in touch</a></li>
-  </ul>
-</nav>
-  </div>
-</details>
-<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
-  <summary
-    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
-    Table of Contents
-  </summary>
-  <div
-    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#what-im-up-for">What I&rsquo;m up for</a></li>
-    <li><a href="#where-ive-been">Where I&rsquo;ve been</a></li>
-    <li><a href="#get-in-touch">Get in touch</a></li>
-  </ul>
-</nav>
-  </div>
-</details>
-
-
-
-          </div>
-        </div>
-      
 
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
 
         <div class="article-content max-w-prose mb-20">
-          <p>I&rsquo;m Connor. I&rsquo;m a data engineer at <a href="https://www.harness.io"  target="_blank" rel="noreferrer">Harness</a>, based in Arizona. Day-to-day that means around fifty DLT pipelines, transformations in SQLMesh, deploying internal services with our security team, and building an AI app that sits on top of our warehouse and talks to Slack so the rest of the company can ask the data questions in plain English instead of pinging our centralized data team.</p>
-<p>I don&rsquo;t write code because I like writing code. I write code because it&rsquo;s the fastest way I&rsquo;ve found to solve the problems I&rsquo;ve found to be worth solving. That distinction matters to me. The good days are the ones where a pipeline makes someone&rsquo;s job quieter or a query answers a question that used to require a meeting.</p>
-<p>Outside of work I hunt, which is how I ended up caring about geospatial data, public-land boundaries, and the strange politics of who owns what dirt. I keep an eye on what <a href="https://motherduck.com"  target="_blank" rel="noreferrer">MotherDuck</a> is shipping — they release features faster than I can find excuses to use them, which is a good problem.</p>
+          <p>I have been working through a small geospatial computer vision project from first principles. The goal sounds simple: take satellite imagery and teach a model to find trails.</p>
+<p>In practice, I learned that most of the work is not the model. It is getting geography, imagery, labels, and pixels to line up correctly.</p>
+<p>The pipeline now looks like this:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">bbox + zoom
+</span></span><span class="line"><span class="cl">-&gt; XYZ map tiles
+</span></span><span class="line"><span class="cl">-&gt; satellite imagery
+</span></span><span class="line"><span class="cl">-&gt; OSM trail vectors
+</span></span><span class="line"><span class="cl">-&gt; rasterized trail masks
+</span></span><span class="line"><span class="cl">-&gt; dataset CSV
+</span></span><span class="line"><span class="cl">-&gt; PyTorch tensors
+</span></span><span class="line"><span class="cl">-&gt; tiny segmentation model
+</span></span><span class="line"><span class="cl">-&gt; validation predictions</span></span></code></pre></div></div>
+<p>That is enough to be worth writing down, even though it is not a useful trail detector yet.</p>
 
-<h2 class="relative group">What I&rsquo;m up for
-    <div id="what-im-up-for" class="anchor"></div>
+<h2 class="relative group">Images, but as data
+    <div id="images-but-as-data" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-im-up-for" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#images-but-as-data" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>Open to consulting engagements, especially anything sitting at the intersection of data engineering and geospatial. Curious about federal / GIS roles where the work is closer to land and resources than it is to ad-tech.</p>
+<p>The first mental shift was remembering that a satellite tile is not just a picture. It is a grid of numbers.</p>
+<p>In this project, each image tile is a 256x256 PNG. When loaded into PyTorch, it becomes a tensor shaped like this:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">3 x 256 x 256</span></span></code></pre></div></div>
+<p>That means:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">3 color channels
+</span></span><span class="line"><span class="cl">256 pixels tall
+</span></span><span class="line"><span class="cl">256 pixels wide</span></span></code></pre></div></div>
+<p>PyTorch usually uses <code>channels x height x width</code>, so the RGB channels come first. Other tools use different conventions, which is annoying in the same way metric vs. imperial is annoying. The practical rule is simple: check the shape at every boundary.</p>
+<p>The model does not see “a satellite image” the way I do. It sees normalized numeric arrays.</p>
 
-<h2 class="relative group">Where I&rsquo;ve been
-    <div id="where-ive-been" class="anchor"></div>
+<h2 class="relative group">Labels are the hard part
+    <div id="labels-are-the-hard-part" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#where-ive-been" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#labels-are-the-hard-part" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p><strong>Trainings</strong></p>
-<ul>
-<li>Data Vault 2.0 Practitioner — Helsinki, Finland</li>
-</ul>
-<p><strong>Conferences</strong></p>
-<ul>
-<li>dbt Coalesce 2022 — New Orleans, LA</li>
-<li>dbt Coalesce 2023 — San Diego, CA</li>
-<li>WWDVC 2023 — Stowe, VT</li>
-<li>Data Saturday #52 — Oslo, Norway</li>
-<li>AI Council 2026 — San Francisco, CA</li>
-</ul>
+<p>A model needs examples. For trail detection, one example is not just an image. It is an image plus an answer key.</p>
+<p>For segmentation, the answer key is a mask:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">image: 256 x 256 RGB pixels
+</span></span><span class="line"><span class="cl">mask:  256 x 256 label pixels</span></span></code></pre></div></div>
+<p>In the current binary setup, each mask pixel means:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">0 = not trail
+</span></span><span class="line"><span class="cl">1 = trail</span></span></code></pre></div></div>
+<p>That is why this is called segmentation. We are not asking, “does this tile contain a trail?” We are asking, “which pixels are trail?”</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  
-
-
-
-
-
-  
-  
-  
-    
-    
-      
-      
-      
-    
-  
-    
-    
-      
-      
-      
-    
-  
-    
-    
-      
-      
-      
-    
-  
-    
-    
-      
-      
-      
-    
-  
-    
-    
-      
-      
-      
-    
-  
-    
-    
-      
-      
-      
-    
-  
-
-
-<div class="width-patch"></div>
-<div
-  id="carousel-2bc053111729a74bce2ff033e7cdfe90-1779164948740994000"
-  class="relative"
-  style="container-type: inline-size;"
-  data-twe-carousel-init
-  data-twe-ride="carousel"
-  data-twe-interval="3500">
-  <div
-    class="absolute right-0 left-0 z-2 mx-[15%] mb-10 flex list-none justify-center p-0"
-    style="top: calc(100cqi * 1 / 1 - 2.5rem);"
-    data-twe-carousel-indicators>
-    
-    
-      <button
-        type="button"
-        data-twe-target="#carousel-2bc053111729a74bce2ff033e7cdfe90-1779164948740994000"
-        data-twe-slide-to="0"
-        data-twe-carousel-active aria-current="true"
-        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-        aria-label="Slide 0"></button>
-      
-    
-      <button
-        type="button"
-        data-twe-target="#carousel-2bc053111729a74bce2ff033e7cdfe90-1779164948740994000"
-        data-twe-slide-to="1"
-        
-        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-        aria-label="Slide 1"></button>
-      
-    
-      <button
-        type="button"
-        data-twe-target="#carousel-2bc053111729a74bce2ff033e7cdfe90-1779164948740994000"
-        data-twe-slide-to="2"
-        
-        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-        aria-label="Slide 2"></button>
-      
-    
-      <button
-        type="button"
-        data-twe-target="#carousel-2bc053111729a74bce2ff033e7cdfe90-1779164948740994000"
-        data-twe-slide-to="3"
-        
-        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-        aria-label="Slide 3"></button>
-      
-    
-      <button
-        type="button"
-        data-twe-target="#carousel-2bc053111729a74bce2ff033e7cdfe90-1779164948740994000"
-        data-twe-slide-to="4"
-        
-        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-        aria-label="Slide 4"></button>
-      
-    
-      <button
-        type="button"
-        data-twe-target="#carousel-2bc053111729a74bce2ff033e7cdfe90-1779164948740994000"
-        data-twe-slide-to="5"
-        
-        class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-neutral bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-        aria-label="Slide 5"></button>
-      
-    
-  </div>
-
-  <div
-    class="relative w-full after:clear-both after:block after:content-['']"
-    style="overflow-x: clip; overflow-y: visible;">
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div
-      class="relative float-left -mr-[100%]  w-full transition-transform ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item
-      style="transition-duration: 3500ms;"
-      data-twe-carousel-active>
-        <div class="single_hero_background relative overflow-hidden" style="aspect-ratio: 1 / 1;">
-          <img
-            src="/about/gallery/aicouncil.jpeg"
-            class="block absolute top-0 object-cover w-full h-full not-prose nozoom"
-            alt="carousel image 1">
-        </div>
-        
-        <figcaption
-          class="mt-1 invisible"
-          aria-hidden="true"
-        >&nbsp;</figcaption>
-        
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div
-      class="relative float-left -mr-[100%] hidden w-full transition-transform ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item
-      style="transition-duration: 3500ms;"
-      >
-        <div class="single_hero_background relative overflow-hidden" style="aspect-ratio: 1 / 1;">
-          <img
-            src="/about/gallery/dataday.png"
-            class="block absolute top-0 object-cover w-full h-full not-prose nozoom"
-            alt="carousel image 2">
-        </div>
-        
-        <figcaption
-          class="mt-1 "
-          
-        >Data Saturday #52 — Oslo</figcaption>
-        
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div
-      class="relative float-left -mr-[100%] hidden w-full transition-transform ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item
-      style="transition-duration: 3500ms;"
-      >
-        <div class="single_hero_background relative overflow-hidden" style="aspect-ratio: 1 / 1;">
-          <img
-            src="/about/gallery/datamon.png"
-            class="block absolute top-0 object-cover w-full h-full not-prose nozoom"
-            alt="carousel image 3">
-        </div>
-        
-        <figcaption
-          class="mt-1 "
-          
-        >Datamon from Zenlytics at dbt Coalesce 2023</figcaption>
-        
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div
-      class="relative float-left -mr-[100%] hidden w-full transition-transform ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item
-      style="transition-duration: 3500ms;"
-      >
-        <div class="single_hero_background relative overflow-hidden" style="aspect-ratio: 1 / 1;">
-          <img
-            src="/about/gallery/inmon.png"
-            class="block absolute top-0 object-cover w-full h-full not-prose nozoom"
-            alt="carousel image 4">
-        </div>
-        
-        <figcaption
-          class="mt-1 "
-          
-        >With Bill Inmon at WWDVC 2023</figcaption>
-        
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div
-      class="relative float-left -mr-[100%] hidden w-full transition-transform ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item
-      style="transition-duration: 3500ms;"
-      >
-        <div class="single_hero_background relative overflow-hidden" style="aspect-ratio: 1 / 1;">
-          <img
-            src="/about/gallery/neworleans.png"
-            class="block absolute top-0 object-cover w-full h-full not-prose nozoom"
-            alt="carousel image 5">
-        </div>
-        
-        <figcaption
-          class="mt-1 "
-          
-        >dbt Coalesce 2022 — New Orleans</figcaption>
-        
-    </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div
-      class="relative float-left -mr-[100%] hidden w-full transition-transform ease-in-out motion-reduce:transition-none"
-      data-twe-carousel-item
-      style="transition-duration: 3500ms;"
-      >
-        <div class="single_hero_background relative overflow-hidden" style="aspect-ratio: 1 / 1;">
-          <img
-            src="/about/gallery/suomenlinna.png"
-            class="block absolute top-0 object-cover w-full h-full not-prose nozoom"
-            alt="carousel image 6">
-        </div>
-        
-        <figcaption
-          class="mt-1 "
-          
-        >Suomenlinna — Helsinki Data Vault training</figcaption>
-        
-    </div>
-    
-  </div>
-
-  <button
-    class="absolute top-0 left-0 z-2 flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:no-underline hover:opacity-90 hover:outline-none focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-    style="height: calc(100cqi * 1 / 1);"
-    type="button"
-    data-twe-target="#carousel-2bc053111729a74bce2ff033e7cdfe90-1779164948740994000"
-    data-twe-slide="prev">
-    <span class="inline-block h-8 w-8">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="4.5"
-        stroke="currentColor"
-        class="h-6 w-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-      </svg>
-    </span>
-    <span
-      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-      >Previous</span
-    >
-  </button>
-
-  <button
-    class="absolute top-0 right-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:no-underline hover:opacity-90 hover:outline-none focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-    style="height: calc(100cqi * 1 / 1);"
-    type="button"
-    data-twe-target="#carousel-2bc053111729a74bce2ff033e7cdfe90-1779164948740994000"
-    data-twe-slide="next">
-    <span class="inline-block h-8 w-8">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="4.5"
-        stroke="currentColor"
-        class="h-6 w-6">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-      </svg>
-    </span>
-    <span
-      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-      >Next</span
-    >
-  </button>
-</div>
-
-  
-  <script>
-    (() => {
-      const root = document.getElementById("carousel-2bc053111729a74bce2ff033e7cdfe90-1779164948740994000");
-      if (!root) return;
-
-      const items = Array.from(root.querySelectorAll("[data-twe-carousel-item]"));
-      const captions = items
-        .map((item) => item.querySelector("figcaption"))
-        .filter((caption) => caption);
-      if (captions.length < 2) return;
-
-      const measureAndFixCaptionHeight = () => {
-        const hiddenItems = items.filter((item) => item.classList.contains("hidden"));
-        hiddenItems.forEach((item) => item.classList.remove("hidden"));
-
-        const maxHeight = Math.max(
-          ...captions.map((caption) => Math.ceil(caption.getBoundingClientRect().height)),
-        );
-
-        hiddenItems.forEach((item) => item.classList.add("hidden"));
-        captions.forEach((caption) => {
-          caption.style.minHeight = `${maxHeight}px`;
-        });
-      };
-
-      window.requestAnimationFrame(measureAndFixCaptionHeight);
-      window.addEventListener("load", measureAndFixCaptionHeight, { once: true });
-      window.addEventListener("resize", measureAndFixCaptionHeight);
-    })();
-  </script>
-  
-
-
-<h2 class="relative group">Get in touch
-    <div id="get-in-touch" class="anchor"></div>
+<h2 class="relative group">Rasterizing OSM trails
+    <div id="rasterizing-osm-trails" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#get-in-touch" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#rasterizing-osm-trails" aria-label="Anchor">#</a>
     </span>
     
 </h2>
+<p>To avoid hand-labeling every tile, I used OpenStreetMap as weak supervision. OSM trail data starts as vector geometry: lines made of longitude/latitude points.</p>
+<p>The satellite image is already raster data. It is pixels. The OSM trail is vector data. It is geometry.</p>
+<p>Rasterization is the bridge between them:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">OSM LineString geometry
+</span></span><span class="line"><span class="cl">-&gt; pixel coordinates inside a tile
+</span></span><span class="line"><span class="cl">-&gt; black/white mask PNG</span></span></code></pre></div></div>
+<p>In plain English, I take a trail line from a map and paint it onto the exact pixels of the satellite tile.</p>
+<p>After that step, I have two aligned rasters:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">input raster: satellite pixels
+</span></span><span class="line"><span class="cl">label raster: trail/not-trail pixels</span></span></code></pre></div></div>
+<p>That alignment is the whole point. Pixel <code>(100, 50)</code> in the image must line up with pixel <code>(100, 50)</code> in the mask.</p>
+
+<h2 class="relative group">The first dataset
+    <div id="the-first-dataset" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-first-dataset" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The first working dataset had one image/mask pair. That was enough to prove the loader worked:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">image: 3 x 256 x 256
+</span></span><span class="line"><span class="cl">mask:  1 x 256 x 256</span></span></code></pre></div></div>
+<p>Then I expanded to a tiny Moab demo area. A bounding box plus zoom level produced 25 XYZ tiles:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">25 tiles total
+</span></span><span class="line"><span class="cl">13 with trail pixels
+</span></span><span class="line"><span class="cl">12 with no trail pixels</span></span></code></pre></div></div>
+<p>The CSV manifest became the bridge between files on disk and training data:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">image_path, mask_path, z, x, y, bbox, split</span></span></code></pre></div></div>
+<p>From there, I split the rows into:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">20 training tiles
+</span></span><span class="line"><span class="cl">5 validation tiles</span></span></code></pre></div></div>
+<p>That was the first move from “can the model memorize this?” toward “can the model predict on something it did not train on?”</p>
+
+<h2 class="relative group">The useful failure
+    <div id="the-useful-failure" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-useful-failure" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The tiny model trained. The losses went down. It generated validation prediction overlays.</p>
+<p>Then I opened one of the validation images and expected to see a prediction line. There was no line.</p>
+<p>The ground-truth mask for that tile had trail pixels. The model predicted zero trail pixels.</p>
+<p>That sounds bad, and it is, but it is also the first useful failure. The pipeline worked well enough to expose a real machine learning problem: class imbalance.</p>
+<p>A 256x256 tile has 65,536 pixels. A trail may only occupy a few hundred or a thousand of them. Most pixels are background. If the model predicts “not trail” everywhere, it is wrong in the way I care about, but still right for most pixels.</p>
+<p>So the lesson is not “the model is good.” The lesson is:</p>
+<blockquote><p>A working pipeline is not enough; the training objective has to make the rare thing matter.</p>
+</blockquote>
+<h2 class="relative group">Where this stands
+    <div id="where-this-stands" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#where-this-stands" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This feels like a good <code>v0.1.0</code> milestone:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">geographic area
+</span></span><span class="line"><span class="cl">-&gt; imagery tiles
+</span></span><span class="line"><span class="cl">-&gt; weak OSM labels
+</span></span><span class="line"><span class="cl">-&gt; raster masks
+</span></span><span class="line"><span class="cl">-&gt; dataset manifest
+</span></span><span class="line"><span class="cl">-&gt; PyTorch tensors
+</span></span><span class="line"><span class="cl">-&gt; tiny segmentation model
+</span></span><span class="line"><span class="cl">-&gt; validation predictions</span></span></code></pre></div></div>
+<p>It is not a trail detector yet. It is a toy geospatial segmentation pipeline that demonstrates the full shape of the problem.</p>
+<p>The next steps are clear:</p>
 <ul>
-<li>Email — <a href="mailto:connor@loughondata.com" >connor@loughondata.com</a></li>
-<li>GitHub — <a href="https://github.com/Doctacon"  target="_blank" rel="noreferrer">@Doctacon</a></li>
-<li>LinkedIn — <a href="https://www.linkedin.com/in/crlough/"  target="_blank" rel="noreferrer">crlough</a></li>
+<li>use weighted loss so trail pixels count more than background pixels</li>
+<li>save probability heatmaps, not just thresholded masks</li>
+<li>compare satellite image, ground-truth overlay, and predicted overlay side by side</li>
+<li>expand beyond one tiny adjacent tile grid</li>
+<li>eventually replace the tiny model with a real segmentation architecture</li>
 </ul>
+<p>For now, I am happy with the checkpoint. I started with map tiles and ended with a model failing in an understandable way. That is progress.</p>
 
           
           
@@ -1417,6 +1146,34 @@
     
     <footer class="pt-8 max-w-prose print:hidden">
       
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/getting-agents-to-use-the-damn-index/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Getting Agents To Use The Damn Index
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-05-15T00:00:00&#43;00:00">15 May 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
   
 
 

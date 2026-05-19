@@ -9,7 +9,57 @@
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <lastBuildDate>Fri, 15 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Computer-Vision</title>
+      <link>https://loughondata.com/tags/computer-vision/</link>
+      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/tags/computer-vision/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Geospatial</title>
+      <link>https://loughondata.com/tags/geospatial/</link>
+      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/tags/geospatial/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Machine-Learning</title>
+      <link>https://loughondata.com/tags/machine-learning/</link>
+      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/tags/machine-learning/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Openstreetmap</title>
+      <link>https://loughondata.com/tags/openstreetmap/</link>
+      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/tags/openstreetmap/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Pytorch</title>
+      <link>https://loughondata.com/tags/pytorch/</link>
+      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/tags/pytorch/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Ai</title>
@@ -107,16 +157,6 @@
       <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/duckdb/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Geospatial</title>
-      <link>https://loughondata.com/tags/geospatial/</link>
-      <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/geospatial/</guid>
       <description></description>
       
     </item>

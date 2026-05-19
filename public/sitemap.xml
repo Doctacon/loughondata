@@ -3,19 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://loughondata.com/posts/getting-agents-to-use-the-damn-index/</loc>
-    <lastmod>2026-05-15T00:00:00+00:00</lastmod>
+    <loc>https://loughondata.com/posts/from-map-tiles-to-trail-masks/</loc>
+    <lastmod>2026-05-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://loughondata.com/</loc>
-    <lastmod>2026-05-15T00:00:00+00:00</lastmod>
+    <lastmod>2026-05-18T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://loughondata.com/posts/</loc>
+    <lastmod>2026-05-18T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://loughondata.com/posts/getting-agents-to-use-the-damn-index/</loc>
     <lastmod>2026-05-15T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
