@@ -2,6 +2,7 @@
 title: "Getting Agents To Use The Damn Index"
 date: 2026-05-15
 draft: false
+featured: true
 summary: "Notes from AI Council on turbopuffer, embeddings, semantic code search, and why the hardest part is not building the index but getting agents to use it."
 tags: ["ai", "embeddings", "rag", "semantic-search", "coding-agents", "conferences"]
 ---

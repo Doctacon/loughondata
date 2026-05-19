@@ -1,0 +1,9 @@
+{{ $featuredArticles := where (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) "Params.featured" true }}
+{{ if gt (len $featuredArticles) 0 }}
+  <h2 class="mt-8 text-2xl font-extrabold mb-10">Featured</h2>
+  <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 mb-12">
+    {{ range $featuredArticles }}
+      {{ partial "article-link/card.html" . }}
+    {{ end }}
+  </section>
+{{ end }}

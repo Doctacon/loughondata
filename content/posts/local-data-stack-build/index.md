@@ -3,6 +3,7 @@ title: "Local Data Stack"
 subtitle: "The pipeline works. Here's what I actually shipped."
 date: 2026-05-02
 draft: false
+featured: true
 tags: ["data-engineering", "geospatial", "motherduck", "duckdb", "cloudflare-r2", "dlt"]
 series: ["local-data-stack"]
 series_order: 2
