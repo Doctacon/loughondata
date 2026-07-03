@@ -15,20 +15,20 @@
 
   
   
-    <title>From Map Tiles To Trail Masks &middot; Lough on Data</title>
-    <meta name="title" content="From Map Tiles To Trail Masks &middot; Lough on Data">
+    <title>Fixing Alias-Based Calendar Invites in Proton Calendar &middot; Lough on Data</title>
+    <meta name="title" content="Fixing Alias-Based Calendar Invites in Proton Calendar &middot; Lough on Data">
   
 
   
   
-    <meta name="description" content="A checkpoint from learning geospatial computer vision from first principles: map tiles, weak OSM labels, raster masks, PyTorch tensors, and why the first model failed in a useful way.">
+    <meta name="description" content="A small local service that turns alias-addressed calendar invites into non-RSVP .ics copies Proton Calendar can import.">
   
   
-    <meta name="keywords" content="geospatial,computer-vision,machine-learning,pytorch,openstreetmap,">
+    <meta name="keywords" content="proton-mail,calendar,email,python,duckdb,local-first,">
   
   
   
-  <link rel="canonical" href="https://loughondata.com/posts/from-map-tiles-to-trail-masks/">
+  <link rel="canonical" href="https://loughondata.com/posts/proton-calendar-alias-invites/">
   
   
 
@@ -57,25 +57,26 @@
   
 
   
-  <meta property="og:url" content="https://loughondata.com/posts/from-map-tiles-to-trail-masks/">
+  <meta property="og:url" content="https://loughondata.com/posts/proton-calendar-alias-invites/">
   <meta property="og:site_name" content="Lough on Data">
-  <meta property="og:title" content="From Map Tiles To Trail Masks">
-  <meta property="og:description" content="A checkpoint from learning geospatial computer vision from first principles: map tiles, weak OSM labels, raster masks, PyTorch tensors, and why the first model failed in a useful way.">
+  <meta property="og:title" content="Fixing Alias-Based Calendar Invites in Proton Calendar">
+  <meta property="og:description" content="A small local service that turns alias-addressed calendar invites into non-RSVP .ics copies Proton Calendar can import.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2026-05-18T00:00:00+00:00">
-    <meta property="article:modified_time" content="2026-05-18T00:00:00+00:00">
-    <meta property="article:tag" content="Geospatial">
-    <meta property="article:tag" content="Computer-Vision">
-    <meta property="article:tag" content="Machine-Learning">
-    <meta property="article:tag" content="Pytorch">
-    <meta property="article:tag" content="Openstreetmap">
+    <meta property="article:published_time" content="2026-07-03T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-03T00:00:00+00:00">
+    <meta property="article:tag" content="Proton-Mail">
+    <meta property="article:tag" content="Calendar">
+    <meta property="article:tag" content="Email">
+    <meta property="article:tag" content="Python">
+    <meta property="article:tag" content="Duckdb">
+    <meta property="article:tag" content="Local-First">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="From Map Tiles To Trail Masks">
-  <meta name="twitter:description" content="A checkpoint from learning geospatial computer vision from first principles: map tiles, weak OSM labels, raster masks, PyTorch tensors, and why the first model failed in a useful way.">
+  <meta name="twitter:title" content="Fixing Alias-Based Calendar Invites in Proton Calendar">
+  <meta name="twitter:description" content="A small local service that turns alias-addressed calendar invites into non-RSVP .ics copies Proton Calendar can import.">
 
   
   
@@ -171,6 +172,16 @@
   
   
 
+  
+  
+  
+  
+  <script
+    defer
+    type="text/javascript"
+    src="/js/mermaid.bundle.fbd117b974ae2784c64dabbeb75fd4af8985e21012349d79ef3bce3076a0e9c6b39e08c5b62e273deb50a520411e4bf5f58385cea7abd2492f4ef21480167677.js"
+    integrity="sha512-&#43;9EXuXSuJ4TGTau&#43;t1/Ur4mF4hASNJ157zvOMHag6cazngjFti4nPetQpSBBHkv19YOFzqer0kkvTvIUgBZ2dw=="></script>
+
 
 
 
@@ -230,25 +241,25 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "From Map Tiles To Trail Masks",
-    "headline": "From Map Tiles To Trail Masks",
+    "name": "Fixing Alias-Based Calendar Invites in Proton Calendar",
+    "headline": "Fixing Alias-Based Calendar Invites in Proton Calendar",
     
     "inLanguage": "en",
-    "url" : "https://loughondata.com/posts/from-map-tiles-to-trail-masks/",
+    "url" : "https://loughondata.com/posts/proton-calendar-alias-invites/",
     "author" : {
       "@type": "Person",
       "name": "Connor Lough"
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-05-18T00:00:00\u002b00:00",
-    "datePublished": "2026-05-18T00:00:00\u002b00:00",
+    "dateCreated": "2026-07-03T00:00:00\u002b00:00",
+    "datePublished": "2026-07-03T00:00:00\u002b00:00",
     
-    "dateModified": "2026-05-18T00:00:00\u002b00:00",
+    "dateModified": "2026-07-03T00:00:00\u002b00:00",
     
-    "keywords": ["geospatial","computer-vision","machine-learning","pytorch","openstreetmap"],
+    "keywords": ["proton-mail","calendar","email","python","duckdb","local-first"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "849"
+    "wordCount": "735"
   }]
   </script>
 
@@ -671,7 +682,7 @@
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        From Map Tiles To Trail Masks
+        Fixing Alias-Based Calendar Invites in Proton Calendar
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -723,7 +734,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-05-18T00:00:00&#43;00:00">18 May 2026</time><span class="px-2 text-primary-500">&middot;</span><span>849 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+      <time datetime="2026-07-03T00:00:00&#43;00:00">3 July 2026</time><span class="px-2 text-primary-500">&middot;</span><span>735 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
     
 
     
@@ -749,7 +760,7 @@
             
             
               
-                <a class="relative mt-[0.5rem] me-2" href="/tags/geospatial/">
+                <a class="relative mt-[0.5rem] me-2" href="/tags/proton-mail/">
                   <span class="flex cursor-pointer">
   
   
@@ -758,7 +769,7 @@
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Geospatial
+    Proton-Mail
   </span>
 </span>
 
@@ -771,7 +782,7 @@
             
             
               
-                <a class="relative mt-[0.5rem] me-2" href="/tags/computer-vision/">
+                <a class="relative mt-[0.5rem] me-2" href="/tags/calendar/">
                   <span class="flex cursor-pointer">
   
   
@@ -780,7 +791,7 @@
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Computer-Vision
+    Calendar
   </span>
 </span>
 
@@ -793,7 +804,7 @@
             
             
               
-                <a class="relative mt-[0.5rem] me-2" href="/tags/machine-learning/">
+                <a class="relative mt-[0.5rem] me-2" href="/tags/email/">
                   <span class="flex cursor-pointer">
   
   
@@ -802,7 +813,7 @@
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Machine-Learning
+    Email
   </span>
 </span>
 
@@ -815,7 +826,7 @@
             
             
               
-                <a class="relative mt-[0.5rem] me-2" href="/tags/pytorch/">
+                <a class="relative mt-[0.5rem] me-2" href="/tags/python/">
                   <span class="flex cursor-pointer">
   
   
@@ -824,7 +835,7 @@
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Pytorch
+    Python
   </span>
 </span>
 
@@ -837,7 +848,7 @@
             
             
               
-                <a class="relative mt-[0.5rem] me-2" href="/tags/openstreetmap/">
+                <a class="relative mt-[0.5rem] me-2" href="/tags/duckdb/">
                   <span class="flex cursor-pointer">
   
   
@@ -846,7 +857,29 @@
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Openstreetmap
+    Duckdb
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/local-first/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Local-First
   </span>
 </span>
 
@@ -988,146 +1021,191 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          <p>I have been working through a small geospatial computer vision project from first principles. The goal sounds simple: take satellite imagery and teach a model to find trails.</p>
-<p>In practice, I learned that most of the work is not the model. It is getting geography, imagery, labels, and pixels to line up correctly.</p>
-<p>The pipeline now looks like this:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">bbox + zoom
-</span></span><span class="line"><span class="cl">-&gt; XYZ map tiles
-</span></span><span class="line"><span class="cl">-&gt; satellite imagery
-</span></span><span class="line"><span class="cl">-&gt; OSM trail vectors
-</span></span><span class="line"><span class="cl">-&gt; rasterized trail masks
-</span></span><span class="line"><span class="cl">-&gt; dataset CSV
-</span></span><span class="line"><span class="cl">-&gt; PyTorch tensors
-</span></span><span class="line"><span class="cl">-&gt; tiny segmentation model
-</span></span><span class="line"><span class="cl">-&gt; validation predictions</span></span></code></pre></div></div>
-<p>That is enough to be worth writing down, even though it is not a useful trail detector yet.</p>
+          <p>I ran into a small but annoying calendar problem.</p>
+<p>I use email aliases on a custom domain and forward them into one Proton Mail inbox. Mail works fine. Calendar invites are where things get weird: the invite is addressed to the alias, but Proton Calendar expects the attendee to be the main Proton address. The result is an invite that arrives in mail, but is awkward or impossible to add/respond to cleanly in Proton Calendar.</p>
+<p>I do not actually care about RSVP support for these invites. I just want the event on my calendar.</p>
+<p>So the solution was to make a local normalizer: read the invite from Proton Mail, remove all RSVP/attendee semantics, convert the calendar file into a plain published event, and email that cleaned <code>.ics</code> file back to myself.</p>
 
-<h2 class="relative group">Images, but as data
-    <div id="images-but-as-data" class="anchor"></div>
+<h2 class="relative group">The shape of the problem
+    <div id="the-shape-of-the-problem" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#images-but-as-data" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-shape-of-the-problem" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>The first mental shift was remembering that a satellite tile is not just a picture. It is a grid of numbers.</p>
-<p>In this project, each image tile is a 256x256 PNG. When loaded into PyTorch, it becomes a tensor shaped like this:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">3 x 256 x 256</span></span></code></pre></div></div>
-<p>That means:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">3 color channels
-</span></span><span class="line"><span class="cl">256 pixels tall
-</span></span><span class="line"><span class="cl">256 pixels wide</span></span></code></pre></div></div>
-<p>PyTorch usually uses <code>channels x height x width</code>, so the RGB channels come first. Other tools use different conventions, which is annoying in the same way metric vs. imperial is annoying. The practical rule is simple: check the shape at every boundary.</p>
-<p>The model does not see “a satellite image” the way I do. It sees normalized numeric arrays.</p>
+<pre class="not-prose mermaid">
+flowchart LR
+    A[Organizer sends invite] --> B[Alias address]
+    B --> C[Proton Mail inbox]
+    C --> D{Proton Calendar import}
+    D -->|attendee is alias| E[Awkward / broken invite handling]
+</pre>
 
-<h2 class="relative group">Labels are the hard part
-    <div id="labels-are-the-hard-part" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#labels-are-the-hard-part" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
-<p>A model needs examples. For trail detection, one example is not just an image. It is an image plus an answer key.</p>
-<p>For segmentation, the answer key is a mask:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">image: 256 x 256 RGB pixels
-</span></span><span class="line"><span class="cl">mask:  256 x 256 label pixels</span></span></code></pre></div></div>
-<p>In the current binary setup, each mask pixel means:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">0 = not trail
-</span></span><span class="line"><span class="cl">1 = trail</span></span></code></pre></div></div>
-<p>That is why this is called segmentation. We are not asking, “does this tile contain a trail?” We are asking, “which pixels are trail?”</p>
+<p>The key detail is that the <code>.ics</code> file contains something like this:</p>
+<div class="highlight-wrapper"><pre tabindex="0"><code class="language-ics" data-lang="ics">BEGIN:VCALENDAR
+METHOD:REQUEST
+BEGIN:VEVENT
+UID:example-event-id
+ORGANIZER;CN=Organizer:mailto:organizer@example.com
+ATTENDEE;CN=Me;RSVP=TRUE;PARTSTAT=NEEDS-ACTION:mailto:alias@example.net
+SUMMARY:Meeting
+DTSTART:20260710T180000Z
+DTEND:20260710T183000Z
+END:VEVENT
+END:VCALENDAR</code></pre></div>
+<p>That <code>ATTENDEE</code> line is the problem. It says the invited attendee is the alias address. Proton Calendar quite reasonably treats it like an invite for that identity, not a normal event for the main mailbox.</p>
 
-<h2 class="relative group">Rasterizing OSM trails
-    <div id="rasterizing-osm-trails" class="anchor"></div>
+<h2 class="relative group">The local-only fix
+    <div id="the-local-only-fix" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#rasterizing-osm-trails" aria-label="Anchor">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-local-only-fix" aria-label="Anchor">#</a>
     </span>
     
 </h2>
-<p>To avoid hand-labeling every tile, I used OpenStreetMap as weak supervision. OSM trail data starts as vector geometry: lines made of longitude/latitude points.</p>
-<p>The satellite image is already raster data. It is pixels. The OSM trail is vector data. It is geometry.</p>
-<p>Rasterization is the bridge between them:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">OSM LineString geometry
-</span></span><span class="line"><span class="cl">-&gt; pixel coordinates inside a tile
-</span></span><span class="line"><span class="cl">-&gt; black/white mask PNG</span></span></code></pre></div></div>
-<p>In plain English, I take a trail line from a map and paint it onto the exact pixels of the satellite tile.</p>
-<p>After that step, I have two aligned rasters:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">input raster: satellite pixels
-</span></span><span class="line"><span class="cl">label raster: trail/not-trail pixels</span></span></code></pre></div></div>
-<p>That alignment is the whole point. Pixel <code>(100, 50)</code> in the image must line up with pixel <code>(100, 50)</code> in the mask.</p>
+<p>The normalizer runs locally and talks to Proton through <a href="https://proton.me/mail/bridge"  target="_blank" rel="noreferrer">Proton Mail Bridge</a>, which exposes local IMAP and SMTP ports. No Proton private APIs, no web scraping, no cloud service, and no SimpleLogin API needed.</p>
+<pre class="not-prose mermaid">
+flowchart TD
+    Bridge[Proton Mail Bridge]
+    IMAP[Local IMAP]
+    Service[alias-invite-normalizer]
+    DuckDB[(DuckDB state)]
+    SMTP[Local SMTP]
+    Inbox[Proton inbox]
+    Calendar[Proton Calendar]
 
-<h2 class="relative group">The first dataset
-    <div id="the-first-dataset" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-first-dataset" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
-<p>The first working dataset had one image/mask pair. That was enough to prove the loader worked:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">image: 3 x 256 x 256
-</span></span><span class="line"><span class="cl">mask:  1 x 256 x 256</span></span></code></pre></div></div>
-<p>Then I expanded to a tiny Moab demo area. A bounding box plus zoom level produced 25 XYZ tiles:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">25 tiles total
-</span></span><span class="line"><span class="cl">13 with trail pixels
-</span></span><span class="line"><span class="cl">12 with no trail pixels</span></span></code></pre></div></div>
-<p>The CSV manifest became the bridge between files on disk and training data:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">image_path, mask_path, z, x, y, bbox, split</span></span></code></pre></div></div>
-<p>From there, I split the rows into:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">20 training tiles
-</span></span><span class="line"><span class="cl">5 validation tiles</span></span></code></pre></div></div>
-<p>That was the first move from “can the model memorize this?” toward “can the model predict on something it did not train on?”</p>
+    Bridge --> IMAP --> Service
+    Service -->|dedupe key + hashes| DuckDB
+    Service -->|clean METHOD:PUBLISH .ics| SMTP --> Bridge --> Inbox
+    Inbox --> Calendar
+</pre>
 
-<h2 class="relative group">The useful failure
-    <div id="the-useful-failure" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-useful-failure" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
-<p>The tiny model trained. The losses went down. It generated validation prediction overlays.</p>
-<p>Then I opened one of the validation images and expected to see a prediction line. There was no line.</p>
-<p>The ground-truth mask for that tile had trail pixels. The model predicted zero trail pixels.</p>
-<p>That sounds bad, and it is, but it is also the first useful failure. The pipeline worked well enough to expose a real machine learning problem: class imbalance.</p>
-<p>A 256x256 tile has 65,536 pixels. A trail may only occupy a few hundred or a thousand of them. Most pixels are background. If the model predicts “not trail” everywhere, it is wrong in the way I care about, but still right for most pixels.</p>
-<p>So the lesson is not “the model is good.” The lesson is:</p>
-<blockquote><p>A working pipeline is not enough; the training objective has to make the rare thing matter.</p>
-</blockquote>
-<h2 class="relative group">Where this stands
-    <div id="where-this-stands" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#where-this-stands" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
-<p>This feels like a good <code>v0.1.0</code> milestone:</p>
-<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">geographic area
-</span></span><span class="line"><span class="cl">-&gt; imagery tiles
-</span></span><span class="line"><span class="cl">-&gt; weak OSM labels
-</span></span><span class="line"><span class="cl">-&gt; raster masks
-</span></span><span class="line"><span class="cl">-&gt; dataset manifest
-</span></span><span class="line"><span class="cl">-&gt; PyTorch tensors
-</span></span><span class="line"><span class="cl">-&gt; tiny segmentation model
-</span></span><span class="line"><span class="cl">-&gt; validation predictions</span></span></code></pre></div></div>
-<p>It is not a trail detector yet. It is a toy geospatial segmentation pipeline that demonstrates the full shape of the problem.</p>
-<p>The next steps are clear:</p>
+<p>The service watches configured mailboxes, finds <code>text/calendar</code> parts or <code>.ics</code> attachments, parses them with a real iCalendar parser, and checks for attendees on configured alias domains.</p>
+<p>The output is intentionally not an RSVP-able invite:</p>
+<div class="highlight-wrapper"><pre tabindex="0"><code class="language-ics" data-lang="ics">BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Alias Invite Normalizer//EN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:example-event-id
+ORGANIZER;CN=Organizer:mailto:organizer@example.com
+SUMMARY:Meeting
+DTSTART:20260710T180000Z
+DTEND:20260710T183000Z
+COMMENT:Original invite was sent to alias alias@example.net. This is a non-RSVP calendar copy.
+END:VEVENT
+END:VCALENDAR</code></pre></div>
+<p>The important transformations are:</p>
 <ul>
-<li>use weighted loss so trail pixels count more than background pixels</li>
-<li>save probability heatmaps, not just thresholded masks</li>
-<li>compare satellite image, ground-truth overlay, and predicted overlay side by side</li>
-<li>expand beyond one tiny adjacent tile grid</li>
-<li>eventually replace the tiny model with a real segmentation architecture</li>
+<li>change <code>METHOD:REQUEST</code> or <code>METHOD:CANCEL</code> to <code>METHOD:PUBLISH</code></li>
+<li>remove every <code>ATTENDEE</code> property</li>
+<li>drop RSVP/participant-response semantics</li>
+<li>keep useful event fields like <code>SUMMARY</code>, <code>DESCRIPTION</code>, <code>LOCATION</code>, <code>DTSTART</code>, <code>DTEND</code>, <code>ORGANIZER</code>, recurrence rules, timezones, and alarms</li>
+<li>add a note explaining that this is a non-RSVP copy</li>
 </ul>
-<p>For now, I am happy with the checkpoint. I started with map tiles and ended with a model failing in an understandable way. That is progress.</p>
+
+<h2 class="relative group">Configuration
+    <div id="configuration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#configuration" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The config is boring on purpose:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">proton</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">imap_host</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;127.0.0.1&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">imap_port</span><span class="p">:</span><span class="w"> </span><span class="m">1143</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">imap_security</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;starttls&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">smtp_host</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;127.0.0.1&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">smtp_port</span><span class="p">:</span><span class="w"> </span><span class="m">1025</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">smtp_security</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;starttls&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">bridge_username</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${PROTON_BRIDGE_USERNAME}&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">bridge_password</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${PROTON_BRIDGE_PASSWORD}&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">master_email</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;me@example.com&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">sender_email</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;me@example.com&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">mailboxes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="s2">&#34;INBOX&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">aliases</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">domains</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="s2">&#34;example.net&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">database</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">backend</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;duckdb_file&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;./alias_invite_state.duckdb&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nt">behavior</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">poll_interval_seconds</span><span class="p">:</span><span class="w"> </span><span class="m">60</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">mark_original_as_seen</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">send_companion_email</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">store_raw_ics</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span></span></span></code></pre></div></div>
+<p>Secrets stay in environment variables. The local config and DuckDB file do not need to be committed anywhere.</p>
+
+<h2 class="relative group">Dedupe matters
+    <div id="dedupe-matters" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#dedupe-matters" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The service stores processed invite state in DuckDB. The logical key is:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">(event_uid, recurrence_id, sequence, original_method, alias_email)</span></span></code></pre></div></div>
+<p>It also stores hashes of the original and generated <code>.ics</code>. That gives it a few useful behaviors:</p>
+<ul>
+<li>same event, same sequence, same hash: skip</li>
+<li>same event key, different hash: warn, but do not spam another email</li>
+<li>new sequence: send a new copy</li>
+<li>cancellation: generate a non-RSVP cancellation copy, still never reply to the organizer</li>
+</ul>
+
+<h2 class="relative group">The CLI
+    <div id="the-cli" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-cli" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The whole thing is a small Python CLI:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">alias-invite-normalizer init-db
+</span></span><span class="line"><span class="cl">alias-invite-normalizer doctor
+</span></span><span class="line"><span class="cl">alias-invite-normalizer scan-once
+</span></span><span class="line"><span class="cl">alias-invite-normalizer run</span></span></code></pre></div></div>
+<p><code>doctor</code> checks config, DuckDB, IMAP login, and SMTP login. <code>scan-once</code> processes current mail and exits. <code>run</code> stays in the foreground and polls.</p>
+<p>I also wrapped it locally with a shorter command:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pen doctor
+</span></span><span class="line"><span class="cl">pen scan-once
+</span></span><span class="line"><span class="cl">pen run</span></span></code></pre></div></div>
+<p>The wrapper just loads a local <code>.env</code>, points at the local YAML config, and runs the normalizer.</p>
+
+<h2 class="relative group">Why this feels like the right amount of software
+    <div id="why-this-feels-like-the-right-amount-of-software" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-this-feels-like-the-right-amount-of-software" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This is not a calendar server. It is not a replacement for Proton Calendar. It does not pretend RSVP works. It just turns a problematic invite into a plain event copy that Proton Calendar can add.</p>
+<p>That constraint keeps the design small:</p>
+<ul>
+<li>local-only</li>
+<li>Proton Bridge for supported IMAP/SMTP access</li>
+<li>DuckDB for state</li>
+<li>no external listener</li>
+<li>no organizer or attendee emails</li>
+<li>no raw invite content in logs</li>
+</ul>
+<p>The best part is that the workflow is now boring. If an invite lands in the inbox for an alias, the service sends back a cleaned calendar copy. I add that copy to Proton Calendar and move on with my day.</p>
 
           
           
@@ -1157,32 +1235,19 @@
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/getting-agents-to-use-the-damn-index/">
+              href="/posts/from-map-tiles-to-trail-masks/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Getting Agents To Use The Damn Index
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;From Map Tiles To Trail Masks
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-05-15T00:00:00&#43;00:00">15 May 2026</time>
+                <time datetime="2026-05-18T00:00:00&#43;00:00">18 May 2026</time>
               </span>
             
           
         </span>
         <span class="flex flex-col items-end">
-          
-            <a
-              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/proton-calendar-alias-invites/">
-              <span class="leading-6">
-                Fixing Alias-Based Calendar Invites in Proton Calendar&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
-              </span>
-            </a>
-            
-              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-07-03T00:00:00&#43;00:00">3 July 2026</time>
-              </span>
-            
           
         </span>
       </div>

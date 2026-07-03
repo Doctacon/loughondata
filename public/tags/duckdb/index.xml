@@ -9,7 +9,17 @@
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <lastBuildDate>Sat, 02 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/duckdb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/duckdb/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Fixing Alias-Based Calendar Invites in Proton Calendar</title>
+      <link>https://loughondata.com/posts/proton-calendar-alias-invites/</link>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/posts/proton-calendar-alias-invites/</guid>
+      <description>A small local service that turns alias-addressed calendar invites into non-RSVP .ics copies Proton Calendar can import.</description>
+      
+    </item>
     
     <item>
       <title>Local Data Stack</title>

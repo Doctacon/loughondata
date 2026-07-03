@@ -9,7 +9,67 @@
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>© 2026 Connor Lough</copyright>
-    <lastBuildDate>Mon, 18 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Calendar</title>
+      <link>https://loughondata.com/tags/calendar/</link>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/tags/calendar/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Duckdb</title>
+      <link>https://loughondata.com/tags/duckdb/</link>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/tags/duckdb/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Email</title>
+      <link>https://loughondata.com/tags/email/</link>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/tags/email/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Local-First</title>
+      <link>https://loughondata.com/tags/local-first/</link>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/tags/local-first/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Proton-Mail</title>
+      <link>https://loughondata.com/tags/proton-mail/</link>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/tags/proton-mail/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://loughondata.com/tags/python/</link>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/tags/python/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Computer-Vision</title>
@@ -147,16 +207,6 @@
       <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/dlt/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Duckdb</title>
-      <link>https://loughondata.com/tags/duckdb/</link>
-      <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/duckdb/</guid>
       <description></description>
       
     </item>
@@ -467,16 +517,6 @@
       <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/ebird/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://loughondata.com/tags/python/</link>
-      <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/python/</guid>
       <description></description>
       
     </item>

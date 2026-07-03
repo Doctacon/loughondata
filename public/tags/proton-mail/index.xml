@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proton-Mail on Lough on Data</title>
+    <link>https://loughondata.com/tags/proton-mail/</link>
+    <description>Recent content in Proton-Mail on Lough on Data</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
+    <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
+    <copyright>© 2026 Connor Lough</copyright>
+    <lastBuildDate>Fri, 03 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/proton-mail/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Fixing Alias-Based Calendar Invites in Proton Calendar</title>
+      <link>https://loughondata.com/posts/proton-calendar-alias-invites/</link>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/posts/proton-calendar-alias-invites/</guid>
+      <description>A small local service that turns alias-addressed calendar invites into non-RSVP .ics copies Proton Calendar can import.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
