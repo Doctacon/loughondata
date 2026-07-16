@@ -10,6 +10,7 @@ html:not(.dark) {
 
 html {
   background-color: #101515;
+  overflow-x: clip;
   background-image:
     linear-gradient(rgb(16 21 21 / 0.36), rgb(16 21 21 / 0.36)),
     var(--butte-granite);
@@ -20,19 +21,115 @@ html {
 }
 
 body {
-  background: rgb(247 249 247 / 0.82) !important;
+  background: transparent !important;
+  color: #17201e;
+  position: relative;
+}
+
+/* The glass must sit between the fixed landscape layer and readable runner content. */
+body::before {
+  background: rgb(247 249 247 / 0.82);
   backdrop-filter: blur(24px) saturate(0.78);
   -webkit-backdrop-filter: blur(24px) saturate(0.78);
   border-inline: 1px solid rgb(31 93 80 / 0.16);
   box-shadow: 0 0 3rem rgb(16 21 21 / 0.18);
-  color: #17201e;
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
+body > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Body's backdrop filter contains fixed children; center the theme search overlay against the viewport. */
+#search-wrapper {
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%);
+  width: calc(100vw - 2px) !important;
 }
 
 html.dark body {
-  background: rgb(16 21 21 / 0.76) !important;
+  color: #fff;
+}
+
+html.dark body::before {
+  background: rgb(16 21 21 / 0.76);
   border-color: rgb(188 206 203 / 0.14);
   box-shadow: 0 0 3rem rgb(0 0 0 / 0.28);
-  color: #fff;
+}
+
+/* Decorative only: the flight is clipped into gutters and runner while the static perch shares scenery SVG coordinates. */
+.woodpecker-gutters {
+  display: none;
+  inset: 0;
+  -webkit-mask-image: linear-gradient(to right, #000 0 var(--runner-left, 0px), transparent var(--runner-left, 0px) var(--runner-right, 100vw), #000 var(--runner-right, 100vw) 100%);
+  mask-image: linear-gradient(to right, #000 0 var(--runner-left, 0px), transparent var(--runner-left, 0px) var(--runner-right, 100vw), #000 var(--runner-right, 100vw) 100%);
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+}
+
+/* This runner-clipped copy is visually filtered and remains below body content. */
+.woodpecker-glass {
+  display: none;
+  height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.woodpecker-glass .woodpecker {
+  filter: blur(1px) saturate(0.7);
+  opacity: 0.48;
+}
+
+.woodpecker {
+  background-image: var(--acorn-woodpecker-sprite);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 500% 200%;
+  display: block;
+  height: var(--woodpecker-size, 8.5rem);
+  left: 0;
+  position: absolute;
+  top: 22vh;
+  transform: translate3d(0, 0, 0);
+  visibility: hidden;
+  width: var(--woodpecker-size, 8.5rem);
+  will-change: transform, background-position;
+}
+
+.woodpecker-gutters[data-state="flying"] .woodpecker--flight,
+.woodpecker-glass[data-state="flying"] .woodpecker {
+  visibility: visible;
+}
+
+.woodpecker-gutters[data-ready="true"],
+.woodpecker-glass[data-ready="true"] {
+  display: block;
+}
+
+/* The static perch is rendered in the same 1672×941 scene space as scenery.png. */
+.woodpecker-perch {
+  display: none;
+  height: 100vh;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  width: 100vw;
+  z-index: 0;
+}
+
+.woodpecker-perch[data-ready="true"][data-state="perched"] {
+  display: block;
 }
 
 /* Keep the fixed header compact without depending on scroll for basic layout. */

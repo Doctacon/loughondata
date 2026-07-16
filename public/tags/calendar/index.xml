@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Calendar on Lough on Data</title>
-    <link>https://loughondata.com/tags/calendar/</link>
+    <link>http://localhost:1313/tags/calendar/</link>
     <description>Recent content in Calendar on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
-    <lastBuildDate>Fri, 03 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/calendar/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/calendar/index.xml" rel="self" type="application/rss+xml" />
 
     <item>
       <title>Fixing Alias-Based Calendar Invites in Proton Calendar</title>
-      <link>https://loughondata.com/posts/proton-calendar-alias-invites/</link>
+      <link>http://localhost:1313/posts/proton-calendar-alias-invites/</link>
       <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/posts/proton-calendar-alias-invites/</guid>
+      <guid>http://localhost:1313/posts/proton-calendar-alias-invites/</guid>
       <description>A small local service that turns alias-addressed calendar invites into non-RSVP .ics copies Proton Calendar can import.</description>
 
     </item>

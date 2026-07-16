@@ -2,601 +2,601 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Lough on Data</title>
-    <link>https://loughondata.com/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Lough on Data</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
-    <lastBuildDate>Fri, 03 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
 
     <item>
       <title>Calendar</title>
-      <link>https://loughondata.com/tags/calendar/</link>
+      <link>http://localhost:1313/tags/calendar/</link>
       <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/calendar/</guid>
+      <guid>http://localhost:1313/tags/calendar/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Duckdb</title>
-      <link>https://loughondata.com/tags/duckdb/</link>
+      <link>http://localhost:1313/tags/duckdb/</link>
       <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/duckdb/</guid>
+      <guid>http://localhost:1313/tags/duckdb/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Email</title>
-      <link>https://loughondata.com/tags/email/</link>
+      <link>http://localhost:1313/tags/email/</link>
       <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/email/</guid>
+      <guid>http://localhost:1313/tags/email/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Local-First</title>
-      <link>https://loughondata.com/tags/local-first/</link>
+      <link>http://localhost:1313/tags/local-first/</link>
       <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/local-first/</guid>
+      <guid>http://localhost:1313/tags/local-first/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Proton-Mail</title>
-      <link>https://loughondata.com/tags/proton-mail/</link>
+      <link>http://localhost:1313/tags/proton-mail/</link>
       <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/proton-mail/</guid>
+      <guid>http://localhost:1313/tags/proton-mail/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Python</title>
-      <link>https://loughondata.com/tags/python/</link>
+      <link>http://localhost:1313/tags/python/</link>
       <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/python/</guid>
+      <guid>http://localhost:1313/tags/python/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Computer-Vision</title>
-      <link>https://loughondata.com/tags/computer-vision/</link>
+      <link>http://localhost:1313/tags/computer-vision/</link>
       <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/computer-vision/</guid>
+      <guid>http://localhost:1313/tags/computer-vision/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Geospatial</title>
-      <link>https://loughondata.com/tags/geospatial/</link>
+      <link>http://localhost:1313/tags/geospatial/</link>
       <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/geospatial/</guid>
+      <guid>http://localhost:1313/tags/geospatial/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Machine-Learning</title>
-      <link>https://loughondata.com/tags/machine-learning/</link>
+      <link>http://localhost:1313/tags/machine-learning/</link>
       <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/machine-learning/</guid>
+      <guid>http://localhost:1313/tags/machine-learning/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Openstreetmap</title>
-      <link>https://loughondata.com/tags/openstreetmap/</link>
+      <link>http://localhost:1313/tags/openstreetmap/</link>
       <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/openstreetmap/</guid>
+      <guid>http://localhost:1313/tags/openstreetmap/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Pytorch</title>
-      <link>https://loughondata.com/tags/pytorch/</link>
+      <link>http://localhost:1313/tags/pytorch/</link>
       <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/pytorch/</guid>
+      <guid>http://localhost:1313/tags/pytorch/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Ai</title>
-      <link>https://loughondata.com/tags/ai/</link>
+      <link>http://localhost:1313/tags/ai/</link>
       <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/ai/</guid>
+      <guid>http://localhost:1313/tags/ai/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Coding-Agents</title>
-      <link>https://loughondata.com/tags/coding-agents/</link>
+      <link>http://localhost:1313/tags/coding-agents/</link>
       <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/coding-agents/</guid>
+      <guid>http://localhost:1313/tags/coding-agents/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Conferences</title>
-      <link>https://loughondata.com/tags/conferences/</link>
+      <link>http://localhost:1313/tags/conferences/</link>
       <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/conferences/</guid>
+      <guid>http://localhost:1313/tags/conferences/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Embeddings</title>
-      <link>https://loughondata.com/tags/embeddings/</link>
+      <link>http://localhost:1313/tags/embeddings/</link>
       <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/embeddings/</guid>
+      <guid>http://localhost:1313/tags/embeddings/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Rag</title>
-      <link>https://loughondata.com/tags/rag/</link>
+      <link>http://localhost:1313/tags/rag/</link>
       <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/rag/</guid>
+      <guid>http://localhost:1313/tags/rag/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Semantic-Search</title>
-      <link>https://loughondata.com/tags/semantic-search/</link>
+      <link>http://localhost:1313/tags/semantic-search/</link>
       <pubDate>Fri, 15 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/semantic-search/</guid>
+      <guid>http://localhost:1313/tags/semantic-search/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Cloudflare-R2</title>
-      <link>https://loughondata.com/tags/cloudflare-r2/</link>
+      <link>http://localhost:1313/tags/cloudflare-r2/</link>
       <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/cloudflare-r2/</guid>
+      <guid>http://localhost:1313/tags/cloudflare-r2/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Data-Engineering</title>
-      <link>https://loughondata.com/tags/data-engineering/</link>
+      <link>http://localhost:1313/tags/data-engineering/</link>
       <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/data-engineering/</guid>
+      <guid>http://localhost:1313/tags/data-engineering/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Dlt</title>
-      <link>https://loughondata.com/tags/dlt/</link>
+      <link>http://localhost:1313/tags/dlt/</link>
       <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/dlt/</guid>
+      <guid>http://localhost:1313/tags/dlt/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Motherduck</title>
-      <link>https://loughondata.com/tags/motherduck/</link>
+      <link>http://localhost:1313/tags/motherduck/</link>
       <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/motherduck/</guid>
+      <guid>http://localhost:1313/tags/motherduck/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Aws-S3</title>
-      <link>https://loughondata.com/tags/aws-s3/</link>
+      <link>http://localhost:1313/tags/aws-s3/</link>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/aws-s3/</guid>
+      <guid>http://localhost:1313/tags/aws-s3/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Career</title>
-      <link>https://loughondata.com/tags/career/</link>
+      <link>http://localhost:1313/tags/career/</link>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/career/</guid>
+      <guid>http://localhost:1313/tags/career/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Dagster</title>
-      <link>https://loughondata.com/tags/dagster/</link>
+      <link>http://localhost:1313/tags/dagster/</link>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/dagster/</guid>
+      <guid>http://localhost:1313/tags/dagster/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Data-Quality</title>
-      <link>https://loughondata.com/tags/data-quality/</link>
+      <link>http://localhost:1313/tags/data-quality/</link>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/data-quality/</guid>
+      <guid>http://localhost:1313/tags/data-quality/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Open-Source</title>
-      <link>https://loughondata.com/tags/open-source/</link>
+      <link>http://localhost:1313/tags/open-source/</link>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/open-source/</guid>
+      <guid>http://localhost:1313/tags/open-source/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Side-Project</title>
-      <link>https://loughondata.com/tags/side-project/</link>
+      <link>http://localhost:1313/tags/side-project/</link>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/side-project/</guid>
+      <guid>http://localhost:1313/tags/side-project/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Sqlmesh</title>
-      <link>https://loughondata.com/tags/sqlmesh/</link>
+      <link>http://localhost:1313/tags/sqlmesh/</link>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/sqlmesh/</guid>
+      <guid>http://localhost:1313/tags/sqlmesh/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Claude</title>
-      <link>https://loughondata.com/tags/claude/</link>
+      <link>http://localhost:1313/tags/claude/</link>
       <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/claude/</guid>
+      <guid>http://localhost:1313/tags/claude/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Gcp</title>
-      <link>https://loughondata.com/tags/gcp/</link>
+      <link>http://localhost:1313/tags/gcp/</link>
       <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/gcp/</guid>
+      <guid>http://localhost:1313/tags/gcp/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Llm</title>
-      <link>https://loughondata.com/tags/llm/</link>
+      <link>http://localhost:1313/tags/llm/</link>
       <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/llm/</guid>
+      <guid>http://localhost:1313/tags/llm/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Ollama</title>
-      <link>https://loughondata.com/tags/ollama/</link>
+      <link>http://localhost:1313/tags/ollama/</link>
       <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/ollama/</guid>
+      <guid>http://localhost:1313/tags/ollama/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Graph-Rag</title>
-      <link>https://loughondata.com/tags/graph-rag/</link>
+      <link>http://localhost:1313/tags/graph-rag/</link>
       <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/graph-rag/</guid>
+      <guid>http://localhost:1313/tags/graph-rag/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Nlp</title>
-      <link>https://loughondata.com/tags/nlp/</link>
+      <link>http://localhost:1313/tags/nlp/</link>
       <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/nlp/</guid>
+      <guid>http://localhost:1313/tags/nlp/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Data-Mesh</title>
-      <link>https://loughondata.com/tags/data-mesh/</link>
+      <link>http://localhost:1313/tags/data-mesh/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/data-mesh/</guid>
+      <guid>http://localhost:1313/tags/data-mesh/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Ibis</title>
-      <link>https://loughondata.com/tags/ibis/</link>
+      <link>http://localhost:1313/tags/ibis/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/ibis/</guid>
+      <guid>http://localhost:1313/tags/ibis/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Polars</title>
-      <link>https://loughondata.com/tags/polars/</link>
+      <link>http://localhost:1313/tags/polars/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/polars/</guid>
+      <guid>http://localhost:1313/tags/polars/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Testing</title>
-      <link>https://loughondata.com/tags/testing/</link>
+      <link>http://localhost:1313/tags/testing/</link>
       <pubDate>Sat, 31 Aug 2024 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/testing/</guid>
+      <guid>http://localhost:1313/tags/testing/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Ci</title>
-      <link>https://loughondata.com/tags/ci/</link>
+      <link>http://localhost:1313/tags/ci/</link>
       <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/ci/</guid>
+      <guid>http://localhost:1313/tags/ci/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Dbt</title>
-      <link>https://loughondata.com/tags/dbt/</link>
+      <link>http://localhost:1313/tags/dbt/</link>
       <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/dbt/</guid>
+      <guid>http://localhost:1313/tags/dbt/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Dbt-Osmosis</title>
-      <link>https://loughondata.com/tags/dbt-osmosis/</link>
+      <link>http://localhost:1313/tags/dbt-osmosis/</link>
       <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/dbt-osmosis/</guid>
+      <guid>http://localhost:1313/tags/dbt-osmosis/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Dbt2looker</title>
-      <link>https://loughondata.com/tags/dbt2looker/</link>
+      <link>http://localhost:1313/tags/dbt2looker/</link>
       <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/dbt2looker/</guid>
+      <guid>http://localhost:1313/tags/dbt2looker/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Github-Actions</title>
-      <link>https://loughondata.com/tags/github-actions/</link>
+      <link>http://localhost:1313/tags/github-actions/</link>
       <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/github-actions/</guid>
+      <guid>http://localhost:1313/tags/github-actions/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Data-Modeling</title>
-      <link>https://loughondata.com/tags/data-modeling/</link>
+      <link>http://localhost:1313/tags/data-modeling/</link>
       <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/data-modeling/</guid>
+      <guid>http://localhost:1313/tags/data-modeling/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Data-Vault</title>
-      <link>https://loughondata.com/tags/data-vault/</link>
+      <link>http://localhost:1313/tags/data-vault/</link>
       <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/data-vault/</guid>
+      <guid>http://localhost:1313/tags/data-vault/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Godaddy</title>
-      <link>https://loughondata.com/tags/godaddy/</link>
+      <link>http://localhost:1313/tags/godaddy/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/godaddy/</guid>
+      <guid>http://localhost:1313/tags/godaddy/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Heroku</title>
-      <link>https://loughondata.com/tags/heroku/</link>
+      <link>http://localhost:1313/tags/heroku/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/heroku/</guid>
+      <guid>http://localhost:1313/tags/heroku/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Rails</title>
-      <link>https://loughondata.com/tags/rails/</link>
+      <link>http://localhost:1313/tags/rails/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/rails/</guid>
+      <guid>http://localhost:1313/tags/rails/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Ruby</title>
-      <link>https://loughondata.com/tags/ruby/</link>
+      <link>http://localhost:1313/tags/ruby/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/ruby/</guid>
+      <guid>http://localhost:1313/tags/ruby/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Web-Dev</title>
-      <link>https://loughondata.com/tags/web-dev/</link>
+      <link>http://localhost:1313/tags/web-dev/</link>
       <pubDate>Thu, 10 Aug 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/web-dev/</guid>
+      <guid>http://localhost:1313/tags/web-dev/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Aws</title>
-      <link>https://loughondata.com/tags/aws/</link>
+      <link>http://localhost:1313/tags/aws/</link>
       <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/aws/</guid>
+      <guid>http://localhost:1313/tags/aws/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Dbeaver</title>
-      <link>https://loughondata.com/tags/dbeaver/</link>
+      <link>http://localhost:1313/tags/dbeaver/</link>
       <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/dbeaver/</guid>
+      <guid>http://localhost:1313/tags/dbeaver/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Ebird</title>
-      <link>https://loughondata.com/tags/ebird/</link>
+      <link>http://localhost:1313/tags/ebird/</link>
       <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/ebird/</guid>
+      <guid>http://localhost:1313/tags/ebird/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>S3</title>
-      <link>https://loughondata.com/tags/s3/</link>
+      <link>http://localhost:1313/tags/s3/</link>
       <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/s3/</guid>
+      <guid>http://localhost:1313/tags/s3/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Slack</title>
-      <link>https://loughondata.com/tags/slack/</link>
+      <link>http://localhost:1313/tags/slack/</link>
       <pubDate>Thu, 15 Jun 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/slack/</guid>
+      <guid>http://localhost:1313/tags/slack/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Mermaid</title>
-      <link>https://loughondata.com/tags/mermaid/</link>
+      <link>http://localhost:1313/tags/mermaid/</link>
       <pubDate>Sat, 15 Apr 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/mermaid/</guid>
+      <guid>http://localhost:1313/tags/mermaid/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Meltano</title>
-      <link>https://loughondata.com/tags/meltano/</link>
+      <link>http://localhost:1313/tags/meltano/</link>
       <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/meltano/</guid>
+      <guid>http://localhost:1313/tags/meltano/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Postgres</title>
-      <link>https://loughondata.com/tags/postgres/</link>
+      <link>http://localhost:1313/tags/postgres/</link>
       <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/postgres/</guid>
+      <guid>http://localhost:1313/tags/postgres/</guid>
       <description></description>
 
     </item>
 
     <item>
       <title>Snowflake</title>
-      <link>https://loughondata.com/tags/snowflake/</link>
+      <link>http://localhost:1313/tags/snowflake/</link>
       <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/tags/snowflake/</guid>
+      <guid>http://localhost:1313/tags/snowflake/</guid>
       <description></description>
 
     </item>

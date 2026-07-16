@@ -1,0 +1,15 @@
+{{ $page := . }}
+{{ with resources.Get "img/acorn-woodpecker-sprite.png" }}
+<div class="woodpecker-gutters" aria-hidden="true" data-home="{{ $page.IsHome }}">
+  <span class="woodpecker woodpecker--flight"></span>
+</div>
+<div class="woodpecker-glass" aria-hidden="true">
+  <span class="woodpecker"></span>
+</div>
+<svg class="woodpecker-perch" aria-hidden="true" viewBox="0 0 1672 941" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <clipPath id="woodpecker-perch-frame"><rect x="157" y="362" width="114" height="114" /></clipPath>
+  </defs>
+  <image href="{{ .RelPermalink }}" x="-299" y="248" width="570" height="228" clip-path="url(#woodpecker-perch-frame)" />
+</svg>
+{{ end }}

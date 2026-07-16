@@ -1,5 +1,7 @@
 {{ with resources.Get "css/field-log.css" }}<style>{{ . | minify }}</style>{{ end }}
 {{ with resources.Get "img/scenery.png" }}<style>:root { --butte-granite: url("{{ .RelPermalink }}"); }</style>{{ end }}
+{{ with resources.Get "img/acorn-woodpecker-sprite.png" }}<style>:root { --acorn-woodpecker-sprite: url("{{ .RelPermalink }}"); }</style>{{ end }}
+{{ with resources.Get "img/acorn-woodpecker-flight.png" }}<style>:root { --acorn-woodpecker-flight: url("{{ .RelPermalink }}"); }</style>{{ end }}
 <script>
   (function () {
     const root = document.documentElement;
@@ -18,6 +20,104 @@
 
     window.addEventListener("DOMContentLoaded", () => {
       root.classList.add("js");
+
+      const woodpeckerGutters = document.querySelector(".woodpecker-gutters");
+      const woodpeckerGlass = document.querySelector(".woodpecker-glass");
+      const woodpeckerPerch = document.querySelector(".woodpecker-perch");
+      if (woodpeckerGutters && woodpeckerGlass && woodpeckerPerch) {
+        // Decorative layers sit outside the body glass so they remain fixed to the landscape.
+        document.documentElement.append(woodpeckerGutters, woodpeckerGlass, woodpeckerPerch);
+
+        const flightBird = woodpeckerGutters.querySelector(".woodpecker--flight");
+        const glassBird = woodpeckerGlass.querySelector(".woodpecker");
+        const reduceWoodpeckerMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const isHome = woodpeckerGutters.dataset.home === "true";
+        const flightFrames = [0, 1, 2, 3, 4];
+        const scenery = { width: 1672, height: 941, trunkX: 157, trunkY: 362, birdSize: 114 };
+        let flightComplete = reduceWoodpeckerMotion || !isHome;
+
+        const layoutGutters = () => {
+          const runner = document.body.getBoundingClientRect();
+          const leftWidth = Math.max(0, runner.left);
+          const rightWidth = Math.max(0, window.innerWidth - runner.right);
+          const eligible = window.innerWidth >= 1024 && leftWidth >= 160 && rightWidth >= 160;
+          for (const layer of [woodpeckerGutters, woodpeckerGlass, woodpeckerPerch]) {
+            layer.dataset.ready = String(eligible);
+          }
+          if (!eligible) return null;
+
+          const scale = Math.max(window.innerWidth / scenery.width, window.innerHeight / scenery.height);
+          const birdSize = scale * scenery.birdSize;
+          woodpeckerGutters.style.setProperty("--runner-left", `${runner.left}px`);
+          woodpeckerGutters.style.setProperty("--runner-right", `${runner.right}px`);
+          woodpeckerGutters.style.setProperty("--woodpecker-size", `${birdSize}px`);
+          woodpeckerGlass.style.left = `${runner.left}px`;
+          woodpeckerGlass.style.width = `${runner.width}px`;
+          woodpeckerGlass.style.setProperty("--woodpecker-size", `${birdSize}px`);
+          return { runner };
+        };
+
+        const showFlightFrame = (frame) => {
+          for (const bird of [flightBird, glassBird]) {
+            bird.style.backgroundImage = "var(--acorn-woodpecker-flight)";
+            bird.style.backgroundSize = "500% 100%";
+            bird.style.backgroundPosition = `${frame * 25}% 0`;
+          }
+        };
+
+        const perch = () => {
+          if (!layoutGutters()) return;
+          woodpeckerGutters.dataset.state = "perched";
+          woodpeckerGlass.dataset.state = "idle";
+          woodpeckerPerch.dataset.state = "perched";
+        };
+
+        const dimensions = layoutGutters();
+        if (dimensions) {
+          if (reduceWoodpeckerMotion || !isHome) {
+            perch();
+          } else {
+            window.setTimeout(() => {
+              const startedAt = performance.now();
+              const duration = 3200;
+              woodpeckerGutters.dataset.state = "flying";
+              woodpeckerGlass.dataset.state = "flying";
+              woodpeckerPerch.dataset.state = "idle";
+
+              const fly = (now) => {
+                const gutters = layoutGutters();
+                if (!gutters) return;
+                const elapsed = Math.min(now - startedAt, duration);
+                const progress = elapsed / duration;
+                const scale = Math.max(window.innerWidth / scenery.width, window.innerHeight / scenery.height);
+                const offsetX = (window.innerWidth - (scenery.width * scale)) / 2;
+                const offsetY = (window.innerHeight - (scenery.height * scale)) / 2;
+                const perchX = offsetX + (scenery.trunkX * scale);
+                const perchY = offsetY + (scenery.trunkY * scale);
+                const x = window.innerWidth + ((perchX - window.innerWidth) * progress);
+                const y = (window.innerHeight * 0.19) + ((perchY - (window.innerHeight * 0.19)) * progress);
+                showFlightFrame(flightFrames[Math.floor(elapsed / 90) % flightFrames.length]);
+                flightBird.style.top = `${y}px`;
+                flightBird.style.transform = `translate3d(${x}px, 0, 0)`;
+                glassBird.style.top = `${y}px`;
+                glassBird.style.transform = `translate3d(${x - gutters.runner.left}px, 0, 0)`;
+
+                if (elapsed < duration) {
+                  window.requestAnimationFrame(fly);
+                } else {
+                  flightComplete = true;
+                  perch();
+                }
+              };
+              window.requestAnimationFrame(fly);
+            }, 1200);
+          }
+        }
+
+        window.addEventListener("resize", () => {
+          if (flightComplete) perch();
+        }, { passive: true });
+      }
 
       const menuToggle = document.getElementById("mobile-menu-toggle");
       const menu = document.getElementById("mobile-navigation");
