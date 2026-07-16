@@ -8,9 +8,9 @@
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
-    <copyright>© 2026 Connor Lough</copyright>
+    <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
     <lastBuildDate>Mon, 18 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/geospatial/index.xml" rel="self" type="application/rss+xml" />
-    
+
     <item>
       <title>From Map Tiles To Trail Masks</title>
       <link>https://loughondata.com/posts/from-map-tiles-to-trail-masks/</link>
@@ -18,9 +18,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/posts/from-map-tiles-to-trail-masks/</guid>
       <description>A checkpoint from learning geospatial computer vision from first principles: map tiles, weak OSM labels, raster masks, PyTorch tensors, and why the first model failed in a useful way.</description>
-      
+
     </item>
-    
+
     <item>
       <title>Local Data Stack</title>
       <link>https://loughondata.com/posts/local-data-stack-build/</link>
@@ -28,18 +28,8 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/posts/local-data-stack-build/</guid>
       <description>The follow-up to Part 1. I built the stack — a small&#xA;dlt pipeline that watches a hand-picked list of outdoor, geospatial,&#xA;and forestry companies for new roles, writes Parquet to Cloudflare R2,&#xA;and surfaces everything in a MotherDuck Dive I check on my phone.&#xA;Here&amp;rsquo;s how it works, what changed from the original plan, and what&#xA;I deliberately left naive.</description>
-      
+
     </item>
-    
-    <item>
-      <title>Databox</title>
-      <link>https://loughondata.com/projects/databox/</link>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>https://loughondata.com/projects/databox/</guid>
-      <description>A single-operator data platform that ingests eBird, NOAA, and USGS into one queryable warehouse — built to answer whether species distributions shift with same-day weather and streamflow anomalies.</description>
-      
-    </item>
-    
+
   </channel>
 </rss>

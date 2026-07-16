@@ -8,9 +8,9 @@
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
-    <copyright>© 2026 Connor Lough</copyright>
+    <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
     <lastBuildDate>Fri, 15 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/ai/index.xml" rel="self" type="application/rss+xml" />
-    
+
     <item>
       <title>Getting Agents To Use The Damn Index</title>
       <link>https://loughondata.com/posts/getting-agents-to-use-the-damn-index/</link>
@@ -18,9 +18,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/posts/getting-agents-to-use-the-damn-index/</guid>
       <description>Notes from AI Council on turbopuffer, embeddings, semantic code search, and why the hardest part is not building the index but getting agents to use it.</description>
-      
+
     </item>
-    
+
     <item>
       <title>Giving Your LLM Context</title>
       <link>https://loughondata.com/posts/give-your-llm-context/</link>
@@ -28,9 +28,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/posts/give-your-llm-context/</guid>
       <description>Working through RAG approaches — from the dummy-simple Ollama + AnythingLLM path to a GCP RAG Engine setup that lives next to your IDE.</description>
-      
+
     </item>
-    
+
     <item>
       <title>Lazy Graph RAG</title>
       <link>https://loughondata.com/posts/lazy-graph-rag-i/</link>
@@ -38,8 +38,8 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/posts/lazy-graph-rag-i/</guid>
       <description>A first pass at LazyGraphRAG — defer all LLM calls until query time, build a concept graph from NLP, and chase the cost/quality sweet spot.</description>
-      
+
     </item>
-    
+
   </channel>
 </rss>

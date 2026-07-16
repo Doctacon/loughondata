@@ -1,0 +1,34 @@
+{{ with hugo.Data.github_contributions }}
+<section class="field-log" aria-labelledby="field-log-title">
+  <div class="field-log-heading">
+    <p class="contractor-wordmark">Build in public</p>
+    <a href="https://github.com/Doctacon">View GitHub profile →</a>
+  </div>
+  <div class="field-log-calendar" role="grid" aria-labelledby="field-log-title">
+    <span id="field-log-title" class="sr-only">GitHub contributions over the last 12 months</span>
+    <div class="field-log-weekdays" aria-hidden="true"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+    <div class="field-log-scroll">
+      <div class="field-log-months" aria-hidden="true">
+        {{ range .weeks }}{{ with index .contributionDays 0 }}<span>{{ if eq .weekday 0 }}{{ time.Format "Jan" .date }}{{ end }}</span>{{ end }}{{ end }}
+      </div>
+      <div class="field-log-weeks">
+        {{ range .weeks }}
+          {{ $week := . }}
+          <div class="field-log-week">
+            {{ range slice 1 2 3 4 5 6 0 }}
+              {{ $weekday := . }}{{ $days := where $week.contributionDays "weekday" $weekday }}
+              {{ with index $days 0 }}
+                <button class="field-log-day level-{{ .contributionLevel }}" role="gridcell" aria-label="{{ .date }}: {{ .contributionCount }} contributions">
+                  <span aria-hidden="true" class="field-log-front"></span><span aria-hidden="true" class="field-log-back"><span>{{ if eq .contributionCount 0 }}0{{ else }}{{ .contributionCount }}{{ end }}</span><small>{{ time.Format "Jan 2" .date }}</small></span>
+                </button>
+              {{ else }}
+                <span class="field-log-day field-log-day-empty" aria-hidden="true"></span>
+              {{ end }}
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

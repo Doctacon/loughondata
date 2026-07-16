@@ -8,9 +8,9 @@
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
-    <copyright>© 2026 Connor Lough</copyright>
+    <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
     <lastBuildDate>Fri, 03 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    
+
     <item>
       <title>Calendar</title>
       <link>https://loughondata.com/tags/calendar/</link>
@@ -18,9 +18,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/calendar/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Duckdb</title>
       <link>https://loughondata.com/tags/duckdb/</link>
@@ -28,9 +28,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/duckdb/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Email</title>
       <link>https://loughondata.com/tags/email/</link>
@@ -38,9 +38,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/email/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Local-First</title>
       <link>https://loughondata.com/tags/local-first/</link>
@@ -48,9 +48,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/local-first/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Proton-Mail</title>
       <link>https://loughondata.com/tags/proton-mail/</link>
@@ -58,9 +58,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/proton-mail/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Python</title>
       <link>https://loughondata.com/tags/python/</link>
@@ -68,9 +68,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/python/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Computer-Vision</title>
       <link>https://loughondata.com/tags/computer-vision/</link>
@@ -78,9 +78,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/computer-vision/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Geospatial</title>
       <link>https://loughondata.com/tags/geospatial/</link>
@@ -88,9 +88,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/geospatial/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Machine-Learning</title>
       <link>https://loughondata.com/tags/machine-learning/</link>
@@ -98,9 +98,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/machine-learning/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Openstreetmap</title>
       <link>https://loughondata.com/tags/openstreetmap/</link>
@@ -108,9 +108,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/openstreetmap/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Pytorch</title>
       <link>https://loughondata.com/tags/pytorch/</link>
@@ -118,9 +118,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/pytorch/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Ai</title>
       <link>https://loughondata.com/tags/ai/</link>
@@ -128,9 +128,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/ai/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Coding-Agents</title>
       <link>https://loughondata.com/tags/coding-agents/</link>
@@ -138,9 +138,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/coding-agents/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Conferences</title>
       <link>https://loughondata.com/tags/conferences/</link>
@@ -148,9 +148,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/conferences/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Embeddings</title>
       <link>https://loughondata.com/tags/embeddings/</link>
@@ -158,9 +158,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/embeddings/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Rag</title>
       <link>https://loughondata.com/tags/rag/</link>
@@ -168,9 +168,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/rag/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Semantic-Search</title>
       <link>https://loughondata.com/tags/semantic-search/</link>
@@ -178,9 +178,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/semantic-search/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Cloudflare-R2</title>
       <link>https://loughondata.com/tags/cloudflare-r2/</link>
@@ -188,9 +188,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/cloudflare-r2/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Data-Engineering</title>
       <link>https://loughondata.com/tags/data-engineering/</link>
@@ -198,9 +198,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/data-engineering/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Dlt</title>
       <link>https://loughondata.com/tags/dlt/</link>
@@ -208,9 +208,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/dlt/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Motherduck</title>
       <link>https://loughondata.com/tags/motherduck/</link>
@@ -218,9 +218,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/motherduck/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Aws-S3</title>
       <link>https://loughondata.com/tags/aws-s3/</link>
@@ -228,9 +228,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/aws-s3/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Career</title>
       <link>https://loughondata.com/tags/career/</link>
@@ -238,9 +238,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/career/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Dagster</title>
       <link>https://loughondata.com/tags/dagster/</link>
@@ -248,9 +248,29 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/dagster/</guid>
       <description></description>
-      
+
     </item>
-    
+
+    <item>
+      <title>Data-Quality</title>
+      <link>https://loughondata.com/tags/data-quality/</link>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/tags/data-quality/</guid>
+      <description></description>
+
+    </item>
+
+    <item>
+      <title>Open-Source</title>
+      <link>https://loughondata.com/tags/open-source/</link>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>https://loughondata.com/tags/open-source/</guid>
+      <description></description>
+
+    </item>
+
     <item>
       <title>Side-Project</title>
       <link>https://loughondata.com/tags/side-project/</link>
@@ -258,9 +278,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/side-project/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Sqlmesh</title>
       <link>https://loughondata.com/tags/sqlmesh/</link>
@@ -268,9 +288,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/sqlmesh/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Claude</title>
       <link>https://loughondata.com/tags/claude/</link>
@@ -278,9 +298,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/claude/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Gcp</title>
       <link>https://loughondata.com/tags/gcp/</link>
@@ -288,9 +308,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/gcp/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Llm</title>
       <link>https://loughondata.com/tags/llm/</link>
@@ -298,9 +318,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/llm/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Ollama</title>
       <link>https://loughondata.com/tags/ollama/</link>
@@ -308,9 +328,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/ollama/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Graph-Rag</title>
       <link>https://loughondata.com/tags/graph-rag/</link>
@@ -318,9 +338,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/graph-rag/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Nlp</title>
       <link>https://loughondata.com/tags/nlp/</link>
@@ -328,9 +348,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/nlp/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Data-Mesh</title>
       <link>https://loughondata.com/tags/data-mesh/</link>
@@ -338,9 +358,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/data-mesh/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Ibis</title>
       <link>https://loughondata.com/tags/ibis/</link>
@@ -348,9 +368,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/ibis/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Polars</title>
       <link>https://loughondata.com/tags/polars/</link>
@@ -358,9 +378,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/polars/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Testing</title>
       <link>https://loughondata.com/tags/testing/</link>
@@ -368,9 +388,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/testing/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Ci</title>
       <link>https://loughondata.com/tags/ci/</link>
@@ -378,9 +398,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/ci/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Dbt</title>
       <link>https://loughondata.com/tags/dbt/</link>
@@ -388,9 +408,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/dbt/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Dbt-Osmosis</title>
       <link>https://loughondata.com/tags/dbt-osmosis/</link>
@@ -398,9 +418,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/dbt-osmosis/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Dbt2looker</title>
       <link>https://loughondata.com/tags/dbt2looker/</link>
@@ -408,9 +428,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/dbt2looker/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Github-Actions</title>
       <link>https://loughondata.com/tags/github-actions/</link>
@@ -418,9 +438,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/github-actions/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Data-Modeling</title>
       <link>https://loughondata.com/tags/data-modeling/</link>
@@ -428,9 +448,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/data-modeling/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Data-Vault</title>
       <link>https://loughondata.com/tags/data-vault/</link>
@@ -438,9 +458,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/data-vault/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Godaddy</title>
       <link>https://loughondata.com/tags/godaddy/</link>
@@ -448,9 +468,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/godaddy/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Heroku</title>
       <link>https://loughondata.com/tags/heroku/</link>
@@ -458,9 +478,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/heroku/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Rails</title>
       <link>https://loughondata.com/tags/rails/</link>
@@ -468,9 +488,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/rails/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Ruby</title>
       <link>https://loughondata.com/tags/ruby/</link>
@@ -478,9 +498,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/ruby/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Web-Dev</title>
       <link>https://loughondata.com/tags/web-dev/</link>
@@ -488,9 +508,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/web-dev/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Aws</title>
       <link>https://loughondata.com/tags/aws/</link>
@@ -498,9 +518,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/aws/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Dbeaver</title>
       <link>https://loughondata.com/tags/dbeaver/</link>
@@ -508,9 +528,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/dbeaver/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Ebird</title>
       <link>https://loughondata.com/tags/ebird/</link>
@@ -518,9 +538,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/ebird/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>S3</title>
       <link>https://loughondata.com/tags/s3/</link>
@@ -528,9 +548,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/s3/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Slack</title>
       <link>https://loughondata.com/tags/slack/</link>
@@ -538,9 +558,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/slack/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Mermaid</title>
       <link>https://loughondata.com/tags/mermaid/</link>
@@ -548,9 +568,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/mermaid/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Meltano</title>
       <link>https://loughondata.com/tags/meltano/</link>
@@ -558,9 +578,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/meltano/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Postgres</title>
       <link>https://loughondata.com/tags/postgres/</link>
@@ -568,9 +588,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/postgres/</guid>
       <description></description>
-      
+
     </item>
-    
+
     <item>
       <title>Snowflake</title>
       <link>https://loughondata.com/tags/snowflake/</link>
@@ -578,8 +598,8 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/tags/snowflake/</guid>
       <description></description>
-      
+
     </item>
-    
+
   </channel>
 </rss>

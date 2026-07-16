@@ -1,10 +1,119 @@
+{{ with resources.Get "css/field-log.css" }}<style>{{ . | minify }}</style>{{ end }}
+{{ with resources.Get "img/butte-granite.png" }}<style>:root { --butte-granite: url("{{ .RelPermalink }}"); }</style>{{ end }}
 <script>
   (function () {
     const root = document.documentElement;
+
+    try {
+      root.classList.toggle("dark", localStorage.getItem("appearance") !== "light");
+    } catch {
+      root.classList.add("dark");
+    }
+
     const setScrolled = () => {
       root.dataset.scrolled = window.scrollY > 20 ? "true" : "false";
     };
     setScrolled();
     window.addEventListener("scroll", setScrolled, { passive: true });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      root.classList.add("js");
+
+      const menuToggle = document.getElementById("mobile-menu-toggle");
+      const menu = document.getElementById("mobile-navigation");
+      if (menuToggle && menu) {
+        const setMenuOpen = (open) => {
+          menu.classList.toggle("is-open", open);
+          menuToggle.setAttribute("aria-expanded", String(open));
+        };
+        setMenuOpen(false);
+        menuToggle.addEventListener("click", () => {
+          setMenuOpen(!menu.classList.contains("is-open"));
+        });
+      }
+
+      const updateThemeColor = () => {
+        const themeColor = document.querySelector('meta[name="theme-color"]');
+        if (themeColor) themeColor.content = getComputedStyle(document.body).backgroundColor;
+      };
+      const toggleAppearance = () => {
+        root.classList.toggle("dark");
+        const appearance = root.classList.contains("dark") ? "dark" : "light";
+        try {
+          localStorage.setItem("appearance", appearance);
+        } catch {
+          // Appearance still changes when browser storage cannot be written.
+        }
+        try {
+          window.updateMeta?.();
+        } catch {
+          updateThemeColor();
+        }
+        try {
+          window.updateMermaidTheme?.();
+        } catch {
+          // Mermaid is optional and must not block the appearance control.
+        }
+        try {
+          window.updateLogo?.(appearance);
+        } catch {
+          // Secondary logo support is optional.
+        }
+      };
+      const clearAppearance = () => {
+        try {
+          localStorage.removeItem("appearance");
+        } catch {
+          // Storage is optional for this control.
+        }
+      };
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      for (const day of document.querySelectorAll(".field-log-day:not(.field-log-day-empty)")) {
+        let reset;
+        let trail;
+        const reveal = () => {
+          window.clearTimeout(reset);
+          day.classList.remove("is-revealing");
+          // Restart the count-rise animation for repeated hover/focus.
+          void day.offsetWidth;
+          day.classList.add("is-revealing");
+          reset = window.setTimeout(() => day.classList.remove("is-revealing"), 1500);
+        };
+        const markTrail = () => {
+          if (reduceMotion) return;
+          window.clearTimeout(trail);
+          day.classList.remove("is-trailing");
+          void day.offsetWidth;
+          day.classList.add("is-trailing");
+          trail = window.setTimeout(() => day.classList.remove("is-trailing"), 700);
+        };
+        day.addEventListener("pointerenter", () => { markTrail(); reveal(); });
+        day.addEventListener("focus", reveal);
+        day.addEventListener("pointerleave", () => {
+          window.clearTimeout(reset);
+          day.classList.remove("is-revealing");
+        });
+        day.addEventListener("blur", () => {
+          window.clearTimeout(reset);
+          day.classList.remove("is-revealing");
+        });
+      }
+
+      for (const id of ["appearance-switcher", "appearance-switcher-mobile"]) {
+        const switcher = document.getElementById(id);
+        if (!switcher) continue;
+        // Capture handlers replace Blowfish's unguarded localStorage handlers.
+        switcher.addEventListener("click", (event) => {
+          event.stopImmediatePropagation();
+          toggleAppearance();
+        }, true);
+        switcher.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          clearAppearance();
+        }, true);
+      }
+    });
   })();
 </script>

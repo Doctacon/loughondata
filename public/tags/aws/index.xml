@@ -8,9 +8,9 @@
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
-    <copyright>© 2026 Connor Lough</copyright>
+    <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
     <lastBuildDate>Thu, 15 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/aws/index.xml" rel="self" type="application/rss+xml" />
-    
+
     <item>
       <title>dlt Demo: Bird Hotspot Finder, pt. II</title>
       <link>https://loughondata.com/posts/bird-finder-via-dlt-ii/</link>
@@ -18,8 +18,8 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/posts/bird-finder-via-dlt-ii/</guid>
       <description>Extending the dlt pipeline: stage load packages to S3, persist schema changes back to DuckDB, and ping Slack on schema drift.</description>
-      
+
     </item>
-    
+
   </channel>
 </rss>

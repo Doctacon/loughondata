@@ -1,0 +1,83 @@
+{{ define "main" }}
+  {{ $parts := split .RawContent "<!--services-offers-->" }}
+  {{ $intro := index $parts 0 }}
+  {{ $rest := delimit (after 1 $parts) "" }}
+
+  <article class="contractor-page contractor-services">
+    <section class="contractor-content contractor-services-intro prose dark:prose-invert">
+      {{ .RenderString $intro }}
+    </section>
+
+    <section class="services-offers" aria-labelledby="service-offers-heading">
+      <div class="services-offers-intro">
+        <p class="contractor-eyebrow">Focused engagements</p>
+        <h2 id="service-offers-heading">Four ways I can help</h2>
+      </div>
+
+      <ol class="services-offer-cards">
+        <li>
+          <span class="service-number">01</span>
+          <h3>Platform Assessment</h3>
+          <dl>
+            <div>
+              <dt>Best for</dt>
+              <dd>Data is unreliable but the team cannot see where the system or ownership is breaking down.</dd>
+            </div>
+            <div>
+              <dt>You leave with</dt>
+              <dd>A system map and ranked priorities for the next fixes.</dd>
+            </div>
+          </dl>
+        </li>
+        <li>
+          <span class="service-number">02</span>
+          <h3>Pipeline Buildout</h3>
+          <dl>
+            <div>
+              <dt>Best for</dt>
+              <dd>Critical data arrives through manual loads, brittle scripts, or silently failing jobs.</dd>
+            </div>
+            <div>
+              <dt>You leave with</dt>
+              <dd>A working source-to-warehouse pipeline and operating runbook.</dd>
+            </div>
+          </dl>
+        </li>
+        <li>
+          <span class="service-number">03</span>
+          <h3>Warehouse &amp; Modeling</h3>
+          <dl>
+            <div>
+              <dt>Best for</dt>
+              <dd>Teams debate numbers because definitions, joins, or trusted metrics are unclear.</dd>
+            </div>
+            <div>
+              <dt>You leave with</dt>
+              <dd>A trusted model layer with inspectable agreed definitions.</dd>
+            </div>
+          </dl>
+        </li>
+        <li>
+          <span class="service-number">04</span>
+          <h3>Data Reliability</h3>
+          <dl>
+            <div>
+              <dt>Best for</dt>
+              <dd>Problems reach downstream people before anyone detects, diagnoses, or owns them.</dd>
+            </div>
+            <div>
+              <dt>You leave with</dt>
+              <dd>Quality checks and a response runbook.</dd>
+            </div>
+          </dl>
+        </li>
+      </ol>
+    </section>
+
+    {{ with $rest }}
+      <section class="contractor-content contractor-services-detail prose dark:prose-invert">
+        {{ $.RenderString . }}
+      </section>
+    {{ end }}
+  </article>
+{{ end }}

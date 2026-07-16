@@ -8,9 +8,9 @@
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
-    <copyright>© 2026 Connor Lough</copyright>
+    <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
     <lastBuildDate>Sat, 31 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/data-mesh/index.xml" rel="self" type="application/rss+xml" />
-    
+
     <item>
       <title>Data Saturday #52 — Oslo</title>
       <link>https://loughondata.com/posts/data-saturday-52-oslo/</link>
@@ -18,8 +18,8 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/posts/data-saturday-52-oslo/</guid>
       <description>Session notes from Data Saturday #52 in Oslo: tools that came up, Roche&amp;rsquo;s Maxim, testing in the dev cycle, data mesh, and turning data into influence.</description>
-      
+
     </item>
-    
+
   </channel>
 </rss>

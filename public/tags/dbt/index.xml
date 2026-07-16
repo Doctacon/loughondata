@@ -8,9 +8,9 @@
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
-    <copyright>© 2026 Connor Lough</copyright>
+    <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
     <lastBuildDate>Sat, 10 Feb 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/dbt/index.xml" rel="self" type="application/rss+xml" />
-    
+
     <item>
       <title>Never Make Another dbt model .yml</title>
       <link>https://loughondata.com/posts/never-make-another-yml/</link>
@@ -18,9 +18,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/posts/never-make-another-yml/</guid>
       <description>A GitHub Action that runs dbt-osmosis + dbt2looker on every push, then commits the regenerated .yml and .lookml files back to your repo.</description>
-      
+
     </item>
-    
+
     <item>
       <title>Data Vault walk-through: Fifty First Data Vaults</title>
       <link>https://loughondata.com/posts/fifty-first-data-vaults/</link>
@@ -28,9 +28,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/posts/fifty-first-data-vaults/</guid>
       <description>A talk to the UK Data Vault User Group on what went wrong (and right) across many iterations of building data vaults, and why the methodology is worth the heartache.</description>
-      
+
     </item>
-    
+
     <item>
       <title>Creating a Mermaid Diagram for Your dbt Project Using graph.gpickle</title>
       <link>https://loughondata.com/posts/dbt-and-mermaid-diagramming/</link>
@@ -38,8 +38,8 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/posts/dbt-and-mermaid-diagramming/</guid>
       <description>Turn a dbt project&amp;rsquo;s compiled graph.gpickle into a Mermaid diagram so you can actually see what your models depend on.</description>
-      
+
     </item>
-    
+
   </channel>
 </rss>

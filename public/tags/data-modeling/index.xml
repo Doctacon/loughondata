@@ -8,9 +8,9 @@
     <language>en</language>
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
-    <copyright>© 2026 Connor Lough</copyright>
+    <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
     <lastBuildDate>Fri, 15 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://loughondata.com/tags/data-modeling/index.xml" rel="self" type="application/rss+xml" />
-    
+
     <item>
       <title>Data Vault walk-through: Fifty First Data Vaults</title>
       <link>https://loughondata.com/posts/fifty-first-data-vaults/</link>
@@ -18,9 +18,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/posts/fifty-first-data-vaults/</guid>
       <description>A talk to the UK Data Vault User Group on what went wrong (and right) across many iterations of building data vaults, and why the methodology is worth the heartache.</description>
-      
+
     </item>
-    
+
     <item>
       <title>World Wide Data Vault Consortium 2023</title>
       <link>https://loughondata.com/posts/wwdvc-2023/</link>
@@ -28,8 +28,8 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>https://loughondata.com/posts/wwdvc-2023/</guid>
       <description>A recap of WWDVC 2023 in Stowe, Vermont — small, international, and surprisingly star-studded for a methodology most people still haven&amp;rsquo;t heard of.</description>
-      
+
     </item>
-    
+
   </channel>
 </rss>
