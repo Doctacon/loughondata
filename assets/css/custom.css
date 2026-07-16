@@ -14,9 +14,9 @@ html {
     linear-gradient(rgb(16 21 21 / 0.36), rgb(16 21 21 / 0.36)),
     var(--butte-granite);
   background-attachment: fixed;
-  background-position: center, calc(50% - 14vw);
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover, 120% auto;
+  background-size: cover;
 }
 
 body {

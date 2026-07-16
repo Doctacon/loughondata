@@ -1,5 +1,5 @@
 {{ with resources.Get "css/field-log.css" }}<style>{{ . | minify }}</style>{{ end }}
-{{ with resources.Get "img/butte-granite.png" }}<style>:root { --butte-granite: url("{{ .RelPermalink }}"); }</style>{{ end }}
+{{ with resources.Get "img/scenery.png" }}<style>:root { --butte-granite: url("{{ .RelPermalink }}"); }</style>{{ end }}
 <script>
   (function () {
     const root = document.documentElement;
