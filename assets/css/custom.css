@@ -63,6 +63,56 @@ html.dark body::before {
   box-shadow: 0 0 3rem rgb(0 0 0 / 0.28);
 }
 
+/* The semantic workflow needs the runner, not the prose measure, to stay readable left-to-right. */
+.databox-semantic-workflow--mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .databox-semantic-workflow--desktop {
+    margin-inline: 0;
+    width: min(72rem, calc(100vw - 4rem));
+  }
+
+  .databox-semantic-workflow--desktop .mermaid {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .databox-semantic-workflow--desktop {
+    display: none;
+  }
+
+  .databox-semantic-workflow--mobile {
+    display: block;
+  }
+}
+
+.databox-case-study-proof {
+  margin: 2.5rem auto;
+  max-width: 100%;
+}
+
+.databox-case-study-proof img {
+  border-radius: 0.75rem;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.databox-case-study-proof figcaption {
+  color: #51645f;
+  font-size: 0.925rem;
+  line-height: 1.55;
+  margin-top: 0.75rem;
+}
+
+html.dark .databox-case-study-proof figcaption {
+  color: #bccecb;
+}
+
 /* Decorative only: the flight is clipped into gutters and runner while the static perch shares scenery SVG coordinates. */
 .woodpecker-gutters {
   display: none;

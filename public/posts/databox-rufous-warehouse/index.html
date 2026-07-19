@@ -1,0 +1,1489 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth dark"
+  data-default-appearance="dark"
+  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+
+    <meta http-equiv="content-language" content="en">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+
+
+    <title>How Databox Became the Warehouse Behind Rufous &middot; Lough on Data</title>
+    <meta name="title" content="How Databox Became the Warehouse Behind Rufous &middot; Lough on Data">
+
+
+
+
+    <meta name="description" content="Quack makes local multi-source ingestion practical. A reviewed schema-to-CDM workflow makes it semantic. Rufous is what became possible once those two things met.">
+
+
+    <meta name="keywords" content="data-engineering,duckdb,dlt,sqlmesh,dagster,data-modeling,open-source,">
+
+
+
+  <link rel="canonical" href="http://localhost:1313/posts/databox-rufous-warehouse/">
+
+
+
+
+
+    <meta name="author" content="Connor Lough">
+
+
+
+
+
+
+
+
+
+          <link href="https://github.com/Doctacon" rel="me">
+
+
+
+
+
+          <link href="https://www.linkedin.com/in/crlough/" rel="me">
+
+
+
+
+
+
+  <meta property="og:url" content="http://localhost:1313/posts/databox-rufous-warehouse/">
+  <meta property="og:site_name" content="Lough on Data">
+  <meta property="og:title" content="How Databox Became the Warehouse Behind Rufous">
+  <meta property="og:description" content="Quack makes local multi-source ingestion practical. A reviewed schema-to-CDM workflow makes it semantic. Rufous is what became possible once those two things met.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-07-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-07-15T00:00:00+00:00">
+    <meta property="article:tag" content="Data-Engineering">
+    <meta property="article:tag" content="Duckdb">
+    <meta property="article:tag" content="Dlt">
+    <meta property="article:tag" content="Sqlmesh">
+    <meta property="article:tag" content="Dagster">
+    <meta property="article:tag" content="Data-Modeling">
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How Databox Became the Warehouse Behind Rufous">
+  <meta name="twitter:description" content="Quack makes local multi-source ingestion practical. A reviewed schema-to-CDM workflow makes it semantic. Rufous is what became possible once those two things met.">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.2259a95b8053fb8b29fe77ff1a79bf00cb96268f46f035ad5c8a25745f1b47b83ffe856e140e292ae66c95e10cd68e9bd0b3a905500a76e5c06cadefd5644636.css"
+    integrity="sha512-IlmpW4BT&#43;4sp/nf/Gnm/AMuWJo9G8DWtXIoldF8bR7g//oVuFA4pKuZsleEM1o6b0LOpBVAKduXAbK3v1WRGNg==">
+
+
+
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.4c6b36324987fc05dd8cd58437946294b6f2e315675cef16098738373ac2a0fe600416b00e13a1a8687c872f82868f7a0ece1e4ae0b9ea6ead63721f5e8b6748.js"
+      integrity="sha512-TGs2MkmH/AXdjNWEN5RilLby4xVnXO8WCYc4NzrCoP5gBBawDhOhqGh8hy&#43;Cho96Ds4eSuC56m6tY3IfXotnSA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+
+
+
+
+
+
+
+
+
+  <script
+    defer
+    type="text/javascript"
+    src="/js/mermaid.bundle.fbd117b974ae2784c64dabbeb75fd4af8985e21012349d79ef3bce3076a0e9c6b39e08c5b62e273deb50a520411e4bf5f58385cea7abd2492f4ef21480167677.js"
+    integrity="sha512-&#43;9EXuXSuJ4TGTau&#43;t1/Ur4mF4hASNJ157zvOMHag6cazngjFti4nPetQpSBBHkv19YOFzqer0kkvTvIUgBZ2dw=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+
+
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "How Databox Became the Warehouse Behind Rufous",
+    "headline": "How Databox Became the Warehouse Behind Rufous",
+
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/posts/databox-rufous-warehouse/",
+    "author" : {
+      "@type": "Person",
+      "name": "Connor Lough"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-07-15T00:00:00\u002b00:00",
+    "datePublished": "2026-07-15T00:00:00\u002b00:00",
+
+    "dateModified": "2026-07-15T00:00:00\u002b00:00",
+
+    "keywords": ["data-engineering","duckdb","dlt","sqlmesh","dagster","data-modeling","open-source"],
+
+    "mainEntityOfPage": "true",
+    "wordCount": "1018"
+  }]
+  </script>
+
+
+
+
+
+
+
+
+    <style>ZgotmplZ</style>
+<style>:root { --butte-granite: url("/img/scenery.png"); }</style>
+<style>:root { --acorn-woodpecker-sprite: url("/img/acorn-woodpecker-sprite.png"); }</style>
+<style>:root { --acorn-woodpecker-flight: url("/img/acorn-woodpecker-flight.png"); }</style>
+<script>
+  (function () {
+    const root = document.documentElement;
+
+    try {
+      root.classList.toggle("dark", localStorage.getItem("appearance") !== "light");
+    } catch {
+      root.classList.add("dark");
+    }
+
+    const setScrolled = () => {
+      root.dataset.scrolled = window.scrollY > 20 ? "true" : "false";
+    };
+    setScrolled();
+    window.addEventListener("scroll", setScrolled, { passive: true });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      root.classList.add("js");
+
+      const woodpeckerGutters = document.querySelector(".woodpecker-gutters");
+      const woodpeckerGlass = document.querySelector(".woodpecker-glass");
+      const woodpeckerPerch = document.querySelector(".woodpecker-perch");
+      if (woodpeckerGutters && woodpeckerGlass && woodpeckerPerch) {
+
+        document.documentElement.append(woodpeckerGutters, woodpeckerGlass, woodpeckerPerch);
+
+        const flightBird = woodpeckerGutters.querySelector(".woodpecker--flight");
+        const glassBird = woodpeckerGlass.querySelector(".woodpecker");
+        const reduceWoodpeckerMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const isHome = woodpeckerGutters.dataset.home === "true";
+        const flightFrames = [0, 1, 2, 3, 4];
+        const scenery = { width: 1672, height: 941, trunkX: 157, trunkY: 362, birdSize: 114 };
+        let flightComplete = reduceWoodpeckerMotion || !isHome;
+
+        const layoutGutters = () => {
+          const runner = document.body.getBoundingClientRect();
+          const leftWidth = Math.max(0, runner.left);
+          const rightWidth = Math.max(0, window.innerWidth - runner.right);
+          const eligible = window.innerWidth >= 1024 && leftWidth >= 160 && rightWidth >= 160;
+          for (const layer of [woodpeckerGutters, woodpeckerGlass, woodpeckerPerch]) {
+            layer.dataset.ready = String(eligible);
+          }
+          if (!eligible) return null;
+
+          const scale = Math.max(window.innerWidth / scenery.width, window.innerHeight / scenery.height);
+          const birdSize = scale * scenery.birdSize;
+          woodpeckerGutters.style.setProperty("--runner-left", `${runner.left}px`);
+          woodpeckerGutters.style.setProperty("--runner-right", `${runner.right}px`);
+          woodpeckerGutters.style.setProperty("--woodpecker-size", `${birdSize}px`);
+          woodpeckerGlass.style.left = `${runner.left}px`;
+          woodpeckerGlass.style.width = `${runner.width}px`;
+          woodpeckerGlass.style.setProperty("--woodpecker-size", `${birdSize}px`);
+          return { runner };
+        };
+
+        const showFlightFrame = (frame) => {
+          for (const bird of [flightBird, glassBird]) {
+            bird.style.backgroundImage = "var(--acorn-woodpecker-flight)";
+            bird.style.backgroundSize = "500% 100%";
+            bird.style.backgroundPosition = `${frame * 25}% 0`;
+          }
+        };
+
+        const perch = () => {
+          if (!layoutGutters()) return;
+          woodpeckerGutters.dataset.state = "perched";
+          woodpeckerGlass.dataset.state = "idle";
+          woodpeckerPerch.dataset.state = "perched";
+        };
+
+        const dimensions = layoutGutters();
+        if (dimensions) {
+          if (reduceWoodpeckerMotion || !isHome) {
+            perch();
+          } else {
+            window.setTimeout(() => {
+              const startedAt = performance.now();
+              const duration = 3200;
+              woodpeckerGutters.dataset.state = "flying";
+              woodpeckerGlass.dataset.state = "flying";
+              woodpeckerPerch.dataset.state = "idle";
+
+              const fly = (now) => {
+                const gutters = layoutGutters();
+                if (!gutters) return;
+                const elapsed = Math.min(now - startedAt, duration);
+                const progress = elapsed / duration;
+                const scale = Math.max(window.innerWidth / scenery.width, window.innerHeight / scenery.height);
+                const offsetX = (window.innerWidth - (scenery.width * scale)) / 2;
+                const offsetY = (window.innerHeight - (scenery.height * scale)) / 2;
+                const perchX = offsetX + (scenery.trunkX * scale);
+                const perchY = offsetY + (scenery.trunkY * scale);
+                const x = window.innerWidth + ((perchX - window.innerWidth) * progress);
+                const y = (window.innerHeight * 0.19) + ((perchY - (window.innerHeight * 0.19)) * progress);
+                showFlightFrame(flightFrames[Math.floor(elapsed / 90) % flightFrames.length]);
+                flightBird.style.top = `${y}px`;
+                flightBird.style.transform = `translate3d(${x}px, 0, 0)`;
+                glassBird.style.top = `${y}px`;
+                glassBird.style.transform = `translate3d(${x - gutters.runner.left}px, 0, 0)`;
+
+                if (elapsed < duration) {
+                  window.requestAnimationFrame(fly);
+                } else {
+                  flightComplete = true;
+                  perch();
+                }
+              };
+              window.requestAnimationFrame(fly);
+            }, 1200);
+          }
+        }
+
+        window.addEventListener("resize", () => {
+          if (flightComplete) perch();
+        }, { passive: true });
+      }
+
+      const menuToggle = document.getElementById("mobile-menu-toggle");
+      const menu = document.getElementById("mobile-navigation");
+      if (menuToggle && menu) {
+        const setMenuOpen = (open) => {
+          menu.classList.toggle("is-open", open);
+          menuToggle.setAttribute("aria-expanded", String(open));
+        };
+        setMenuOpen(false);
+        menuToggle.addEventListener("click", () => {
+          setMenuOpen(!menu.classList.contains("is-open"));
+        });
+      }
+
+      const updateThemeColor = () => {
+        const themeColor = document.querySelector('meta[name="theme-color"]');
+        if (themeColor) themeColor.content = getComputedStyle(document.body).backgroundColor;
+      };
+      const toggleAppearance = () => {
+        root.classList.toggle("dark");
+        const appearance = root.classList.contains("dark") ? "dark" : "light";
+        try {
+          localStorage.setItem("appearance", appearance);
+        } catch {
+
+        }
+        try {
+          window.updateMeta?.();
+        } catch {
+          updateThemeColor();
+        }
+        try {
+          window.updateMermaidTheme?.();
+        } catch {
+
+        }
+        try {
+          window.updateLogo?.(appearance);
+        } catch {
+
+        }
+      };
+      const clearAppearance = () => {
+        try {
+          localStorage.removeItem("appearance");
+        } catch {
+
+        }
+      };
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      for (const day of document.querySelectorAll(".field-log-day:not(.field-log-day-empty)")) {
+        let reset;
+        let trail;
+        const reveal = () => {
+          window.clearTimeout(reset);
+          day.classList.remove("is-revealing");
+
+          void day.offsetWidth;
+          day.classList.add("is-revealing");
+          reset = window.setTimeout(() => day.classList.remove("is-revealing"), 1500);
+        };
+        const markTrail = () => {
+          if (reduceMotion) return;
+          window.clearTimeout(trail);
+          day.classList.remove("is-trailing");
+          void day.offsetWidth;
+          day.classList.add("is-trailing");
+          trail = window.setTimeout(() => day.classList.remove("is-trailing"), 700);
+        };
+        day.addEventListener("pointerenter", () => { markTrail(); reveal(); });
+        day.addEventListener("focus", reveal);
+        day.addEventListener("pointerleave", () => {
+          window.clearTimeout(reset);
+          day.classList.remove("is-revealing");
+        });
+        day.addEventListener("blur", () => {
+          window.clearTimeout(reset);
+          day.classList.remove("is-revealing");
+        });
+      }
+
+      for (const id of ["appearance-switcher", "appearance-switcher-mobile"]) {
+        const switcher = document.getElementById(id);
+        if (!switcher) continue;
+
+        switcher.addEventListener("click", (event) => {
+          event.stopImmediatePropagation();
+          toggleAppearance();
+        }, true);
+        switcher.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          clearAppearance();
+        }, true);
+      }
+    });
+  })();
+</script>
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <body class="flex flex-col min-h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+
+
+<div class="woodpecker-gutters" aria-hidden="true" data-home="false">
+  <span class="woodpecker woodpecker--flight"></span>
+</div>
+<div class="woodpecker-glass" aria-hidden="true">
+  <span class="woodpecker"></span>
+</div>
+<svg class="woodpecker-perch" aria-hidden="true" viewBox="0 0 1672 941" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <clipPath id="woodpecker-perch-frame"><rect x="157" y="362" width="114" height="114" /></clipPath>
+  </defs>
+  <image href="/img/acorn-woodpecker-sprite.png" x="-299" y="248" width="570" height="228" clip-path="url(#woodpecker-perch-frame)" />
+</svg>
+
+
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+
+
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl backdrop-saturate-220 backdrop-brightness-112 dark:backdrop-saturate-180 dark:backdrop-brightness-95 bg-primary-200/80 bg-linear-60 dark:bg-primary-800/30 shadow-xl"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+
+
+
+      <div>
+        <a href="/" class="flex">
+          <span class="sr-only">Lough on Data</span>
+
+            <img
+              src="/img/avatar.png"
+              width="512"
+              height="512"
+              class="logo max-h-20 max-w-20 object-scale-down object-left nozoom"
+              alt="">
+
+        </a>
+      </div>
+
+
+
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Lough on Data
+    </a>
+
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+
+
+
+
+    <a
+      href="/services/"
+
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Services"
+      title="Services">
+
+
+        <span class="text-base font-medium break-normal">
+          Services
+        </span>
+
+    </a>
+
+
+
+
+
+    <a
+      href="/projects/"
+
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Work"
+      title="Work">
+
+
+        <span class="text-base font-medium break-normal">
+          Work
+        </span>
+
+    </a>
+
+
+
+
+
+    <a
+      href="/posts/"
+
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Journal"
+      title="Posts">
+
+
+        <span class="text-base font-medium break-normal">
+          Journal
+        </span>
+
+    </a>
+
+
+
+
+
+    <a
+      href="/about/"
+
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+
+
+        <span class="text-base font-medium break-normal">
+          About
+        </span>
+
+    </a>
+
+
+
+
+
+
+
+
+
+
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+
+
+
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+
+
+
+    <div class="relative">
+      <button
+        id="mobile-menu-toggle"
+        type="button"
+        aria-controls="mobile-navigation"
+        aria-expanded="true"
+        aria-label="Navigation"
+        class="flex items-center justify-center bf-icon-color-hover">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+      </button>
+
+      <nav
+        id="mobile-navigation"
+        aria-label="Primary navigation"
+        class="mobile-navigation bf-scrollbar">
+        <div class="space-y-6">
+
+
+    <div class="px-2">
+      <a
+        href="/services/"
+        aria-label="Services"
+
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+
+        <span title="Services" class="text-2xl font-bold tracking-tight">Services</span>
+      </a>
+
+
+    </div>
+
+    <div class="px-2">
+      <a
+        href="/projects/"
+        aria-label="Work"
+
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+
+        <span title="Work" class="text-2xl font-bold tracking-tight">Work</span>
+      </a>
+
+
+    </div>
+
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Journal"
+
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+
+        <span title="Posts" class="text-2xl font-bold tracking-tight">Journal</span>
+      </a>
+
+
+    </div>
+
+    <div class="px-2">
+      <a
+        href="/about/"
+        aria-label="About"
+
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+
+        <span title="About" class="text-2xl font-bold tracking-tight">About</span>
+      </a>
+
+
+    </div>
+
+
+
+
+
+
+
+            <button
+              id="appearance-switcher-mobile"
+              type="button"
+              aria-label="Dark mode switcher"
+              class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+              <div class="dark:hidden"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span></div>
+              <div class="hidden dark:block"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span></div>
+            </button>
+
+
+
+
+
+        </div>
+      </nav>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+  integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+  data-blur-id="menu-blur"></script>
+
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+
+
+  <article>
+
+
+
+
+    <header id="single_header" class="mt-5 max-w-prose">
+
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        How Databox Became the Warehouse Behind Rufous
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="flex flex-row flex-wrap items-center">
+
+
+      <time datetime="2026-07-15T00:00:00&#43;00:00">15 July 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1018 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+
+
+
+
+  </div>
+
+
+
+
+
+    <div class="flex flex-row flex-wrap items-center">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <a class="relative mt-[0.5rem] me-2" href="/tags/data-engineering/">
+                  <span class="flex cursor-pointer">
+
+
+
+
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+
+    Data-Engineering
+  </span>
+</span>
+
+                </a>
+
+
+
+
+
+
+
+
+                <a class="relative mt-[0.5rem] me-2" href="/tags/duckdb/">
+                  <span class="flex cursor-pointer">
+
+
+
+
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+
+    Duckdb
+  </span>
+</span>
+
+                </a>
+
+
+
+
+
+
+
+
+                <a class="relative mt-[0.5rem] me-2" href="/tags/dlt/">
+                  <span class="flex cursor-pointer">
+
+
+
+
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+
+    Dlt
+  </span>
+</span>
+
+                </a>
+
+
+
+
+
+
+
+
+                <a class="relative mt-[0.5rem] me-2" href="/tags/sqlmesh/">
+                  <span class="flex cursor-pointer">
+
+
+
+
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+
+    Sqlmesh
+  </span>
+</span>
+
+                </a>
+
+
+
+
+
+
+
+
+                <a class="relative mt-[0.5rem] me-2" href="/tags/dagster/">
+                  <span class="flex cursor-pointer">
+
+
+
+
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+
+    Dagster
+  </span>
+</span>
+
+                </a>
+
+
+
+
+
+
+
+
+                <a class="relative mt-[0.5rem] me-2" href="/tags/data-modeling/">
+                  <span class="flex cursor-pointer">
+
+
+
+
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+
+    Data-Modeling
+  </span>
+</span>
+
+                </a>
+
+
+
+
+
+
+
+
+                <a class="relative mt-[0.5rem] me-2" href="/tags/open-source/">
+                  <span class="flex cursor-pointer">
+
+
+
+
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+
+    Open-Source
+  </span>
+</span>
+
+                </a>
+
+
+
+
+
+    </div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex author">
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Connor Lough"
+        src="/img/avatar_hu_db567b2fec34e612.png"
+        data-zoom-src="/img/avatar_hu_8b208b04b1ab4e2f.png">
+
+
+  <div class="place-self-center">
+
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Connor Lough
+      </div>
+
+
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500 space-x-2">
+
+
+
+        <a
+          class="email-link hover:text-primary-700 dark:hover:text-primary-400"
+          href="#"
+
+            data-email="bWFpbHRvOmNvbm5vckBsb3VnaG9uZGF0YS5jb20="
+
+          target="_blank"
+          aria-label="Email"
+          title="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></span></a
+        >
+
+
+
+
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/Doctacon"
+
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+
+
+
+
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.linkedin.com/in/crlough/"
+
+          target="_blank"
+          aria-label="Linkedin"
+          title="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></span></a
+        >
+
+
+  </div>
+
+</div>
+  </div>
+</div>
+
+
+
+
+
+
+    <div class="mb-5"></div>
+
+
+
+    </header>
+
+
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+
+
+
+
+
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+
+
+        <div class="article-content max-w-prose mb-20">
+          <p>Databox began as a local-first warehouse: public data in, DuckDB file out. That is useful, but it is not enough to support a product. A product needs refreshes that preserve one local database, transformations that preserve meaning, and an interface that does not have to rediscover every provider&rsquo;s naming scheme.</p>
+<p>Since July 6, the useful chain has become:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">parallel ingestion
+</span></span><span class="line"><span class="cl">-&gt; reviewed source semantics
+</span></span><span class="line"><span class="cl">-&gt; ontology and canonical data model
+</span></span><span class="line"><span class="cl">-&gt; SQLMesh business models
+</span></span><span class="line"><span class="cl">-&gt; Rufous, a local birding application</span></span></code></pre></div></div>
+<p>Rufous is the proof surface, not the warehouse&rsquo;s purpose. It is a reference consumer that makes the quality of the warehouse visible.</p>
+
+<h2 class="relative group">One local database, many source clients
+    <div id="one-local-database-many-source-clients" class="anchor"></div>
+
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#one-local-database-many-source-clients" aria-label="Anchor">#</a>
+    </span>
+
+</h2>
+<p>Databox uses DuckDB for the warehouse, dlt for ingestion, SQLMesh for transformations, Soda for validation, and Dagster for orchestration. The awkward part is that a DuckDB file is not a server built for independent writers.</p>
+<p><a href="https://github.com/Doctacon/databox/commit/441bb36"  target="_blank" rel="noreferrer">Quack</a> provides that boundary: one server owns <code>data/databox.duckdb</code> while isolated <code>parallel_refresh</code> dlt clients connect through its protocol. Required source loads overlap, retain their own state, and write their own <code>raw_&lt;source&gt;</code> schemas. A failed source fails the refresh before SQLMesh runs; it does not become mysterious damage in a shared <code>main</code> schema.</p>
+<pre class="not-prose mermaid">
+flowchart TB
+  accTitle: Parallel refresh and independent pinned-file paths
+  accDescr: Parallel-refresh dlt clients write through one Quack-owned DuckDB server before SQLMesh runs. AVONET follows a separate pinned-file refresh and atomic publication path.
+  clients[parallel-refresh dlt clients] --> quack[Quack server<br/>owns data/databox.duckdb]
+  quack --> raw[isolated raw_source schemas]
+  raw --> complete{Required loads succeed?}
+  complete -->|yes| sqlmesh[SQLMesh business models]
+  complete -->|no| failed[Refresh fails<br/>with source attribution]
+
+  avonet[AVONET pinned snapshot] --> independent[Independent refresh]
+  independent --> publish[Atomic raw_avonet publication]
+</pre>
+
+<p>AVONET is the deliberate exception: a static pinned file snapshot outside shared parallel refresh, with atomic publication after its own refresh. The point is not one cadence for every source. It is an explicit refresh contract for each source. Dagster still owns orchestration and the asset view; Quack owns the local write boundary; SQLMesh remains downstream of successful source completion.</p>
+<figure class="databox-case-study-proof">
+  <img src="/projects/databox/dagster-asset-lineage.png" alt="Dagster global asset lineage showing eBird, GBIF, NOAA, USGS, AVONET, and Xeno-canto ingestion assets feeding analytics, environmental observations, and birding analysis." loading="lazy">
+  <figcaption>Databox lineage makes the route from public-source ingestion to derived observations and birding analysis inspectable.</figcaption>
+</figure>
+
+<h2 class="relative group">Raw tables are not a domain model
+    <div id="raw-tables-are-not-a-domain-model" class="anchor"></div>
+
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#raw-tables-are-not-a-domain-model" aria-label="Anchor">#</a>
+    </span>
+
+</h2>
+<p>dlt gets data into tables; it does not decide what those tables mean. An eBird observation, a weather measurement, and an animal-trait record do not acquire a shared vocabulary by landing in DuckDB. Querying raw provider tables from application code would repeat source-specific assumptions in every feature.</p>
+<p>Databox makes the review path explicit: observed dlt schema becomes annotated taxonomy, then ontology, a Kimball-style canonical data model, and finally SQLMesh business models. Every registered raw table must be modeled or explicitly excluded; modeled concepts must reach the ontology, CDM, and a transformed business table.</p>
+<div class="databox-semantic-workflow databox-semantic-workflow--desktop">
+<pre class="not-prose mermaid">
+flowchart LR
+  accTitle: Databox semantic warehouse path
+  accDescr: Observed dlt schema passes through reviewed taxonomy, ontology, canonical data model, SQLMesh transformations, and then supports Rufous as a reference consumer.
+  raw[Observed dlt schema] --> annotate[annotate-sources<br/>reviewed taxonomy]
+  annotate --> ontology[create-ontology<br/>entity graph]
+  ontology --> cdm[generate-cdm<br/>Kimball-style CDM]
+  cdm --> transform[create-transformation]
+  transform --> sqlmesh[SQLMesh business models]
+  sqlmesh --> rufous[Rufous reference consumer]
+</pre>
+
+</div>
+<div class="databox-semantic-workflow databox-semantic-workflow--mobile">
+<pre class="not-prose mermaid">
+flowchart TB
+  accTitle: Databox semantic warehouse path
+  accDescr: Observed dlt schema passes through reviewed taxonomy, ontology, canonical data model, SQLMesh transformations, and then supports Rufous as a reference consumer.
+  raw[Observed dlt schema] --> annotate[annotate-sources<br/>reviewed taxonomy]
+  annotate --> ontology[create-ontology<br/>entity graph]
+  ontology --> cdm[generate-cdm<br/>Kimball-style CDM]
+  cdm --> transform[create-transformation]
+  transform --> sqlmesh[SQLMesh business models]
+  sqlmesh --> rufous[Rufous reference consumer]
+</pre>
+
+</div>
+<p>The sequence matters because it makes choices reviewable before they harden into SQL. <code>annotate-sources</code> starts from dlt&rsquo;s observed schema—columns, types, keys, and nullability—not a whiteboard. It maps tables to confirmed concepts or excludes them with a reason. <code>create-ontology</code> records entities, relationships, source mappings, and any natural-key strategy; it does not silently merge two providers because their records look similar.</p>
+<p><code>generate-cdm</code> then gives facts an explicit grain and dimensions a key strategy before transformation SQL exists. <code>create-transformation</code> comes last: dlt remains ingestion, while SQLMesh maps reviewed raw sources into facts and dimensions. That turns “we should model this later” into a traceable business-facing path.</p>
+
+<h2 class="relative group">Rufous is the reference consumer
+    <div id="rufous-is-the-reference-consumer" class="anchor"></div>
+
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#rufous-is-the-reference-consumer" aria-label="Anchor">#</a>
+    </span>
+
+</h2>
+<p>Rufous is a local birding application with an Arizona catalog, Watch state, trip planning, explicit calendar invitations, alerts, and a local Field Map.</p>
+<figure class="databox-case-study-proof">
+  <img src="rufous-acorn.png" alt="Rufous Arizona Birds catalog showing the selected Acorn Woodpecker, its representative photograph, modeled traits, public-observation count, and available bird call." loading="lazy">
+  <figcaption>Rufous is the reference consumer: a local field console built on inspectable birding concepts, not provider response objects.</figcaption>
+</figure>
+<p>The <a href="https://github.com/Doctacon/databox/blob/main/README.md"  target="_blank" rel="noreferrer">Databox README</a> calls Rufous a reference consumer, not the core project. That distinction keeps Databox from becoming an app-specific backend while giving it a demanding user. The catalog and planner can begin with stable concepts rather than raw provider objects; the Field Map can consume a local, inspectable data surface.</p>
+<p>A CDM did not generate the product UI. Rufous still has its own interaction, accessibility, privacy, and visual decisions. The narrower payoff is that product work starts from verified domain concepts instead of raw-provider archaeology.</p>
+
+<h2 class="relative group">Make the contract executable
+    <div id="make-the-contract-executable" class="anchor"></div>
+
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#make-the-contract-executable" aria-label="Anchor">#</a>
+    </span>
+
+</h2>
+<p>Subsequent hardening made that workflow harder to drift. Databox made the Python registry canonical for seven registered sources, then derived CI coverage from it instead of maintaining a second active-source list. The registry owns source identity, raw-table inventory, cadence, freshness, domain identity, and verification profile. The repository checks source builders, raw-table inventory, verification profiles, modeling completeness, relevant Quack parity, and fixture integrity/privacy.</p>
+<p>The final recorded verification covered 871 tests, including offline and isolated source suites, focused contract tests, and a complete seven-source contract/matrix check. The number is not the conclusion. The conclusion is that ingestion inventory and semantic workflow are now things the repository can reject when they drift.</p>
+
+<h2 class="relative group">The useful shape
+    <div id="the-useful-shape" class="anchor"></div>
+
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-useful-shape" aria-label="Anchor">#</a>
+    </span>
+
+</h2>
+<p>Databox stays deliberately local: concurrent dlt clients write through one Quack server; reviewed semantics become facts and dimensions through SQLMesh; Rufous proves those business models are usable.</p>
+<p>There are limits. Semantics still require review where source vocabulary, natural keys, relationships, grain, and precedence become product decisions. Rufous does not prove every future consumer fits the same model, and tests do not make providers stable. But this is a better boundary: local ownership without sequential ingestion, semantics before SQL, and a real consumer that exposes whether the warehouse is actually useful. The workflow does not remove judgment; it gives that judgment a durable place to live before it reaches an application.</p>
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+    </section>
+
+
+    <footer class="pt-8 max-w-prose print:hidden">
+
+
+
+
+
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/proton-calendar-alias-invites/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Fixing Alias-Based Calendar Invites in Proton Calendar
+              </span>
+            </a>
+
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-07-03T00:00:00&#43;00:00">3 July 2026</time>
+              </span>
+
+
+        </span>
+        <span class="flex flex-col items-end">
+
+        </span>
+      </div>
+    </div>
+
+
+
+
+    </footer>
+  </article>
+
+
+
+
+
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+
+
+
+
+
+
+
+
+
+
+
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/posts/index.xml"
+                title="">
+
+                  <span class="mr-1">
+                    <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM128 416c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg></span>
+                  </span>
+
+                Journal RSS
+              </a>
+            </li>
+
+        </ul>
+      </nav>
+
+
+  <div class="flex items-center justify-between">
+
+
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          Lough on Data is a trade name of Quire LLC.
+      </p>
+
+
+
+
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+
+
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+
+  </div>
+
+
+
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

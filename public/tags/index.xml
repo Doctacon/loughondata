@@ -9,14 +9,44 @@
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
-    <lastBuildDate>Fri, 03 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
 
     <item>
-      <title>Calendar</title>
-      <link>http://localhost:1313/tags/calendar/</link>
-      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+      <title>Dagster</title>
+      <link>http://localhost:1313/tags/dagster/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/tags/calendar/</guid>
+      <guid>http://localhost:1313/tags/dagster/</guid>
+      <description></description>
+
+    </item>
+
+    <item>
+      <title>Data-Engineering</title>
+      <link>http://localhost:1313/tags/data-engineering/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/data-engineering/</guid>
+      <description></description>
+
+    </item>
+
+    <item>
+      <title>Data-Modeling</title>
+      <link>http://localhost:1313/tags/data-modeling/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/data-modeling/</guid>
+      <description></description>
+
+    </item>
+
+    <item>
+      <title>Dlt</title>
+      <link>http://localhost:1313/tags/dlt/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/dlt/</guid>
       <description></description>
 
     </item>
@@ -24,9 +54,39 @@
     <item>
       <title>Duckdb</title>
       <link>http://localhost:1313/tags/duckdb/</link>
-      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/duckdb/</guid>
+      <description></description>
+
+    </item>
+
+    <item>
+      <title>Open-Source</title>
+      <link>http://localhost:1313/tags/open-source/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/open-source/</guid>
+      <description></description>
+
+    </item>
+
+    <item>
+      <title>Sqlmesh</title>
+      <link>http://localhost:1313/tags/sqlmesh/</link>
+      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/sqlmesh/</guid>
+      <description></description>
+
+    </item>
+
+    <item>
+      <title>Calendar</title>
+      <link>http://localhost:1313/tags/calendar/</link>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/calendar/</guid>
       <description></description>
 
     </item>
@@ -192,26 +252,6 @@
     </item>
 
     <item>
-      <title>Data-Engineering</title>
-      <link>http://localhost:1313/tags/data-engineering/</link>
-      <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/tags/data-engineering/</guid>
-      <description></description>
-
-    </item>
-
-    <item>
-      <title>Dlt</title>
-      <link>http://localhost:1313/tags/dlt/</link>
-      <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/tags/dlt/</guid>
-      <description></description>
-
-    </item>
-
-    <item>
       <title>Motherduck</title>
       <link>http://localhost:1313/tags/motherduck/</link>
       <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
@@ -242,16 +282,6 @@
     </item>
 
     <item>
-      <title>Dagster</title>
-      <link>http://localhost:1313/tags/dagster/</link>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/tags/dagster/</guid>
-      <description></description>
-
-    </item>
-
-    <item>
       <title>Data-Quality</title>
       <link>http://localhost:1313/tags/data-quality/</link>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
@@ -262,31 +292,11 @@
     </item>
 
     <item>
-      <title>Open-Source</title>
-      <link>http://localhost:1313/tags/open-source/</link>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/tags/open-source/</guid>
-      <description></description>
-
-    </item>
-
-    <item>
       <title>Side-Project</title>
       <link>http://localhost:1313/tags/side-project/</link>
       <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/side-project/</guid>
-      <description></description>
-
-    </item>
-
-    <item>
-      <title>Sqlmesh</title>
-      <link>http://localhost:1313/tags/sqlmesh/</link>
-      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/tags/sqlmesh/</guid>
       <description></description>
 
     </item>
@@ -437,16 +447,6 @@
       <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/github-actions/</guid>
-      <description></description>
-
-    </item>
-
-    <item>
-      <title>Data-Modeling</title>
-      <link>http://localhost:1313/tags/data-modeling/</link>
-      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/tags/data-modeling/</guid>
       <description></description>
 
     </item>
