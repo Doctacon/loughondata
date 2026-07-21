@@ -17,9 +17,9 @@ Public work is where I can show the choices, controls, and tradeoffs behind a sy
 
 ## Buoy Search
 
-[Buoy Search](https://github.com/Doctacon/buoy-search) turns a public website, GitHub repository, or local document into a reviewed, incremental search index. Its workflow keeps retrieval anchored to the source: changes are planned and reviewed before apply, and results return citable source chunks.
+[Buoy Search](https://github.com/Doctacon/buoy) turns a public website, GitHub repository, or local document into a reviewed, incremental search index. Its workflow keeps retrieval anchored to the source: changes are planned and reviewed before apply, and results return citable source chunks.
 
-{{< github repo="Doctacon/buoy-search" >}}
+{{< github repo="Doctacon/buoy" >}}
 
 ## More to inspect
 
