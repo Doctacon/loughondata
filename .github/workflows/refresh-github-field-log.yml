@@ -1,0 +1,35 @@
+name: Refresh GitHub field log
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh and commit the contribution snapshot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          export GH_TOKEN="$GITHUB_TOKEN"
+          gh auth setup-git
+          gh repo clone "$GITHUB_REPOSITORY" repo -- --depth 1
+          cd repo
+
+          ./scripts/refresh-github-contributions.sh
+
+          if git diff --quiet -- data/github_contributions.json; then
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/github_contributions.json
+          git commit -m "Refresh GitHub contribution snapshot"
+          git push origin HEAD:main
