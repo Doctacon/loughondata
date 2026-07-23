@@ -15,4 +15,4 @@ Verdict: pass
 
 ## Residual risk
 
-The first hosted execution cannot be proven before the workflow is pushed to `main`. It must be manually dispatched and its result recorded after publication.
+Manual dispatch was observed succeeding in GitHub Actions run `30036116398`, which committed refreshed public data as `6d3e957`. The daily cron has not yet elapsed, but its schedule is declarative and was statically checked.
