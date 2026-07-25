@@ -2420,15 +2420,21 @@
         },
         {
           "date": "2026-07-23",
-          "contributionCount": 6,
+          "contributionCount": 9,
           "contributionLevel": "FIRST_QUARTILE",
           "weekday": 4
         },
         {
           "date": "2026-07-24",
+          "contributionCount": 9,
+          "contributionLevel": "FIRST_QUARTILE",
+          "weekday": 5
+        },
+        {
+          "date": "2026-07-25",
           "contributionCount": 0,
           "contributionLevel": "NONE",
-          "weekday": 5
+          "weekday": 6
         }
       ]
     }
