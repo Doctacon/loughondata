@@ -1,0 +1,91 @@
+<section class="rufous-project-embed" aria-labelledby="rufous-embed-title">
+  <div class="rufous-project-embed__bar">
+    <div>
+      <h2 id="rufous-embed-title">Try Rufous</h2>
+      <p>Licensed static evidence, browser-local watches, and deterministic planning.</p>
+    </div>
+    <a href="https://rufous.loughondata.com/" target="_blank" rel="noopener noreferrer">
+      Open full screen <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+  <div class="rufous-project-embed__frame">
+    <iframe
+      src="https://rufous.loughondata.com/"
+      title="Rufous Arizona bird-finding application"
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"
+      sandbox="allow-scripts allow-same-origin allow-forms allow-downloads allow-popups allow-popups-to-escape-sandbox"
+      allowfullscreen></iframe>
+  </div>
+  <p class="rufous-project-embed__note">
+    Rufous has no application server: search, planning, saved watches, and calendar downloads
+    run in your browser from an immutable R2 release with a matching Pages fallback.
+  </p>
+</section>
+
+<style>
+  .rufous-project-embed {
+    margin-block: 2rem 3rem;
+    max-width: none;
+  }
+  .rufous-project-embed__bar {
+    align-items: end;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-bottom: .8rem;
+  }
+  .rufous-project-embed__bar h2,
+  .rufous-project-embed__bar p {
+    margin: 0;
+  }
+  .rufous-project-embed__bar p,
+  .rufous-project-embed__note {
+    color: inherit;
+    font-size: .82rem;
+    opacity: .78;
+  }
+  .rufous-project-embed__bar a {
+    border: 1px solid rgb(188 206 203 / .35);
+    border-radius: 999px;
+    flex: none;
+    font-size: .82rem;
+    font-weight: 650;
+    padding: .45rem .8rem;
+    text-decoration: none;
+  }
+  .rufous-project-embed__bar a:hover,
+  .rufous-project-embed__bar a:focus-visible {
+    background: rgb(185 246 192 / .12);
+    border-color: rgb(185 246 192 / .72);
+  }
+  .rufous-project-embed__frame {
+    background: #08110d;
+    border: 1px solid rgb(188 206 203 / .28);
+    border-radius: .9rem;
+    height: clamp(38rem, 75vh, 58rem);
+    overflow: hidden;
+  }
+  .rufous-project-embed__frame iframe {
+    border: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  .rufous-project-embed__note {
+    border-left: 2px solid rgb(185 246 192 / .56);
+    line-height: 1.55;
+    margin-top: .8rem;
+    padding-left: .8rem;
+  }
+  @media (max-width: 767px) {
+    .rufous-project-embed__bar {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    .rufous-project-embed__frame {
+      height: 72vh;
+      min-height: 34rem;
+    }
+  }
+</style>

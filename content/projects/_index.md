@@ -7,6 +7,12 @@ description: "Public architecture work and open-source projects from Lough on Da
 
 Public work is where I can show the choices, controls, and tradeoffs behind a system without borrowing credibility from confidential client work.
 
+## Rufous
+
+[Rufous](/projects/rufous/) is an Arizona bird-finding field companion built from the Databox reference warehouse. It turns licensed GBIF observations and public place data into an explainable, user-timed outing and a downloadable calendar file—without an application server or server-side visitor storage.
+
+[Try Rufous →](/projects/rufous/)
+
 ## Databox
 
 [Databox](/projects/databox/) is a single-operator cross-domain data platform. It brings public bird-observation, weather, and streamflow data into one queryable warehouse, then makes the ingestion, transformations, quality checks, orchestration, and documentation inspectable as one system.
