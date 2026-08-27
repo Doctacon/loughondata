@@ -39,36 +39,6 @@
 
   {{ partial "home/field-log.html" . }}
 
-  <section class="home-services" aria-labelledby="services-heading">
-    <div class="home-section-intro">
-      <p class="contractor-eyebrow">Focused work</p>
-      <h2 id="services-heading">Where I can help.</h2>
-    </div>
-    <ol class="service-cards">
-      <li>
-        <span class="service-number">01</span>
-        <h3>Platform Assessment</h3>
-        <p>Find the architecture, reliability, cost, modeling, and delivery risks worth addressing first.</p>
-      </li>
-      <li>
-        <span class="service-number">02</span>
-        <h3>Pipeline Buildout</h3>
-        <p>Build dependable ingestion, transformation, orchestration, and observability paths.</p>
-      </li>
-      <li>
-        <span class="service-number">03</span>
-        <h3>Warehouse &amp; Modeling</h3>
-        <p>Make analytical storage, models, metrics, and semantic layers easier to trust and use.</p>
-      </li>
-      <li>
-        <span class="service-number">04</span>
-        <h3>Data Reliability</h3>
-        <p>Add the quality controls, documentation, and operating practices that keep systems useful.</p>
-      </li>
-    </ol>
-    <a class="home-text-link" href="/services/">Explore services <span aria-hidden="true">→</span></a>
-  </section>
-
   {{ with site.GetPage "/projects/databox" }}
     {{ with .Resources.Get "dagster-asset-lineage.png" }}
       <section class="home-databox" aria-labelledby="databox-heading">
@@ -99,6 +69,36 @@
       </section>
     {{ end }}
   {{ end }}
+
+  <section class="home-services" aria-labelledby="services-heading">
+    <div class="home-section-intro">
+      <p class="contractor-eyebrow">Focused work</p>
+      <h2 id="services-heading">Where I can help.</h2>
+    </div>
+    <ol class="service-cards">
+      <li>
+        <span class="service-number">01</span>
+        <h3>Platform Assessment</h3>
+        <p>Find the architecture, reliability, cost, modeling, and delivery risks worth addressing first.</p>
+      </li>
+      <li>
+        <span class="service-number">02</span>
+        <h3>Pipeline Buildout</h3>
+        <p>Build dependable ingestion, transformation, orchestration, and observability paths.</p>
+      </li>
+      <li>
+        <span class="service-number">03</span>
+        <h3>Warehouse &amp; Modeling</h3>
+        <p>Make analytical storage, models, metrics, and semantic layers easier to trust and use.</p>
+      </li>
+      <li>
+        <span class="service-number">04</span>
+        <h3>Data Reliability</h3>
+        <p>Add the quality controls, documentation, and operating practices that keep systems useful.</p>
+      </li>
+    </ol>
+    <a class="home-text-link" href="/services/">Explore services <span aria-hidden="true">→</span></a>
+  </section>
 
   {{ with $rest }}
     <section class="contractor-home-content prose dark:prose-invert">
