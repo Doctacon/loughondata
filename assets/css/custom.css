@@ -217,8 +217,9 @@ html[data-scrolled="true"] .logo {
   display: grid;
   gap: 2rem;
   align-items: start;
-  margin-block: 2rem 4rem;
+  margin-block: 2rem;
   padding: clamp(2rem, 5vw, 4rem);
+  padding-bottom: 2rem;
 }
 
 .contractor-hero-copy,
@@ -767,7 +768,7 @@ html.js .mobile-navigation.is-open {
   .contractor-hero {
     grid-template-columns: minmax(0, 1fr) minmax(12rem, 18rem);
     gap: clamp(2rem, 7vw, 6rem);
-    margin-block: 3rem 5rem;
+    margin-block: 3rem 2.5rem;
   }
 
   .reliability-flow {
@@ -815,7 +816,7 @@ html.js .mobile-navigation.is-open {
 }
 
 /* GitHub contribution field log: calendar first, detail only on interaction. */
-.field-log { margin: 4rem 0; padding: 1.5rem 0; border-top: 1px solid rgb(188 206 203 / .28); border-bottom: 1px solid rgb(188 206 203 / .28); }
+.field-log { margin: 2rem 0 4rem; padding: 1.5rem 0; border-top: 1px solid rgb(188 206 203 / .28); border-bottom: 1px solid rgb(188 206 203 / .28); }
 .field-log-heading { display:flex; align-items:baseline; justify-content:space-between; gap:1rem; margin-bottom:1rem; }
 .field-log-heading .contractor-wordmark { margin:0; }
 .field-log-heading a { white-space:nowrap; }

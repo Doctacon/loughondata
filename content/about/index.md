@@ -10,21 +10,13 @@ showTableOfContents: true
 
 # About Lough on Data
 
-I don’t write code because I like writing code. I write code because it is the fastest way I have found to solve problems worth solving. The good result is usually a system that makes someone’s job quieter or turns a question that needed a meeting into an answer someone can trust.
+I don’t write code because I like writing code. I write code as a means for solving problems worth solving.
 
-I’m Connor Lough, the independent data engineer behind Lough on Data. I help growing teams and early startups build dependable data foundations: the paths data takes into a warehouse, the models and metrics that give it meaning, and the quality and operating practices that keep it useful.
-
-Before working independently, I built and operated data systems in-house. That experience taught me that a good data platform is not just a collection of tools. It needs clear ownership, understandable failure modes, and enough documentation and controls for the team that inherits it.
-
-## How I work
-
-I work remotely with teams worldwide through focused projects and advisory engagements. We start with the problem: what is unreliable, who relies on it, and what outcome matters. If there is a fit, we define a clear next step rather than treating an engagement as open-ended staff augmentation.
-
-I prefer portable, auditable, open-source-friendly systems and practical operating habits over architecture for its own sake.
+I’m Connor Lough, the data engineer behind Lough on Data. I help growing teams build dependable data foundations: the paths data takes into a warehouse, the models and metrics that give it meaning, and the quality and operating practices that keep it useful. And all of it using open source technologies so that one day when I'm gone, there's no surprise bill.
 
 ## Beyond the stack
 
-I’m based in Arizona. Outside of data work, I hunt, which is how I came to care about geospatial data, public-land boundaries, and the strange politics of who owns what dirt. That interest keeps showing up in the questions I choose to explore publicly.
+I’m based in Arizona. Outside of data work, I'm outdoors! I hunt, camp, and go birding. Consequently, most of my public work is centered around bird observations, public-land boundaries, and the strange politics of who owns what dirt. That interest keeps showing up in the questions I choose to explore publicly.
 
 ## Where I’ve been
 

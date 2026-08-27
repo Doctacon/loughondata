@@ -3,15 +3,11 @@ title: "Work"
 description: "Public architecture work and open-source projects from Lough on Data."
 ---
 
-# Work
+## Buoy Search
 
-Public work is where I can show the choices, controls, and tradeoffs behind a system without borrowing credibility from confidential client work.
+[Buoy](https://github.com/Doctacon/buoy) turns a public website, GitHub repository, or local document into a semantic search platform. `plan`, `apply`, `retrieve` are your main functions, with built in automatic namespace routing.
 
-## Rufous
-
-[Rufous](/projects/rufous/) is an Arizona bird-finding field companion built from the Databox reference warehouse. It turns licensed GBIF observations and public place data into an explainable, user-timed outing and a downloadable calendar file—without an application server or server-side visitor storage.
-
-[Try Rufous →](/projects/rufous/)
+{{< github repo="Doctacon/buoy" >}}
 
 ## Databox
 
@@ -21,11 +17,11 @@ Public work is where I can show the choices, controls, and tradeoffs behind a sy
 
 {{< github repo="Doctacon/databox" >}}
 
-## Buoy Search
+## Rufous
 
-[Buoy Search](https://github.com/Doctacon/buoy) turns a public website, GitHub repository, or local document into a reviewed, incremental search index. Its workflow keeps retrieval anchored to the source: changes are planned and reviewed before apply, and results return citable source chunks.
+[Rufous](/projects/rufous/) is an Arizona bird pokedex built from the Databox reference warehouse. It turns licensed GBIF observations and public place data into an explainable, user-timed outing and a downloadable calendar file—without an application server or server-side visitor storage.
 
-{{< github repo="Doctacon/buoy" >}}
+[Try Rufous →](/projects/rufous/)
 
 ## More to inspect
 
