@@ -1,7 +1,7 @@
 ---
 title: "The Streaming and the Dead"
 date: 2026-08-25
-draft: true
+draft: false
 featured: true
 summary: "Streaming has become a must-have data engineering skill, even when batch is still the right architecture. So I built a Kafka and Flink lab on top of Rufous web analytics to find out what the job descriptions are really asking for."
 tags: ["streaming", "data-engineering", "kafka", "flink", "cloudflare-r2"]
