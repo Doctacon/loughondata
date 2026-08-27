@@ -10,7 +10,7 @@
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
     <lastBuildDate>Tue, 28 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/data-quality/index.xml" rel="self" type="application/rss+xml" />
-
+    
     <item>
       <title>Databox</title>
       <link>http://localhost:1313/projects/databox/</link>
@@ -18,8 +18,8 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/projects/databox/</guid>
       <description>A local-first, forkable data-warehouse scaffold: public sources through dlt, DuckDB, SQLMesh, Soda, and Dagster without always-on infrastructure.</description>
-
+      
     </item>
-
+    
   </channel>
 </rss>

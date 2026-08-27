@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kafka on Lough on Data</title>
+    <link>http://localhost:1313/tags/kafka/</link>
+    <description>Recent content in Kafka on Lough on Data</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
+    <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
+    <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
+    <lastBuildDate>Tue, 25 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/kafka/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The Streaming and the Dead</title>
+      <link>http://localhost:1313/posts/tell-me-streaming-one-more-time/</link>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/tell-me-streaming-one-more-time/</guid>
+      <description>Streaming has become a must-have data engineering skill, even when batch is still the right architecture. So I built a Kafka and Flink lab on top of Rufous web analytics to find out what the job descriptions are really asking for.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

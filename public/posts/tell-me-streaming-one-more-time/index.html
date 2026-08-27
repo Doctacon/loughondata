@@ -1,0 +1,1526 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth dark"
+  data-default-appearance="dark"
+  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>The Streaming and the Dead &middot; Lough on Data</title>
+    <meta name="title" content="The Streaming and the Dead &middot; Lough on Data">
+  
+
+  
+  
+    <meta name="description" content="Streaming has become a must-have data engineering skill, even when batch is still the right architecture. So I built a Kafka and Flink lab on top of Rufous web analytics to find out what the job descriptions are really asking for.">
+  
+  
+    <meta name="keywords" content="streaming,data-engineering,kafka,flink,cloudflare-r2,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/tell-me-streaming-one-more-time/">
+  
+  
+
+  
+  
+    <meta name="author" content="Connor Lough">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://github.com/Doctacon" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/crlough/" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/tell-me-streaming-one-more-time/">
+  <meta property="og:site_name" content="Lough on Data">
+  <meta property="og:title" content="The Streaming and the Dead">
+  <meta property="og:description" content="Streaming has become a must-have data engineering skill, even when batch is still the right architecture. So I built a Kafka and Flink lab on top of Rufous web analytics to find out what the job descriptions are really asking for.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-08-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-08-25T00:00:00+00:00">
+    <meta property="article:tag" content="Streaming">
+    <meta property="article:tag" content="Data-Engineering">
+    <meta property="article:tag" content="Kafka">
+    <meta property="article:tag" content="Flink">
+    <meta property="article:tag" content="Cloudflare-R2">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The Streaming and the Dead">
+  <meta name="twitter:description" content="Streaming has become a must-have data engineering skill, even when batch is still the right architecture. So I built a Kafka and Flink lab on top of Rufous web analytics to find out what the job descriptions are really asking for.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.2259a95b8053fb8b29fe77ff1a79bf00cb96268f46f035ad5c8a25745f1b47b83ffe856e140e292ae66c95e10cd68e9bd0b3a905500a76e5c06cadefd5644636.css"
+    integrity="sha512-IlmpW4BT&#43;4sp/nf/Gnm/AMuWJo9G8DWtXIoldF8bR7g//oVuFA4pKuZsleEM1o6b0LOpBVAKduXAbK3v1WRGNg==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.4c6b36324987fc05dd8cd58437946294b6f2e315675cef16098738373ac2a0fe600416b00e13a1a8687c872f82868f7a0ece1e4ae0b9ea6ead63721f5e8b6748.js"
+      integrity="sha512-TGs2MkmH/AXdjNWEN5RilLby4xVnXO8WCYc4NzrCoP5gBBawDhOhqGh8hy&#43;Cho96Ds4eSuC56m6tY3IfXotnSA=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "The Streaming and the Dead",
+    "headline": "The Streaming and the Dead",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/posts/tell-me-streaming-one-more-time/",
+    "author" : {
+      "@type": "Person",
+      "name": "Connor Lough"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-08-25T00:00:00\u002b00:00",
+    "datePublished": "2026-08-25T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-08-25T00:00:00\u002b00:00",
+    
+    "keywords": ["streaming","data-engineering","kafka","flink","cloudflare-r2"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2459"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+    <style>ZgotmplZ</style>
+<style>:root { --butte-granite: url("/img/scenery.png"); }</style>
+<style>:root { --acorn-woodpecker-sprite: url("/img/acorn-woodpecker-sprite.png"); }</style>
+<style>:root { --acorn-woodpecker-flight: url("/img/acorn-woodpecker-flight.png"); }</style>
+<script>
+  (function () {
+    const root = document.documentElement;
+
+    try {
+      root.classList.toggle("dark", localStorage.getItem("appearance") !== "light");
+    } catch {
+      root.classList.add("dark");
+    }
+
+    const setScrolled = () => {
+      root.dataset.scrolled = window.scrollY > 20 ? "true" : "false";
+    };
+    setScrolled();
+    window.addEventListener("scroll", setScrolled, { passive: true });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      root.classList.add("js");
+
+      const woodpeckerGutters = document.querySelector(".woodpecker-gutters");
+      const woodpeckerGlass = document.querySelector(".woodpecker-glass");
+      const woodpeckerPerch = document.querySelector(".woodpecker-perch");
+      if (woodpeckerGutters && woodpeckerGlass && woodpeckerPerch) {
+        
+        document.documentElement.append(woodpeckerGutters, woodpeckerGlass, woodpeckerPerch);
+
+        const flightBird = woodpeckerGutters.querySelector(".woodpecker--flight");
+        const glassBird = woodpeckerGlass.querySelector(".woodpecker");
+        const reduceWoodpeckerMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const isHome = woodpeckerGutters.dataset.home === "true";
+        const flightFrames = [0, 1, 2, 3, 4];
+        const scenery = { width: 1672, height: 941, trunkX: 157, trunkY: 362, birdSize: 114 };
+        let flightComplete = reduceWoodpeckerMotion || !isHome;
+
+        const layoutGutters = () => {
+          const runner = document.body.getBoundingClientRect();
+          const leftWidth = Math.max(0, runner.left);
+          const rightWidth = Math.max(0, window.innerWidth - runner.right);
+          const eligible = window.innerWidth >= 1024 && leftWidth >= 160 && rightWidth >= 160;
+          for (const layer of [woodpeckerGutters, woodpeckerGlass, woodpeckerPerch]) {
+            layer.dataset.ready = String(eligible);
+          }
+          if (!eligible) return null;
+
+          const scale = Math.max(window.innerWidth / scenery.width, window.innerHeight / scenery.height);
+          const birdSize = scale * scenery.birdSize;
+          woodpeckerGutters.style.setProperty("--runner-left", `${runner.left}px`);
+          woodpeckerGutters.style.setProperty("--runner-right", `${runner.right}px`);
+          woodpeckerGutters.style.setProperty("--woodpecker-size", `${birdSize}px`);
+          woodpeckerGlass.style.left = `${runner.left}px`;
+          woodpeckerGlass.style.width = `${runner.width}px`;
+          woodpeckerGlass.style.setProperty("--woodpecker-size", `${birdSize}px`);
+          return { runner };
+        };
+
+        const showFlightFrame = (frame) => {
+          for (const bird of [flightBird, glassBird]) {
+            bird.style.backgroundImage = "var(--acorn-woodpecker-flight)";
+            bird.style.backgroundSize = "500% 100%";
+            bird.style.backgroundPosition = `${frame * 25}% 0`;
+          }
+        };
+
+        const perch = () => {
+          if (!layoutGutters()) return;
+          woodpeckerGutters.dataset.state = "perched";
+          woodpeckerGlass.dataset.state = "idle";
+          woodpeckerPerch.dataset.state = "perched";
+        };
+
+        const dimensions = layoutGutters();
+        if (dimensions) {
+          if (reduceWoodpeckerMotion || !isHome) {
+            perch();
+          } else {
+            window.setTimeout(() => {
+              const startedAt = performance.now();
+              const duration = 3200;
+              woodpeckerGutters.dataset.state = "flying";
+              woodpeckerGlass.dataset.state = "flying";
+              woodpeckerPerch.dataset.state = "idle";
+
+              const fly = (now) => {
+                const gutters = layoutGutters();
+                if (!gutters) return;
+                const elapsed = Math.min(now - startedAt, duration);
+                const progress = elapsed / duration;
+                const scale = Math.max(window.innerWidth / scenery.width, window.innerHeight / scenery.height);
+                const offsetX = (window.innerWidth - (scenery.width * scale)) / 2;
+                const offsetY = (window.innerHeight - (scenery.height * scale)) / 2;
+                const perchX = offsetX + (scenery.trunkX * scale);
+                const perchY = offsetY + (scenery.trunkY * scale);
+                const x = window.innerWidth + ((perchX - window.innerWidth) * progress);
+                const y = (window.innerHeight * 0.19) + ((perchY - (window.innerHeight * 0.19)) * progress);
+                showFlightFrame(flightFrames[Math.floor(elapsed / 90) % flightFrames.length]);
+                flightBird.style.top = `${y}px`;
+                flightBird.style.transform = `translate3d(${x}px, 0, 0)`;
+                glassBird.style.top = `${y}px`;
+                glassBird.style.transform = `translate3d(${x - gutters.runner.left}px, 0, 0)`;
+
+                if (elapsed < duration) {
+                  window.requestAnimationFrame(fly);
+                } else {
+                  flightComplete = true;
+                  perch();
+                }
+              };
+              window.requestAnimationFrame(fly);
+            }, 1200);
+          }
+        }
+
+        window.addEventListener("resize", () => {
+          if (flightComplete) perch();
+        }, { passive: true });
+      }
+
+      const menuToggle = document.getElementById("mobile-menu-toggle");
+      const menu = document.getElementById("mobile-navigation");
+      if (menuToggle && menu) {
+        const setMenuOpen = (open) => {
+          menu.classList.toggle("is-open", open);
+          menuToggle.setAttribute("aria-expanded", String(open));
+        };
+        setMenuOpen(false);
+        menuToggle.addEventListener("click", () => {
+          setMenuOpen(!menu.classList.contains("is-open"));
+        });
+      }
+
+      const updateThemeColor = () => {
+        const themeColor = document.querySelector('meta[name="theme-color"]');
+        if (themeColor) themeColor.content = getComputedStyle(document.body).backgroundColor;
+      };
+      const toggleAppearance = () => {
+        root.classList.toggle("dark");
+        const appearance = root.classList.contains("dark") ? "dark" : "light";
+        try {
+          localStorage.setItem("appearance", appearance);
+        } catch {
+          
+        }
+        try {
+          window.updateMeta?.();
+        } catch {
+          updateThemeColor();
+        }
+        try {
+          window.updateMermaidTheme?.();
+        } catch {
+          
+        }
+        try {
+          window.updateLogo?.(appearance);
+        } catch {
+          
+        }
+      };
+      const clearAppearance = () => {
+        try {
+          localStorage.removeItem("appearance");
+        } catch {
+          
+        }
+      };
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      for (const day of document.querySelectorAll(".field-log-day:not(.field-log-day-empty)")) {
+        let reset;
+        let trail;
+        const reveal = () => {
+          window.clearTimeout(reset);
+          day.classList.remove("is-revealing");
+          
+          void day.offsetWidth;
+          day.classList.add("is-revealing");
+          reset = window.setTimeout(() => day.classList.remove("is-revealing"), 1500);
+        };
+        const markTrail = () => {
+          if (reduceMotion) return;
+          window.clearTimeout(trail);
+          day.classList.remove("is-trailing");
+          void day.offsetWidth;
+          day.classList.add("is-trailing");
+          trail = window.setTimeout(() => day.classList.remove("is-trailing"), 700);
+        };
+        day.addEventListener("pointerenter", () => { markTrail(); reveal(); });
+        day.addEventListener("focus", reveal);
+        day.addEventListener("pointerleave", () => {
+          window.clearTimeout(reset);
+          day.classList.remove("is-revealing");
+        });
+        day.addEventListener("blur", () => {
+          window.clearTimeout(reset);
+          day.classList.remove("is-revealing");
+        });
+      }
+
+      for (const id of ["appearance-switcher", "appearance-switcher-mobile"]) {
+        const switcher = document.getElementById(id);
+        if (!switcher) continue;
+        
+        switcher.addEventListener("click", (event) => {
+          event.stopImmediatePropagation();
+          toggleAppearance();
+        }, true);
+        switcher.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          clearAppearance();
+        }, true);
+      }
+    });
+  })();
+</script>
+
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col min-h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    
+
+<div class="woodpecker-gutters" aria-hidden="true" data-home="false">
+  <span class="woodpecker woodpecker--flight"></span>
+</div>
+<div class="woodpecker-glass" aria-hidden="true">
+  <span class="woodpecker"></span>
+</div>
+<svg class="woodpecker-perch" aria-hidden="true" viewBox="0 0 1672 941" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <clipPath id="woodpecker-perch-frame"><rect x="157" y="362" width="114" height="114" /></clipPath>
+  </defs>
+  <image href="/img/acorn-woodpecker-sprite.png" x="-299" y="248" width="570" height="228" clip-path="url(#woodpecker-perch-frame)" />
+</svg>
+
+
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl backdrop-saturate-220 backdrop-brightness-112 dark:backdrop-saturate-180 dark:backdrop-brightness-95 bg-primary-200/80 bg-linear-60 dark:bg-primary-800/30 shadow-xl"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+    
+    
+      <div>
+        <a href="/" class="flex">
+          <span class="sr-only">Lough on Data</span>
+          
+            <img
+              src="/img/avatar.png"
+              width="512"
+              height="512"
+              class="logo max-h-20 max-w-20 object-scale-down object-left nozoom"
+              alt="">
+          
+        </a>
+      </div>
+    
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Lough on Data
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/services/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Services"
+      title="Services">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Services
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/projects/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Work"
+      title="Work">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Work
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Journal"
+      title="Posts">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Journal
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+      
+      
+        <span class="text-base font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="relative">
+      <button
+        id="mobile-menu-toggle"
+        type="button"
+        aria-controls="mobile-navigation"
+        aria-expanded="true"
+        aria-label="Navigation"
+        class="flex items-center justify-center bf-icon-color-hover">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+      </button>
+
+      <nav
+        id="mobile-navigation"
+        aria-label="Primary navigation"
+        class="mobile-navigation bf-scrollbar">
+        <div class="space-y-6">
+          
+  
+    <div class="px-2">
+      <a
+        href="/services/"
+        aria-label="Services"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Services" class="text-2xl font-bold tracking-tight">Services</span>
+      </a>
+
+      
+    </div>
+  
+    <div class="px-2">
+      <a
+        href="/projects/"
+        aria-label="Work"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Work" class="text-2xl font-bold tracking-tight">Work</span>
+      </a>
+
+      
+    </div>
+  
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Journal"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Posts" class="text-2xl font-bold tracking-tight">Journal</span>
+      </a>
+
+      
+    </div>
+  
+    <div class="px-2">
+      <a
+        href="/about/"
+        aria-label="About"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="About" class="text-2xl font-bold tracking-tight">About</span>
+      </a>
+
+      
+    </div>
+  
+
+          
+  
+
+
+          
+            <button
+              id="appearance-switcher-mobile"
+              type="button"
+              aria-label="Dark mode switcher"
+              class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+              <div class="dark:hidden"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span></div>
+              <div class="hidden dark:block"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span></div>
+            </button>
+          
+
+          
+  
+
+        </div>
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+  integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+  data-blur-id="menu-blur"></script>
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        The Streaming and the Dead
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-08-25T00:00:00&#43;00:00">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span>2459 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">12 mins</span>
+    
+
+    
+    
+      <span class="ps-2"><span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Draft
+  </span>
+</span>
+</span>
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+      
+        
+      
+        
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/streaming/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Streaming
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/data-engineering/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Data-Engineering
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/kafka/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Kafka
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/flink/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Flink
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+            
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/cloudflare-r2/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Cloudflare-R2
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Connor Lough"
+        src="/img/avatar_hu_db567b2fec34e612.png"
+        data-zoom-src="/img/avatar_hu_8b208b04b1ab4e2f.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Connor Lough
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500 space-x-2">
+    
+      
+        
+        <a
+          class="email-link hover:text-primary-700 dark:hover:text-primary-400"
+          href="#"
+          
+            data-email="bWFpbHRvOmNvbm5vckBsb3VnaG9uZGF0YS5jb20="
+          
+          target="_blank"
+          aria-label="Email"
+          title="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/Doctacon"
+          
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        
+        <a
+          class=" hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://www.linkedin.com/in/crlough/"
+          
+          target="_blank"
+          aria-label="Linkedin"
+          title="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <p>Streaming data.</p>
+<p>I cannot speak for every data worker, but there have been very few moments in my career when I have looked at a problem and thought, &ldquo;Wow, I am going to need a streaming architecture to get this working.&rdquo;</p>
+<p>Then I started interviewing again.</p>
+<p>I had not needed to search for a job in two years, and suddenly it seemed like three out of every four data engineering postings wanted Spark, Kafka, Flink, or some combination of the three. Apparently, while I was over here moving terabytes of data in fifteen-minute increments for very little money, the rest of the industry had agreed that every data engineer now needed to be a distributed systems engineer.</p>
+<p>What happened?</p>
+<p>Did batch processing stop working? Did customers become physically incapable of waiting fifteen minutes? Did every startup wake up with Netflix&rsquo;s traffic?</p>
+<p>Not exactly.</p>
+<p>But I do think streaming has become a must-have skill. That is different from streaming being a must-have architecture, and the distinction matters.</p>
+
+<h2 class="relative group">Batch processing is not dead
+    <div id="batch-processing-is-not-dead" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#batch-processing-is-not-dead" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>For most of the last eight years, the companies I worked for were completely satisfied with batch processing.</p>
+<p>The basic shape was familiar:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">source systems
+</span></span><span class="line"><span class="cl">-&gt; ingestion
+</span></span><span class="line"><span class="cl">-&gt; cloud warehouse
+</span></span><span class="line"><span class="cl">-&gt; transformations
+</span></span><span class="line"><span class="cl">-&gt; models and analysis
+</span></span><span class="line"><span class="cl">-&gt; BI</span></span></code></pre></div></div>
+<p>And when I say ingestion, I do not mean copying a few Salesforce tables with Airbyte. I mean moving data out of production MongoDB environments that represented customers&rsquo; pipelines, stages, and steps. Terabytes of operational data.</p>
+<p>One stack I used was Python, dlt, ConnectorX, and PyArrow writing into BigQuery. It ran incremental jobs every fifteen minutes on a CI runner with 2 GB of memory and four cores. It was cheap, understandable, and boring in the most complimentary sense of the word.</p>
+<p>Most data engineers could look at that system and know what it was doing. If it broke, we could rerun it. If a source changed, we could repair the affected batch. Nobody had to reason about watermarks before breakfast.</p>
+<p>I pride myself on not creating promotion projects: elaborate systems whose primary output is a more impressive job title for the person who designed them. If the business is happy with data that is fifteen minutes old, adding Kafka does not make the data platform more mature. It makes it more complicated.</p>
+<p>Large data also does not automatically mean streaming data. A terabyte is a statement about volume. Streaming is usually a statement about time.</p>
+<blockquote><p>The useful question is not, &ldquo;How much data do we have?&rdquo; It is, &ldquo;How stale can this data be before someone cares?&rdquo;</p>
+</blockquote><p>For a lot of internal analytics, the honest answer is still hours. Sometimes it is a day. That is fine. The executive looking at last quarter&rsquo;s revenue does not need an event-time window and an exactly-once sink.</p>
+
+<h2 class="relative group">Freshness became a product requirement
+    <div id="freshness-became-a-product-requirement" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#freshness-became-a-product-requirement" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The place where my opinion starts to change is when the person looking at the data is a customer.</p>
+<p>Internal BI trained us to think of the warehouse as the end of the pipeline. Data arrived, we modeled it, and someone opened a dashboard. If that dashboard lagged behind production by fifteen minutes, nobody panicked.</p>
+<p>Now analytics increasingly lives inside the product. A customer takes an action in the application and then navigates to a usage panel, billing screen, security console, or operational dashboard. The application says there are ten active users. The embedded dashboard, still waiting on the warehouse, says there are six.</p>
+<p>Both systems may be working exactly as designed. Together, they look broken.</p>
+<p>That mismatch is not just a data quality problem. It is a product experience problem. The customer does not care that one number came from an application database and the other came through a beautifully modeled warehouse. They see one product disagreeing with itself.</p>
+<p>The same pressure appears in a few other places:</p>
+<ul>
+<li>A data product becomes more valuable when newly collected information is available immediately.</li>
+<li>A company formed through acquisitions needs a common usage stream across products that were never designed to talk to one another.</li>
+<li>Consumption-based pricing needs usage records quickly enough for limits, forecasts, and billing to remain trustworthy.</li>
+<li>Fraud, security, and operational systems lose value when the response arrives long after the event.</li>
+<li>AI applications create more automated actions, more telemetry, and a much higher expectation that the next system in the chain can react now.</li>
+</ul>
+<p>None of those examples means every transformation should become a stream. They mean freshness is moving from a nice platform metric into the product contract.</p>
+<p>That is why streaming shows up in so many job descriptions. Some companies genuinely need it. Some expect to need it soon. Some are using &ldquo;Kafka&rdquo; as shorthand for &ldquo;we have grown-up data infrastructure.&rdquo; And, yes, some are absolutely building promotion projects.</p>
+<p>But the underlying shift is real. Data engineers are being asked to move closer to application behavior, not only prepare tables for tomorrow&rsquo;s dashboard.</p>
+
+<h2 class="relative group">So what is streaming?
+    <div id="so-what-is-streaming" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#so-what-is-streaming" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The least useful definition is &ldquo;data, but fast.&rdquo;</p>
+<p>For me, the more useful definition is a system that treats its input as an unbounded sequence of records. Producers keep producing. Processors maintain state as records arrive. Consumers act without waiting for somebody to declare the day&rsquo;s dataset complete.</p>
+<p>That does not promise zero latency. A streaming job can still use a five-minute window. A micro-batch can refresh every minute. The difference is the operating model: instead of repeatedly rebuilding an answer from a bounded pile of data, the system keeps an answer moving as new data arrives.</p>
+<p>Once the input is unbounded, time and failure become part of the data model. Records arrive late or out of order. Producers retry. Consumers stop and resume. Schemas change while old records remain in the log. &ldquo;What happened?&rdquo; and &ldquo;When did we learn about it?&rdquo; become two different questions.</p>
+<p>That was the part I needed to learn. Not how to move a JSON object quickly, but how to keep a result trustworthy when there is no natural end to the input.</p>
+
+<h2 class="relative group">Fine. I will learn Kafka
+    <div id="fine-i-will-learn-kafka" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#fine-i-will-learn-kafka" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>I could keep complaining about job descriptions, or I could make the complaint useful.</p>
+<p>I built <code>streams2r2</code>, an on-demand streaming lab using the web analytics from Rufous, my local birding application. <a href="http://localhost:1313/posts/databox-rufous-warehouse/" >Rufous already sits on top of Databox</a>, a local-first warehouse that combines public birding, weather, audio, and trait data. The streaming project looks in the other direction: instead of asking what data Rufous consumes, it asks what data Rufous produces when people use it.</p>
+<p>The pipeline looks like this:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Cloudflare Web Analytics
+</span></span><span class="line"><span class="cl">-&gt; Python producer
+</span></span><span class="line"><span class="cl">-&gt; Kafka raw topic
+</span></span><span class="line"><span class="cl">-&gt; Flink event-time windows
+</span></span><span class="line"><span class="cl">-&gt; Kafka curated topic
+</span></span><span class="line"><span class="cl">-&gt; Kafka Connect
+</span></span><span class="line"><span class="cl">-&gt; private Cloudflare R2 bucket</span></span></code></pre></div></div>
+<p>This is deliberately too much machinery for the amount of traffic my birding app receives. That is the point. A learning project should give each component a real job without requiring me to cosplay as a Fortune 50 company.</p>
+<p>Rufous already uses Cloudflare Web Analytics, so I did not add a custom tracking script just to manufacture events. A Python producer queries Cloudflare&rsquo;s GraphQL API for page-load aggregates and publishes versioned records into a raw Kafka topic. Flink groups those records into five-minute event-time windows by path, country, device type, and browser. The curated records go to another Kafka topic, and Kafka Connect writes gzip-compressed JSON Lines into a private R2 bucket.</p>
+<p>It is a compact tour through most of the concepts hiding behind the word &ldquo;streaming.&rdquo;</p>
+
+<h2 class="relative group">It is not a firehose, and that is useful
+    <div id="it-is-not-a-firehose-and-that-is-useful" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#it-is-not-a-firehose-and-that-is-useful" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>There is an important cheat in this project: Cloudflare Web Analytics does not give me a raw stream of individual clicks. Its GraphQL API returns aggregated, adaptively sampled page-load data.</p>
+<p>One source record represents one minute plus a collection of dimensions. It is not one visitor. It is not one page load. The pipeline preserves Cloudflare&rsquo;s <code>sampleInterval</code> so the output does not pretend sampled estimates are raw facts.</p>
+<p>The producer also polls the API. It does not receive events continuously from a webhook.</p>
+<p>Does that disqualify it as a streaming project? I do not think so. Kafka and Flink still process an unbounded sequence of records, use event time, maintain state, checkpoint progress, and deliver derived results downstream. More importantly, the awkward source forced me to think about something a perfect demo generator would have hidden: what happens when the lab is turned off?</p>
+<p>My laptop is not a production server. Colima is usually stopped. A browser-to-local-Kafka design would lose every event generated while my laptop was asleep, which would make the architecture very live and very useless.</p>
+<p>Cloudflare retains enough history for the producer to catch up. The producer stores a durable cursor and queries the backlog in bounded daily chunks. Each chunk is published as one Kafka transaction, and the cursor moves only after that transaction commits. If the laptop is off for a week, the next run resumes where the last one stopped.</p>
+<p>That makes the source feel less like the canonical &ldquo;firehose&rdquo; diagram and more like real data engineering. Sources are late. Consumers go offline. APIs paginate. State has to live somewhere. Recovery is part of the design.</p>
+
+<h2 class="relative group">Kafka is the boundary, not the point
+    <div id="kafka-is-the-boundary-not-the-point" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#kafka-is-the-boundary-not-the-point" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Before this project, it was easy for me to reduce Kafka to &ldquo;a queue for data people.&rdquo; That is not entirely wrong, but it misses why the boundary is useful.</p>
+<p>The raw topic separates collection from computation. The producer does not need to know how Flink will aggregate the records. Flink does not need Cloudflare credentials or API logic. Kafka Connect does not need to understand either one; it consumes curated records and handles object delivery.</p>
+<p>That separation gives me replay.</p>
+<p>If I change the Flink query, I can process retained raw records again instead of asking Cloudflare to reproduce the exact response it returned last week. If the R2 sink is unavailable, the curated topic remains the handoff point. If I want a second consumer later, I do not have to modify the producer.</p>
+<p>Kafka also forced decisions that batch tools often make easy to ignore:</p>
+<ul>
+<li>What is the event key?</li>
+<li>What makes an event deterministic?</li>
+<li>When is a group of writes committed?</li>
+<li>What does a consumer see after a producer crashes?</li>
+<li>How long should raw records remain replayable?</li>
+<li>Which schema changes are compatible with existing consumers?</li>
+</ul>
+<p>Those are not Kafka trivia questions. They are data contract questions with a clock attached.</p>
+
+<h2 class="relative group">Event time is when the thing happened
+    <div id="event-time-is-when-the-thing-happened" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#event-time-is-when-the-thing-happened" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Flink was where the project stopped feeling like &ldquo;put JSON on a topic&rdquo; and started feeling like streaming.</p>
+<p>Suppose the producer catches up on a day of Cloudflare history at 9:00 this morning. Processing time says every record arrived around 9:00. Event time says one record describes 2:31 yesterday afternoon and another describes 11:58 last night.</p>
+<p>For analytics, event time is the truth I care about.</p>
+<p>The Flink job assigns a watermark, allows records to arrive out of order within a defined boundary, and produces five-minute tumbling windows. A record belongs to the window for when the page view happened, not the moment my laptop finally downloaded it.</p>
+<p>That distinction barely exists in a scheduled batch query because the batch already has a bounded input. In a stream, the input never declares itself finished. The watermark is how the system makes a practical statement that it has probably seen enough of the past to produce a result.</p>
+<p>This is the concept I was not going to learn by adding <code>kafka-python</code> to a toy script. You need late data and stateful computation before watermarks stop sounding like vocabulary from an interview guide.</p>
+
+<h2 class="relative group">Exactly once, except for the whole system
+    <div id="exactly-once-except-for-the-whole-system" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#exactly-once-except-for-the-whole-system" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The project also cured me of saying &ldquo;exactly once&rdquo; too casually.</p>
+<p>Inside the pipeline, I can make strong guarantees at particular boundaries. The producer publishes each Cloudflare query chunk in a Kafka transaction. Flink checkpoints its state and uses an exactly-once Kafka sink. Consumers read only committed records. Kafka Connect tracks offsets as it writes objects to R2.</p>
+<p>The end-to-end pipeline is still effectively at-least-once.</p>
+<p>A crash can happen after Kafka commits a source transaction but before the producer saves its cursor. On restart, that time window may be queried and published again. The producer generates deterministic event IDs from stable dimensions so a downstream system can recognize the replay, but the possibility still exists.</p>
+<p>That is the useful lesson: delivery guarantees belong to boundaries, not architecture diagrams. &ldquo;Exactly once&rdquo; written over an arrow does not make every side effect in a distributed system happen exactly once.</p>
+<p>At Rufous traffic, I do not need to build a grand deduplication service. I need to understand where duplication can occur, make event identity stable, and preserve an upgrade path if it becomes observable.</p>
+
+<h2 class="relative group">Privacy belongs before the durable log
+    <div id="privacy-belongs-before-the-durable-log" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#privacy-belongs-before-the-durable-log" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Rufous target-plan URLs contain a random identifier stored in the browser. It is not useful for this analysis, and it would create a high-cardinality path in the output.</p>
+<p>Before a record reaches Kafka, the producer replaces any concrete target-plan URL with the stable path <code>/target-plans/:plan</code>. The event ID, key, payload, and eventual R2 object all use the normalized value.</p>
+<p>That ordering matters. Kafka is a durable log. Sanitizing a record after publication means the sensitive or needlessly identifying value is already sitting in retained raw data.</p>
+<p>This may be the least flashy part of the project, but it is one of the most transferable. Streaming shortens the distance between production behavior and analytical storage. It should also move minimization, validation, and schema enforcement closer to the source.</p>
+
+<h2 class="relative group">So, is streaming mandatory now?
+    <div id="so-is-streaming-mandatory-now" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#so-is-streaming-mandatory-now" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>For a data platform? No.</p>
+<p>If the business can tolerate fifteen-minute freshness, I will still take the boring incremental pipeline. It will be cheaper to run, easier to understand, and easier for the next person to repair. A nightly model does not become more valuable because its inputs took a victory lap through Kafka.</p>
+<p>For a data engineering career? Increasingly, yes.</p>
+<p>Not because every company needs millisecond latency, and not because batch is dying. Streaming makes you confront time, state, ordering, replay, schema evolution, idempotency, and failure between independently running systems. Those problems appear whenever data becomes part of a live product, and more data teams are being pulled in that direction.</p>
+<p><code>streams2r2</code> is comically overbuilt for counting visits to a personal birding app. It is also small enough that I can turn it off, break it, replay it, inspect every topic, and understand what each guarantee actually means. That is much more useful than memorizing Kafka terminology until an interviewer is satisfied.</p>
+<p>So yes, fine: streaming is a must-have nowadays.</p>
+<p>Just do not tell me my fifteen-minute batch pipeline is dead. It is cheap, it works, and it has never once asked me to configure a watermark.</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/databox-rufous-warehouse/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;How Databox Became the Warehouse Behind Rufous
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-07-15T00:00:00&#43;00:00">15 July 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/posts/index.xml"
+                title="">
+                
+                  <span class="mr-1">
+                    <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM128 416c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg></span>
+                  </span>
+                
+                Journal RSS
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          Lough on Data is a trade name of Quire LLC.
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>

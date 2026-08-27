@@ -9,8 +9,18 @@
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
-    <lastBuildDate>Sat, 02 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/cloudflare-r2/index.xml" rel="self" type="application/rss+xml" />
-
+    <lastBuildDate>Tue, 25 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/cloudflare-r2/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The Streaming and the Dead</title>
+      <link>http://localhost:1313/posts/tell-me-streaming-one-more-time/</link>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/posts/tell-me-streaming-one-more-time/</guid>
+      <description>Streaming has become a must-have data engineering skill, even when batch is still the right architecture. So I built a Kafka and Flink lab on top of Rufous web analytics to find out what the job descriptions are really asking for.</description>
+      
+    </item>
+    
     <item>
       <title>Local Data Stack</title>
       <link>http://localhost:1313/posts/local-data-stack-build/</link>
@@ -18,8 +28,8 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/posts/local-data-stack-build/</guid>
       <description>The follow-up to Part 1. I built the stack — a small&#xA;dlt pipeline that watches a hand-picked list of outdoor, geospatial,&#xA;and forestry companies for new roles, writes Parquet to Cloudflare R2,&#xA;and surfaces everything in a MotherDuck Dive I check on my phone.&#xA;Here&amp;rsquo;s how it works, what changed from the original plan, and what&#xA;I deliberately left naive.</description>
-
+      
     </item>
-
+    
   </channel>
 </rss>

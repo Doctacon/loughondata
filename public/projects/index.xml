@@ -9,8 +9,18 @@
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
-    <lastBuildDate>Tue, 28 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
-
+    <lastBuildDate>Sat, 01 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Rufous</title>
+      <link>http://localhost:1313/projects/rufous/</link>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/projects/rufous/</guid>
+      <description>A static Arizona bird-finding field companion that turns licensed GBIF evidence into an explainable outing and downloadable calendar file.</description>
+      
+    </item>
+    
     <item>
       <title>Databox</title>
       <link>http://localhost:1313/projects/databox/</link>
@@ -18,8 +28,8 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/projects/databox/</guid>
       <description>A local-first, forkable data-warehouse scaffold: public sources through dlt, DuckDB, SQLMesh, Soda, and Dagster without always-on infrastructure.</description>
-
+      
     </item>
-
+    
   </channel>
 </rss>

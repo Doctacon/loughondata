@@ -10,7 +10,7 @@
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
     <lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
-
+    
     <item>
       <title>How Databox Became the Warehouse Behind Rufous</title>
       <link>http://localhost:1313/posts/databox-rufous-warehouse/</link>
@@ -18,9 +18,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/posts/databox-rufous-warehouse/</guid>
       <description>Quack makes local multi-source ingestion practical. A reviewed schema-to-CDM workflow makes it semantic. Rufous is what became possible once those two things met.</description>
-
+      
     </item>
-
+    
     <item>
       <title>Databox</title>
       <link>http://localhost:1313/projects/databox/</link>
@@ -28,8 +28,8 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/projects/databox/</guid>
       <description>A local-first, forkable data-warehouse scaffold: public sources through dlt, DuckDB, SQLMesh, Soda, and Dagster without always-on infrastructure.</description>
-
+      
     </item>
-
+    
   </channel>
 </rss>

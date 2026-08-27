@@ -9,8 +9,98 @@
     <managingEditor>connor@loughondata.com (Connor Lough)</managingEditor>
     <webMaster>connor@loughondata.com (Connor Lough)</webMaster>
     <copyright>Lough on Data is a trade name of Quire LLC.</copyright>
-    <lastBuildDate>Wed, 15 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-
+    <lastBuildDate>Tue, 25 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cloudflare-R2</title>
+      <link>http://localhost:1313/tags/cloudflare-r2/</link>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/cloudflare-r2/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Data-Engineering</title>
+      <link>http://localhost:1313/tags/data-engineering/</link>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/data-engineering/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Flink</title>
+      <link>http://localhost:1313/tags/flink/</link>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/flink/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Kafka</title>
+      <link>http://localhost:1313/tags/kafka/</link>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/kafka/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Streaming</title>
+      <link>http://localhost:1313/tags/streaming/</link>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/streaming/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Birds</title>
+      <link>http://localhost:1313/tags/birds/</link>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/birds/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Cloudflare</title>
+      <link>http://localhost:1313/tags/cloudflare/</link>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/cloudflare/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Maps</title>
+      <link>http://localhost:1313/tags/maps/</link>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/maps/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Open-Data</title>
+      <link>http://localhost:1313/tags/open-data/</link>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 +0000</pubDate>
+      <author>connor@loughondata.com (Connor Lough)</author>
+      <guid>http://localhost:1313/tags/open-data/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>Dagster</title>
       <link>http://localhost:1313/tags/dagster/</link>
@@ -18,19 +108,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/dagster/</guid>
       <description></description>
-
+      
     </item>
-
-    <item>
-      <title>Data-Engineering</title>
-      <link>http://localhost:1313/tags/data-engineering/</link>
-      <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/tags/data-engineering/</guid>
-      <description></description>
-
-    </item>
-
+    
     <item>
       <title>Data-Modeling</title>
       <link>http://localhost:1313/tags/data-modeling/</link>
@@ -38,9 +118,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/data-modeling/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Dlt</title>
       <link>http://localhost:1313/tags/dlt/</link>
@@ -48,9 +128,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/dlt/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Duckdb</title>
       <link>http://localhost:1313/tags/duckdb/</link>
@@ -58,9 +138,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/duckdb/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Open-Source</title>
       <link>http://localhost:1313/tags/open-source/</link>
@@ -68,9 +148,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/open-source/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Sqlmesh</title>
       <link>http://localhost:1313/tags/sqlmesh/</link>
@@ -78,9 +158,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/sqlmesh/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Calendar</title>
       <link>http://localhost:1313/tags/calendar/</link>
@@ -88,9 +168,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/calendar/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Email</title>
       <link>http://localhost:1313/tags/email/</link>
@@ -98,9 +178,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/email/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Local-First</title>
       <link>http://localhost:1313/tags/local-first/</link>
@@ -108,9 +188,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/local-first/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Proton-Mail</title>
       <link>http://localhost:1313/tags/proton-mail/</link>
@@ -118,9 +198,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/proton-mail/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Python</title>
       <link>http://localhost:1313/tags/python/</link>
@@ -128,9 +208,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/python/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Computer-Vision</title>
       <link>http://localhost:1313/tags/computer-vision/</link>
@@ -138,9 +218,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/computer-vision/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Geospatial</title>
       <link>http://localhost:1313/tags/geospatial/</link>
@@ -148,9 +228,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/geospatial/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Machine-Learning</title>
       <link>http://localhost:1313/tags/machine-learning/</link>
@@ -158,9 +238,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/machine-learning/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Openstreetmap</title>
       <link>http://localhost:1313/tags/openstreetmap/</link>
@@ -168,9 +248,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/openstreetmap/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Pytorch</title>
       <link>http://localhost:1313/tags/pytorch/</link>
@@ -178,9 +258,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/pytorch/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Ai</title>
       <link>http://localhost:1313/tags/ai/</link>
@@ -188,9 +268,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/ai/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Coding-Agents</title>
       <link>http://localhost:1313/tags/coding-agents/</link>
@@ -198,9 +278,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/coding-agents/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Conferences</title>
       <link>http://localhost:1313/tags/conferences/</link>
@@ -208,9 +288,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/conferences/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Embeddings</title>
       <link>http://localhost:1313/tags/embeddings/</link>
@@ -218,9 +298,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/embeddings/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Rag</title>
       <link>http://localhost:1313/tags/rag/</link>
@@ -228,9 +308,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/rag/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Semantic-Search</title>
       <link>http://localhost:1313/tags/semantic-search/</link>
@@ -238,19 +318,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/semantic-search/</guid>
       <description></description>
-
+      
     </item>
-
-    <item>
-      <title>Cloudflare-R2</title>
-      <link>http://localhost:1313/tags/cloudflare-r2/</link>
-      <pubDate>Sat, 02 May 2026 00:00:00 +0000</pubDate>
-      <author>connor@loughondata.com (Connor Lough)</author>
-      <guid>http://localhost:1313/tags/cloudflare-r2/</guid>
-      <description></description>
-
-    </item>
-
+    
     <item>
       <title>Motherduck</title>
       <link>http://localhost:1313/tags/motherduck/</link>
@@ -258,9 +328,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/motherduck/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Aws-S3</title>
       <link>http://localhost:1313/tags/aws-s3/</link>
@@ -268,9 +338,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/aws-s3/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Career</title>
       <link>http://localhost:1313/tags/career/</link>
@@ -278,9 +348,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/career/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Data-Quality</title>
       <link>http://localhost:1313/tags/data-quality/</link>
@@ -288,9 +358,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/data-quality/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Side-Project</title>
       <link>http://localhost:1313/tags/side-project/</link>
@@ -298,9 +368,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/side-project/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Claude</title>
       <link>http://localhost:1313/tags/claude/</link>
@@ -308,9 +378,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/claude/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Gcp</title>
       <link>http://localhost:1313/tags/gcp/</link>
@@ -318,9 +388,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/gcp/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Llm</title>
       <link>http://localhost:1313/tags/llm/</link>
@@ -328,9 +398,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/llm/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Ollama</title>
       <link>http://localhost:1313/tags/ollama/</link>
@@ -338,9 +408,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/ollama/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Graph-Rag</title>
       <link>http://localhost:1313/tags/graph-rag/</link>
@@ -348,9 +418,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/graph-rag/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Nlp</title>
       <link>http://localhost:1313/tags/nlp/</link>
@@ -358,9 +428,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/nlp/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Data-Mesh</title>
       <link>http://localhost:1313/tags/data-mesh/</link>
@@ -368,9 +438,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/data-mesh/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Ibis</title>
       <link>http://localhost:1313/tags/ibis/</link>
@@ -378,9 +448,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/ibis/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Polars</title>
       <link>http://localhost:1313/tags/polars/</link>
@@ -388,9 +458,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/polars/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Testing</title>
       <link>http://localhost:1313/tags/testing/</link>
@@ -398,9 +468,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/testing/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Ci</title>
       <link>http://localhost:1313/tags/ci/</link>
@@ -408,9 +478,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/ci/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Dbt</title>
       <link>http://localhost:1313/tags/dbt/</link>
@@ -418,9 +488,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/dbt/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Dbt-Osmosis</title>
       <link>http://localhost:1313/tags/dbt-osmosis/</link>
@@ -428,9 +498,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/dbt-osmosis/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Dbt2looker</title>
       <link>http://localhost:1313/tags/dbt2looker/</link>
@@ -438,9 +508,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/dbt2looker/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Github-Actions</title>
       <link>http://localhost:1313/tags/github-actions/</link>
@@ -448,9 +518,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/github-actions/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Data-Vault</title>
       <link>http://localhost:1313/tags/data-vault/</link>
@@ -458,9 +528,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/data-vault/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Godaddy</title>
       <link>http://localhost:1313/tags/godaddy/</link>
@@ -468,9 +538,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/godaddy/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Heroku</title>
       <link>http://localhost:1313/tags/heroku/</link>
@@ -478,9 +548,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/heroku/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Rails</title>
       <link>http://localhost:1313/tags/rails/</link>
@@ -488,9 +558,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/rails/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Ruby</title>
       <link>http://localhost:1313/tags/ruby/</link>
@@ -498,9 +568,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/ruby/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Web-Dev</title>
       <link>http://localhost:1313/tags/web-dev/</link>
@@ -508,9 +578,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/web-dev/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Aws</title>
       <link>http://localhost:1313/tags/aws/</link>
@@ -518,9 +588,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/aws/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Dbeaver</title>
       <link>http://localhost:1313/tags/dbeaver/</link>
@@ -528,9 +598,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/dbeaver/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Ebird</title>
       <link>http://localhost:1313/tags/ebird/</link>
@@ -538,9 +608,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/ebird/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>S3</title>
       <link>http://localhost:1313/tags/s3/</link>
@@ -548,9 +618,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/s3/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Slack</title>
       <link>http://localhost:1313/tags/slack/</link>
@@ -558,9 +628,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/slack/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Mermaid</title>
       <link>http://localhost:1313/tags/mermaid/</link>
@@ -568,9 +638,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/mermaid/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Meltano</title>
       <link>http://localhost:1313/tags/meltano/</link>
@@ -578,9 +648,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/meltano/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Postgres</title>
       <link>http://localhost:1313/tags/postgres/</link>
@@ -588,9 +658,9 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/postgres/</guid>
       <description></description>
-
+      
     </item>
-
+    
     <item>
       <title>Snowflake</title>
       <link>http://localhost:1313/tags/snowflake/</link>
@@ -598,8 +668,8 @@
       <author>connor@loughondata.com (Connor Lough)</author>
       <guid>http://localhost:1313/tags/snowflake/</guid>
       <description></description>
-
+      
     </item>
-
+    
   </channel>
 </rss>
