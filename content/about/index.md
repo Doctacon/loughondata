@@ -12,7 +12,7 @@ showTableOfContents: true
 
 I don’t write code because I like writing code. I write code as a means for solving problems worth solving.
 
-I’m Connor Lough, the data engineer behind Lough on Data. I help growing teams build dependable data foundations: the paths data takes into a warehouse, the models and metrics that give it meaning, and the quality and operating practices that keep it useful. And all of it using open source technologies so that one day when I'm gone, there's no surprise bill.
+I’m Connor Lough, the data engineer behind Lough on Data. I write about my learnings and help with data foundations: the paths data takes into a warehouse, the models and metrics that give it meaning, and the quality and operating practices that keep it useful. And all of it using open source technologies.
 
 ## Beyond the stack
 
@@ -35,7 +35,5 @@ I’m based in Arizona. Outside of data work, I'm outdoors! I hunt, camp, and go
 {{< carousel images="gallery/*" aspectRatio="1-1" captions="{dataday.png:Data Saturday #52 — Oslo,datamon.png:Datamon from Zenlytics at dbt Coalesce 2023,inmon.png:With Bill Inmon at WWDVC 2023,neworleans.png:dbt Coalesce 2022 — New Orleans,suomenlinna.png:Suomenlinna — Helsinki Data Vault training, aicouncil.jpeg:AI Council 2026}" >}}
 
 ## Get in touch
-
-[**Tell me what’s brittle →**](mailto:connor@loughondata.com?subject=Tell%20me%20what%27s%20brittle&body=What%20is%20unreliable%3F%0A%0AWho%20relies%20on%20it%3F%0A%0AWhat%20outcome%20do%20you%20need%3F)
 
 Or find me on [GitHub](https://github.com/Doctacon) and [LinkedIn](https://www.linkedin.com/in/crlough/).

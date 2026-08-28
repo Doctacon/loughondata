@@ -26,5 +26,3 @@ description: "Public architecture work and open-source projects from Lough on Da
 ## More to inspect
 
 The [Journal](/posts/) contains the working notes behind projects and technical decisions. You can also find open-source work at [github.com/Doctacon](https://github.com/Doctacon).
-
-If you are dealing with a similar system problem, [Tell me what’s brittle](mailto:connor@loughondata.com?subject=Tell%20me%20what%27s%20brittle&body=What%20is%20unreliable%3F%0A%0AWho%20relies%20on%20it%3F%0A%0AWhat%20outcome%20do%20you%20need%3F).
