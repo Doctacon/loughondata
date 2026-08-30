@@ -19,9 +19,9 @@ description: "Public architecture work and open-source projects from Lough on Da
 
 ## Rufous
 
-[Rufous](/projects/rufous/) is an Arizona bird pokedex built from the Databox reference warehouse. It turns licensed GBIF observations and public place data into an explainable, user-timed outing and a downloadable calendar file—without an application server or server-side visitor storage.
+[Rufous](https://rufous.loughondata.com/) is an Arizona bird pokedex built from the Databox reference warehouse. It turns licensed GBIF observations and public place data into an explainable, user-timed outing and a downloadable calendar file—without an application server or server-side visitor storage.
 
-[Try Rufous →](/projects/rufous/)
+[Try Rufous →](https://rufous.loughondata.com/)
 
 ## More to inspect
 
