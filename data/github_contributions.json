@@ -2380,8 +2380,8 @@
         },
         {
           "date": "2026-10-16",
-          "contributionCount": 0,
-          "contributionLevel": "NONE",
+          "contributionCount": 2,
+          "contributionLevel": "FIRST_QUARTILE",
           "weekday": 5
         },
         {
@@ -2408,9 +2408,15 @@
         },
         {
           "date": "2026-10-20",
+          "contributionCount": 10,
+          "contributionLevel": "FIRST_QUARTILE",
+          "weekday": 2
+        },
+        {
+          "date": "2026-10-21",
           "contributionCount": 0,
           "contributionLevel": "NONE",
-          "weekday": 2
+          "weekday": 3
         }
       ]
     }
